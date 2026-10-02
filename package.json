@@ -1,0 +1,9 @@
+{
+  "name": "bible-christian-heroes",
+  "private": true,
+  "type": "module",
+  "description": "Bible & Christian Heroes website with admin, hosted on Netlify",
+  "dependencies": {
+    "@netlify/blobs": "latest"
+  }
+}

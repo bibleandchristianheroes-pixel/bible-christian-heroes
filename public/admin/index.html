@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Heroes Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: a workbench. Sidebar of sections on the left, the chosen list in the middle, edits in a sheet. Same lead-line identity as the site, calmer. */
+:root{--bg:#EEF1F7;--surface:#fff;--surface-2:#E3E8F3;--ink:#152245;--muted:#56617C;--lead:#1B2440;--accent:#2447A1;--ok:#1C7650;--warn:#9A6A00;--bad:#B0233A;--warn-soft:#F6E7BF;
+  --display:"Alegreya SC",Georgia,serif;--body:"Nunito","Segoe UI",system-ui,sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root{--bg:#0C1226;--surface:#141C36;--surface-2:#1C2645;--ink:#EEF1FA;--muted:#A7B0CB;--lead:#04070F;--accent:#86A6FF;--ok:#5FC898;--warn:#E9BC52;--bad:#F2738A;--warn-soft:#3A3014;color-scheme:dark}}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+.btn{border:2px solid var(--lead);background:var(--surface);border-radius:999px;padding:7px 14px;font-weight:800;font-size:.9rem;cursor:pointer;text-decoration:none;color:var(--ink);display:inline-flex;gap:6px;align-items:center}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.danger{color:var(--bad);border-color:var(--bad)}
+.btn.small{padding:4px 10px;font-size:.8rem}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.login{min-height:100vh;display:grid;place-items:center;padding:16px}
+.login form{background:var(--surface);border:3px solid var(--lead);border-radius:20px;padding:28px;width:min(100%,400px);display:flex;flex-direction:column;gap:14px}
+.login h1{font-size:2rem}
+label{font-weight:800;font-size:.85rem;display:flex;flex-direction:column;gap:5px}
+label small{font-weight:600;color:var(--muted)}
+input,textarea,select{border:2px solid var(--lead);background:var(--surface);border-radius:10px;padding:9px 12px;width:100%}
+textarea{min-height:110px;resize:vertical;line-height:1.45}
+textarea.tall{min-height:260px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem}
+.err{color:var(--bad);font-weight:700;min-height:1.4em}
+.topbar{position:sticky;top:0;z-index:5;background:var(--lead);color:#fff;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 16px}
+.topbar h1{font-size:1.25rem;margin-right:auto}
+.topbar .btn{background:transparent;color:#fff;border-color:#5a6790}
+.topbar .btn.primary{background:#E9BC52;border-color:#E9BC52;color:#1B2440}
+.status{font-weight:800;font-size:.85rem;padding:4px 10px;border-radius:999px;background:#2b3760}
+.status.dirty{background:#E9BC52;color:#1B2440}
+.layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 60px)}
+@media (max-width:820px){.layout{grid-template-columns:1fr}}
+.side{border-right:2px solid var(--lead);padding:16px;display:flex;flex-direction:column;gap:4px;background:var(--surface-2)}
+@media (max-width:820px){.side{border-right:0;border-bottom:2px solid var(--lead);flex-direction:row;overflow-x:auto}}
+.side .grp{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:12px 0 4px}
+@media (max-width:820px){.side .grp{display:none}}
+.side button{border:0;background:none;text-align:left;padding:7px 10px;border-radius:8px;font-weight:700;cursor:pointer;white-space:nowrap;display:flex;justify-content:space-between;gap:8px}
+.side button[aria-current="true"]{background:var(--lead);color:#fff}
+.side button span{font-size:.75rem;opacity:.7;font-variant-numeric:tabular-nums}
+.main{padding:24px 20px;min-width:0;display:flex;flex-direction:column;gap:16px;max-width:980px}
+.main .intro{color:var(--muted);max-width:70ch}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.bar input{max-width:280px}
+.items{display:flex;flex-direction:column;gap:8px}
+.item{border:2px solid var(--lead);background:var(--surface);border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.item .t{font-weight:800;line-height:1.25}
+.item .s{color:var(--muted);font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.item .tx{min-width:0}
+.confirm{display:flex;gap:6px;align-items:center;font-weight:800;color:var(--bad);font-size:.85rem}
+.form{border:3px solid var(--lead);background:var(--surface);border-radius:16px;padding:20px;display:grid;gap:14px}
+.form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.form .grid{grid-template-columns:1fr}}
+.form .full{grid-column:1/-1}
+.form h2{font-size:1.4rem}
+.note{background:var(--warn-soft);border-radius:10px;padding:10px 12px;font-size:.88rem}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--lead);color:#fff;padding:10px 18px;border-radius:999px;font-weight:800;z-index:9}
+.color-row{display:flex;gap:8px;align-items:center}
+.color-row input[type=color]{width:52px;height:40px;padding:2px}
+.preview-line{font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="login" id="loginView">
+  <form id="loginForm">
+    <h1>Heroes Admin</h1>
+    <p style="color:var(--muted)">Sign in to add, edit and remove what appears on your website.</p>
+    <label for="pw">Admin password<input id="pw" type="password" autocomplete="current-password" required></label>
+    <div class="err" id="loginErr" role="alert"></div>
+    <button class="btn primary" type="submit">Sign in</button>
+    <a href="/" style="font-size:.85rem">← Back to the website</a>
+  </form>
+</div>
+
+<div id="appView" hidden>
+  <div class="topbar">
+    <h1>Heroes Admin</h1>
+    <span class="status" id="status">All changes published</span>
+    <button class="btn primary" id="publishBtn">Publish changes</button>
+    <a class="btn" href="/" target="_blank" rel="noopener">View site</a>
+    <button class="btn" id="moreBtn" aria-expanded="false">Backups</button>
+    <button class="btn" id="logoutBtn">Sign out</button>
+  </div>
+  <div class="layout">
+    <nav class="side" id="side" aria-label="Sections"></nav>
+    <main class="main" id="main"></main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+"use strict";
+var ICONS=["","ark","star","tablets","wheat","sling","crown","lion","fish","lily","keys","sword","shell"];
+/* Field types: text, textarea, url, color, select, pairs (Name | Known for per line), quiz (Question | Right | Wrong | Wrong), paras (blank line between paragraphs) */
+var SECTIONS=[
+ {grp:"Site"},
+ {key:"settings",label:"Site settings",single:true,intro:"Your site name, the announcement banner, the support button and your app’s store links. Leave a link empty to show “coming soon”.",fields:[
+  ["siteName","Site name","text"],["tagline","Tagline under the name","text"],
+  ["announcement","Announcement banner","textarea","Shows in a gold bar at the top of the site. Leave empty to hide it."],
+  ["supportUrl","Support / donate link","url","For example your PayPal, Patreon, Buy Me a Coffee or Stripe link."],["supportLabel","Support button text","text"],
+  ["contactEmail","Contact email shown in the footer","text","Leave empty to hide it."],
+  ["appName","App name","text"],["appWebUrl","App web link (play in browser)","url"],["appStoreUrl","Apple App Store link","url"],["playStoreUrl","Google Play link","url"]]},
+ {key:"youtube",label:"YouTube channels",intro:"Each channel gets a player that always shows its newest uploads, plus its latest videos. The channel ID starts with UC; find it on YouTube under the channel’s About → Share channel → Copy channel ID.",title:"name",sub:"url",fields:[
+  ["name","Channel name","text"],["title","Heading on the site","text"],["desc","Short description","textarea"],["audience","Who it’s for (small label)","text"],["url","Channel link","url"],["channelId","Channel ID (starts with UC)","text"]]},
+ {grp:"Games"},
+ {key:"quizzes",label:"Quizzes",intro:"Each quiz shows up to 10 random questions per round. Write one question per line: Question | Right answer | Wrong answer | Wrong answer.",title:"title",sub:function(x){return (x.questions||[]).length+" questions";},fields:[
+  ["title","Quiz name","text"],["intro","Short instructions","text"],["prefix","Put before every answer (optional)","text","For example “St ” for saint quizzes."],["questions","Questions","quiz"]]},
+ {key:"heroDecks",label:"Hero Match decks",intro:"Bible hero decks for the Hero Match game. One pair per line: Hero | What they’re known for. Keep the second part short (2–6 words). 6 or more pairs per deck works best.",title:"title",sub:function(x){return (x.pairs||[]).map(function(p){return p[0];}).join(", ");},fields:[["title","Deck name","text"],["pairs","Pairs","pairs"]]},
+ {key:"saintDecks",label:"Saints Match decks",intro:"Saint decks for the Saints Match game. One pair per line: Saint | What they’re known for.",title:"title",sub:function(x){return (x.pairs||[]).map(function(p){return p[0];}).join(", ");},fields:[["title","Deck name","text"],["pairs","Pairs","pairs"]]},
+ {key:"catechism",label:"Catechism cards",intro:"Flashcards from the Penny Catechism.",title:"q",sub:"a",fields:[["q","Question","text"],["a","Answer","textarea"]]},
+ {key:"verses",label:"Bible verses",intro:"Verses for the Verse Builder game. Short verses (5–12 words) work best for children.",title:"text",sub:"ref",fields:[["text","Verse","textarea"],["ref","Reference","text"]]},
+ {grp:"Library"},
+ {key:"ourBooks",label:"Our books",intro:"Your own books. Add a price like “$9.99” or “Free”, a link to buy or read, and a cover image link if you have one.",title:"title",sub:"by",fields:[["title","Title","text"],["by","Author / note","text"],["desc","Description","textarea"],["url","Link (buy or read)","url"],["linkLabel","Link text","text","For example “Buy now” or “Read free”."],["price","Price","text"],["image","Cover image link (optional)","url"],["color","Spine colour","color"]]},
+ {key:"freeBooks",label:"Free books",title:"title",sub:"by",intro:"Free books to read online.",fields:[["title","Title","text"],["by","Author","text"],["desc","Description","textarea"],["url","Read link","url"],["listenUrl","Audiobook link (optional)","url"],["image","Cover image link (optional)","url"],["color","Spine colour","color"]]},
+ {key:"paidBooks",label:"Paid books",title:"title",sub:"by",intro:"Books worth buying. Use an affiliate link if you have one.",fields:[["title","Title","text"],["by","Author / publisher","text"],["desc","Description","textarea"],["url","Link","url"],["linkLabel","Link text","text"],["price","Price (optional)","text"],["image","Cover image link (optional)","url"],["color","Spine colour","color"]]},
+ {grp:"Apps"},
+ {key:"apps",label:"Recommended apps",title:"name",sub:"price",intro:"Apps shown under “Apps we recommend”. Leave the link empty to show “Search in your app store”.",fields:[["name","App name","text"],["price","Price label","text","“Free” shows a green label; anything else shows gold."],["for","Best for","text"],["desc","Description","textarea"],["url","Official link","url"]]},
+ {grp:"Learn"},
+ {key:"heroes",label:"Hall of Heroes",title:"name",sub:"virtue",intro:"The flip cards in Heroes of the Bible.",fields:[["name","Name","text"],["virtue","Virtue","text"],["ref","Bible reference","text"],["lesson","Lesson (shown when tapped)","textarea"],["icon","Picture","select",null,ICONS],["color","Card colour","color"]]},
+ {key:"stories",label:"Read-aloud stories",title:"title",sub:"age",intro:"Stories in Story Time. Leave an empty line between paragraphs.",fields:[["title","Title","text"],["age","Ages and reading time","text"],["summary","One-line summary","text"],["body","Story","paras"]]},
+ {key:"prayers",label:"Prayers",title:"title",sub:"tip",intro:"Prayers in the Prayer corner. Line breaks are kept.",fields:[["title","Prayer name","text"],["text","Prayer text","textarea"],["tip","Tip for families","text"]]},
+ {key:"resources",label:"Grown-ups’ links",title:"title",sub:"url",intro:"Links in the Grown-ups’ corner.",fields:[["title","Title","text"],["desc","Description","textarea"],["url","Link","url"],["source","Source label","text"]]}
+];
+var $=function(id){return document.getElementById(id);};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
+var KEY=null,data=null,published=null,cur="settings",editing=null;
+try{KEY=sessionStorage.getItem("bch-admin");}catch(e){}
+
+function api(method,body,extra){var h={"x-admin-key":KEY||""};if(body)h["content-type"]="application/json";return fetch("/api/content"+(extra||""),{method:method,headers:h,body:body?JSON.stringify(body):undefined,cache:"no-store"}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok)throw new Error(j.error||("Server answered "+r.status));return j;});});}
+function toast(m){var t=$("toast");t.textContent=m;t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(function(){t.hidden=true;},2600);}
+
+$("loginForm").addEventListener("submit",function(e){e.preventDefault();KEY=$("pw").value;$("loginErr").textContent="Checking…";
+  api("POST").then(function(){try{sessionStorage.setItem("bch-admin",KEY);}catch(e){}start();}).catch(function(err){$("loginErr").textContent=err.message;});});
+$("logoutBtn").onclick=function(){try{sessionStorage.removeItem("bch-admin");}catch(e){}location.reload();};
+
+function start(){
+  $("loginView").hidden=true;$("appView").hidden=false;
+  fetch("/api/content",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+  .then(function(d){return d&&d.settings?d:fetch("/content.json",{cache:"no-store"}).then(function(r){return r.json();});})
+  .then(function(d){published=JSON.stringify(d);var draft=null;try{draft=localStorage.getItem("bch-admin-draft");}catch(e){}
+    data=d;if(draft&&draft!==published){try{data=JSON.parse(draft);toast("Restored your unpublished changes");}catch(e){}}
+    SECTIONS.forEach(function(s){if(s.key&&!data[s.key])data[s.key]=s.single?{}:[];});
+    renderSide();show(cur);dirty();});
+}
+if(KEY){api("POST").then(start).catch(function(){KEY=null;});}
+
+function dirty(){var d=JSON.stringify(data)!==published;var s=$("status");s.textContent=d?"Unpublished changes":"All changes published";s.className="status"+(d?" dirty":"");$("publishBtn").disabled=!d;
+  try{if(d)localStorage.setItem("bch-admin-draft",JSON.stringify(data));else localStorage.removeItem("bch-admin-draft");}catch(e){}renderSide();}
+window.addEventListener("beforeunload",function(e){if(data&&JSON.stringify(data)!==published){e.preventDefault();e.returnValue="";}});
+$("publishBtn").onclick=function(){var b=this;b.disabled=true;b.textContent="Publishing…";
+  api("PUT",data).then(function(j){data.updatedAt=j.updatedAt;published=JSON.stringify(data);dirty();toast("Published. Your site is updated.");}).catch(function(err){toast("Could not publish: "+err.message);dirty();}).then(function(){b.textContent="Publish changes";});};
+
+function renderSide(){var s=$("side");s.innerHTML="";SECTIONS.forEach(function(sec){if(sec.grp){s.appendChild(el("div","grp",sec.grp));return;}
+  var b=el("button",null,sec.label);if(!sec.single){b.appendChild(el("span",null,String((data[sec.key]||[]).length)));}b.setAttribute("aria-current",sec.key===cur);b.onclick=function(){editing=null;show(sec.key);};s.appendChild(b);});}
+
+function secOf(k){return SECTIONS.filter(function(s){return s.key===k;})[0];}
+function val(x,f){return typeof f==="function"?f(x):(x[f]||"");}
+
+function show(k){cur=k;renderSide();var sec=secOf(k),m=$("main");m.innerHTML="";
+  if(k==="backups"){return showBackups(m);}
+  m.appendChild(el("h2",null,sec.label));if(sec.intro)m.appendChild(el("p","intro",sec.intro));
+  if(sec.single){m.appendChild(form(sec,data[k],function(obj){data[k]=obj;dirty();toast("Saved to draft. Press Publish when ready.");show(k);},null,true));return;}
+  var bar=el("div","bar");var add=el("button","btn primary","+ Add new");add.onclick=function(){editing={i:-1};show(k);};bar.appendChild(add);
+  var f=el("input");f.type="search";f.placeholder="Filter…";f.id="filter";f.setAttribute("aria-label","Filter items");bar.appendChild(f);m.appendChild(bar);
+  if(editing&&editing.i===-1){m.appendChild(form(sec,{},function(obj){data[k].unshift(obj);editing=null;dirty();toast("Added. Press Publish to put it live.");show(k);},function(){editing=null;show(k);}));}
+  var list=el("div","items");m.appendChild(list);
+  function draw(){list.innerHTML="";var term=f.value.toLowerCase();
+    data[k].forEach(function(item,i){if(term&&JSON.stringify(item).toLowerCase().indexOf(term)<0)return;
+      if(editing&&editing.i===i){list.appendChild(form(sec,item,function(obj){data[k][i]=obj;editing=null;dirty();toast("Saved to draft. Press Publish when ready.");show(k);},function(){editing=null;show(k);}));return;}
+      var row=el("div","item"),tx=el("div","tx");tx.appendChild(el("div","t",val(item,sec.title)||"(untitled)"));tx.appendChild(el("div","s",val(item,sec.sub)));row.appendChild(tx);
+      var acts=el("div","acts");
+      var e=el("button","btn small","Edit");e.onclick=function(){editing={i:i};show(k);};
+      var up=el("button","btn small","↑");up.setAttribute("aria-label","Move up");up.disabled=i===0;up.onclick=function(){var a=data[k];a.splice(i-1,0,a.splice(i,1)[0]);dirty();draw();};
+      var dn=el("button","btn small","↓");dn.setAttribute("aria-label","Move down");dn.disabled=i===data[k].length-1;dn.onclick=function(){var a=data[k];a.splice(i+1,0,a.splice(i,1)[0]);dirty();draw();};
+      var cp=el("button","btn small","Copy");cp.onclick=function(){data[k].splice(i+1,0,JSON.parse(JSON.stringify(item)));dirty();draw();};
+      var del=el("button","btn small danger","Delete");del.onclick=function(){acts.innerHTML="";var c=el("span","confirm","Delete this?");var y=el("button","btn small danger","Yes, delete");y.onclick=function(){data[k].splice(i,1);dirty();draw();toast("Deleted. Press Publish to remove it from the site.");};var n=el("button","btn small","Keep");n.onclick=draw;c.appendChild(y);c.appendChild(n);acts.appendChild(c);};
+      [e,up,dn,cp,del].forEach(function(b){acts.appendChild(b);});row.appendChild(acts);list.appendChild(row);});
+    if(!list.children.length)list.appendChild(el("p","intro",term?"Nothing matches that filter.":"Nothing here yet. Press “+ Add new”."));}
+  f.oninput=draw;draw();
+  var focus=m.querySelector(".form input,.form textarea");if(focus&&editing)focus.focus();
+}
+
+function toText(type,v){if(type==="pairs")return (v||[]).map(function(p){return p.join(" | ");}).join("\n");
+  if(type==="quiz")return (v||[]).map(function(q){return [q.q,q.a].concat(q.wrong||[]).join(" | ");}).join("\n");
+  if(type==="paras")return (v||[]).join("\n\n");return v==null?"":v;}
+function fromText(type,s){
+  if(type==="pairs"){var out=[],bad=[];s.split("\n").forEach(function(l,n){if(!l.trim())return;var p=l.split("|").map(function(x){return x.trim();});if(p.length<2||!p[0]||!p[1])bad.push(n+1);else out.push([p[0],p.slice(1).join(" | ")]);});if(bad.length)throw new Error("Line "+bad.join(", ")+" needs a | between the name and what they’re known for.");return out;}
+  if(type==="quiz"){var qs=[],badq=[];s.split("\n").forEach(function(l,n){if(!l.trim())return;var p=l.split("|").map(function(x){return x.trim();}).filter(Boolean);if(p.length<3)badq.push(n+1);else qs.push({q:p[0],a:p[1],wrong:p.slice(2)});});if(badq.length)throw new Error("Line "+badq.join(", ")+" needs: Question | Right answer | at least one wrong answer.");return qs;}
+  if(type==="paras")return s.split(/\n\s*\n/).map(function(x){return x.trim();}).filter(Boolean);
+  return s;}
+
+function form(sec,item,onSave,onCancel,isSingle){
+  var f=el("form","form");if(!isSingle)f.appendChild(el("h2",null,item&&Object.keys(item).length?"Edit":"Add new"));
+  var g=el("div","grid");f.appendChild(g);var inputs={};
+  sec.fields.forEach(function(fd){var k=fd[0],lab=fd[1],type=fd[2],help=fd[3];var L=el("label");L.appendChild(document.createTextNode(lab));
+    var id="f_"+sec.key+"_"+k;L.htmlFor=id;var inp;
+    if(type==="textarea"||type==="pairs"||type==="quiz"||type==="paras"){inp=el("textarea");if(type!=="textarea")inp.className="tall";L.classList.add("full");}
+    else if(type==="select"){inp=el("select");fd[4].forEach(function(o){var op=el("option",null,o||"(first letter)");op.value=o;inp.appendChild(op);});}
+    else if(type==="color"){var row=el("div","color-row");inp=el("input");inp.type="color";var hx=el("input");hx.type="text";hx.style.maxWidth="120px";hx.setAttribute("aria-label",lab+" hex");inp.oninput=function(){hx.value=inp.value;};hx.oninput=function(){if(/^#[0-9a-f]{6}$/i.test(hx.value))inp.value=hx.value;};row.appendChild(inp);row.appendChild(hx);inp._hx=hx;}
+    else{inp=el("input");inp.type=type==="url"?"url":"text";if(type==="url")inp.placeholder="https://…";}
+    inp.id=id;var v=toText(type,item?item[k]:"");
+    if(type==="color"){inp.value=/^#[0-9a-f]{6}$/i.test(v)?v:"#2447A1";inp._hx.value=inp.value;L.appendChild(inp.parentNode);}else{inp.value=v;L.appendChild(inp);}
+    if(type==="pairs")help=help||"One per line:  Name | Known for";if(type==="quiz")help=help||"One per line:  Question | Right answer | Wrong | Wrong";if(type==="paras")help=help||"Leave an empty line between paragraphs.";
+    if(help)L.appendChild(el("small",null,help));
+    if(type==="url"){inp.type="text";}
+    g.appendChild(L);inputs[k]={inp:inp,type:type};});
+  var err=el("div","err");err.setAttribute("role","alert");f.appendChild(err);
+  var bar=el("div","bar");var s=el("button","btn primary",isSingle?"Save settings":"Save");s.type="submit";bar.appendChild(s);
+  if(onCancel){var c=el("button","btn","Cancel");c.type="button";c.onclick=onCancel;bar.appendChild(c);}
+  bar.appendChild(el("span","preview-line","Saving keeps it as a draft. Press Publish changes at the top to update the website."));f.appendChild(bar);
+  f.addEventListener("submit",function(e){e.preventDefault();var out=JSON.parse(JSON.stringify(item||{}));
+    try{Object.keys(inputs).forEach(function(k){var o=inputs[k];var v=o.inp.value;if(o.type==="url"&&v&&!/^(https?:\/\/|#|\/)/.test(v.trim()))throw new Error("“"+v+"” should start with https://");out[k]=fromText(o.type,o.type==="text"||o.type==="url"?v.trim():v);});}
+    catch(ex){err.textContent=ex.message;return;}
+    var first=sec.fields[0][0];if(!isSingle&&!String(out[first]||"").trim()){err.textContent="Please fill in “"+sec.fields[0][1]+"”.";return;}
+    onSave(out);});
+  return f;}
+
+/* Backups */
+var mb=$("moreBtn");mb.onclick=function(){editing=null;show("backups");};
+function showBackups(m){m.appendChild(el("h2",null,"Backups"));
+  m.appendChild(el("p","intro","Every time you publish, the previous version is kept on the server. You can also download a copy to your computer."));
+  var bar=el("div","bar");var dl=el("button","btn primary","Download a backup file");dl.onclick=function(){var blob=new Blob([JSON.stringify(data,null,1)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="heroes-content-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();a.remove();};
+  var upl=el("label","btn");upl.textContent="Load a backup file";var fi=el("input");fi.type="file";fi.accept="application/json,.json";fi.hidden=true;upl.appendChild(fi);
+  fi.onchange=function(){var file=fi.files[0];if(!file)return;file.text().then(function(t){var d=JSON.parse(t);if(!d.settings)throw new Error("not a site backup");data=d;dirty();toast("Backup loaded. Press Publish to put it live.");}).catch(function(e){toast("That file isn’t a site backup.");});};
+  var rs=el("button","btn danger","Start over from the original content");rs.onclick=function(){rs.replaceWith(conf);};
+  var conf=el("span","confirm","Replace everything with the original content?");var y=el("button","btn small danger","Yes");y.onclick=function(){fetch("/content.json",{cache:"no-store"}).then(function(r){return r.json();}).then(function(d){data=d;dirty();toast("Original content loaded. Press Publish to put it live.");show("backups");});};var n=el("button","btn small","No");n.onclick=function(){show("backups");};conf.appendChild(y);conf.appendChild(n);
+  [dl,upl,rs].forEach(function(b){bar.appendChild(b);});m.appendChild(bar);
+  m.appendChild(el("h2",null,"Published versions"));var list=el("div","items");list.appendChild(el("p","intro","Loading…"));m.appendChild(list);
+  api("GET",null,"?history=1").then(function(keys){list.innerHTML="";if(!keys.length)list.appendChild(el("p","intro","No earlier versions yet. They appear after your second publish."));
+    keys.forEach(function(k){var row=el("div","item");var d=new Date(k.replace("backup/",""));row.appendChild(el("div","t","Version from "+d.toLocaleString()));var b=el("button","btn small","Load this version");b.onclick=function(){api("GET",null,"?backup="+encodeURIComponent(k)).then(function(d){data=d;dirty();toast("Loaded. Press Publish to put it live.");});};row.appendChild(b);list.appendChild(row);});})
+  .catch(function(e){list.innerHTML="";list.appendChild(el("p","intro","Could not load versions: "+e.message));});
+}
+})();
+</script>
+</body>
+</html>

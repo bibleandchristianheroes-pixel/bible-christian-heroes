@@ -1,0 +1,1210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bible and Christian Heroes</title>
+<meta name="description" content="Saints of the day, Bible heroes, free and paid Catholic children’s books, apps, games, read-aloud stories, the daily Rosary and prayers for families.">
+<meta property="og:title" content="Bible and Christian Heroes">
+<meta property="og:description" content="A saint for every day, Bible heroes, books, games, stories and the daily Rosary for Catholic families.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect x='1' y='1' width='32' height='32' rx='9' fill='%232447A1'/%3E%3Cpath d='M17 6v22M9 13h16' stroke='%23F3D78A' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='17' cy='13' r='3' fill='%23B0233A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700;800&family=Alegreya:ital,wght@1,500&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: a chapel of panes. Sticky nav, a rose-window hero for today's saint, then sections set like stained-glass panels joined by dark "lead" lines. Accent follows the liturgical season. */
+:root{
+  --bg:#F1F4FA; --surface:#FFFFFF; --surface-2:#E6ECF7; --ink:#152245; --muted:#53607D;
+  --lead:#1B2440; --gold:#9A6A00; --gold-soft:#F6E7BF; --ruby:#B0233A; --lapis:#2447A1; --emerald:#1C7650; --violet:#6A3E9E;
+  --season:#1C7650; --season-soft:#DDF0E6; --on-season:#FFFFFF;
+  --display:"Alegreya SC", "Palatino Linotype", Palatino, Georgia, serif;
+  --quote:"Alegreya", Georgia, serif;
+  --body:"Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r:14px; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1226; --surface:#141C36; --surface-2:#1C2645; --ink:#EEF1FA; --muted:#A7B0CB;
+  --lead:#04070F; --gold:#E9BC52; --gold-soft:#3A3014; --ruby:#F2738A; --lapis:#86A6FF; --emerald:#5FC898; --violet:#BBA0F2;
+  --season:#5FC898; --season-soft:#173A2C; --on-season:#0C1226; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1226; --surface:#141C36; --surface-2:#1C2645; --ink:#EEF1FA; --muted:#A7B0CB;
+  --lead:#04070F; --gold:#E9BC52; --gold-soft:#3A3014; --ruby:#F2738A; --lapis:#86A6FF; --emerald:#5FC898; --violet:#BBA0F2;
+  --season:#5FC898; --season-soft:#173A2C; --on-season:#0C1226; color-scheme:dark}
+:root[data-season="violet"]{--season:#6A3E9E;--season-soft:#ECE3F7}
+:root[data-season="white"]{--season:#9A6A00;--season-soft:#F6E7BF}
+:root[data-season="rose"]{--season:#B24C7A;--season-soft:#F8E1EC}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"])[data-season="violet"]{--season:#BBA0F2;--season-soft:#2B2145}
+  :root:not([data-theme="light"])[data-season="white"]{--season:#E9BC52;--season-soft:#3A3014}
+  :root:not([data-theme="light"])[data-season="rose"]{--season:#F09CC0;--season-soft:#3D1F2E}}
+:root[data-theme="dark"][data-season="violet"]{--season:#BBA0F2;--season-soft:#2B2145}
+:root[data-theme="dark"][data-season="white"]{--season:#E9BC52;--season-soft:#3A3014}
+:root[data-theme="dark"][data-season="rose"]{--season:#F09CC0;--season-soft:#3D1F2E}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+a{color:var(--lapis);text-underline-offset:3px}
+a:hover{color:var(--ruby)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.9rem,4.5vw,2.7rem);font-weight:800}
+h3{font-size:1.3rem;font-weight:700}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+@media (max-width:480px){.wrap{padding-inline:16px}}
+.eyebrow{font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--season)}
+.lede{color:var(--muted);max-width:62ch;font-size:1.05rem}
+button{font:inherit;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--lead);background:var(--surface);color:var(--ink);padding:10px 18px;border-radius:999px;font-weight:800;font-size:.95rem;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px);color:var(--ink)}
+.btn.primary{background:var(--season);color:var(--on-season);border-color:var(--season)}
+.btn.primary:hover{color:var(--on-season)}
+.btn.yt{background:#C4302B;border-color:#C4302B;color:#fff}
+.btn.yt:hover{color:#fff}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+.chip{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--muted)}
+.chip.free{background:var(--season-soft);color:var(--season)}
+.chip.paid{background:var(--gold-soft);color:var(--gold)}
+.chip.red{color:var(--ruby)}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:2px solid var(--lead)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex-shrink:0}
+.brand b{font-family:var(--display);font-size:1.15rem;line-height:1}
+.brand small{display:block;font-size:.68rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:700;font-size:.92rem;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.theme-btn{flex-shrink:0;border:2px solid var(--lead);background:var(--surface);color:var(--ink);width:40px;height:40px;border-radius:50%;display:grid;place-items:center}
+@media (max-width:760px){.brand small{display:none}.brand b{font-size:1rem}}
+.season-strip{background:var(--season);color:var(--on-season);font-weight:700;font-size:.9rem}
+.season-strip .wrap{display:flex;gap:10px 20px;flex-wrap:wrap;padding-block:6px;justify-content:space-between}
+.announce{background:var(--gold-soft);color:var(--ink);font-weight:700;border-bottom:2px solid var(--lead)}
+.announce .wrap{padding-block:10px}
+
+.hero{padding-block:48px 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-text{min-width:0;display:flex;flex-direction:column;gap:16px}
+.hero h1{font-size:clamp(2.5rem,6.5vw,4.6rem);font-weight:800;letter-spacing:-.01em}
+.hero .date-line{font-weight:800;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hero .blurb{font-size:1.2rem;max-width:40ch}
+.hero .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.rose{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
+.rose canvas{width:100%;height:100%;display:block}
+.rose .center{position:absolute;inset:34%;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;color:#FFF8E6;font-size:clamp(.9rem,2.4vw,1.25rem);line-height:1.1;padding:6px;text-shadow:0 1px 3px rgba(0,0,0,.55)}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.rose{max-width:320px;order:-1}}
+
+section.block{padding-block:64px;border-top:2px solid var(--lead)}
+section.alt{background:var(--surface-2)}
+.head{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.diamond{width:14px;height:14px;transform:rotate(45deg);background:var(--season);border:2px solid var(--lead);display:inline-block;margin-right:10px;vertical-align:middle;position:relative;top:-4px}
+
+/* Watch */
+.channels{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:900px){.channels{grid-template-columns:1fr}}
+.channel{border:3px solid var(--lead);border-radius:20px;background:var(--surface);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.channel .ch-head{padding:20px 20px 14px;display:flex;flex-direction:column;gap:8px}
+.channel .ch-head h3{font-size:1.6rem}
+.channel .ch-head p{color:var(--muted);font-size:.95rem}
+.ch-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.player{aspect-ratio:16/9;width:100%;background:#000;border-block:2px solid var(--lead);position:relative}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.player .poster{position:absolute;inset:0;display:grid;place-items:center;color:#fff;text-decoration:none;background:linear-gradient(135deg,#1B2440,#2447A1);font-weight:800;text-align:center;padding:20px}
+.player .poster span{display:flex;flex-direction:column;align-items:center;gap:10px}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 20px 20px}
+@media (max-width:480px){.vids{grid-template-columns:repeat(2,1fr)}}
+.vid{background:none;border:0;padding:0;text-align:left;color:var(--ink);display:flex;flex-direction:column;gap:6px;min-width:0}
+.vid img{aspect-ratio:16/9;object-fit:cover;width:100%;border-radius:8px;border:2px solid var(--lead);background:var(--surface-2)}
+.vid span{font-size:.78rem;font-weight:700;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vid[aria-current="true"] img{border-color:var(--season);outline:3px solid var(--season)}
+
+/* Saints */
+.cal-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.months{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;min-width:0;max-width:100%}
+.months button,.pick button{border:2px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;font-weight:800;font-size:.85rem;white-space:nowrap}
+.months button[aria-pressed="true"],.pick button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.search{flex:1;min-width:200px;max-width:340px;border:2px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font:inherit}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.day{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;text-align:left;border:2px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:12px;padding:10px 12px}
+.day:hover{background:var(--season-soft)}
+.day .num{font-family:var(--display);font-weight:800;font-size:1.5rem;line-height:1;text-align:center;border-radius:8px;padding:6px 0;color:#fff}
+.day .num.w{background:#B8892A}.day .num.r{background:#B0233A}.day .num.p{background:#5B3E8F}
+.day .nm{font-weight:800;line-height:1.25;font-size:.95rem}
+.day .rk{font-size:.75rem;color:var(--muted);font-weight:700}
+.day.today{outline:3px solid var(--season);outline-offset:2px}
+@media (max-width:480px){.days{gap:8px}.day{padding:8px 10px}}
+.cal-note{margin-top:16px;color:var(--muted);font-size:.85rem;max-width:80ch}
+.empty{color:var(--muted);padding:20px 0}
+
+.heroes{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.hcard{border:2px solid var(--lead);border-radius:var(--r);background:var(--surface);color:var(--ink);text-align:left;padding:0;overflow:hidden;display:flex;flex-direction:column;min-height:230px}
+.hcard .pane{height:70px;display:grid;place-items:center;border-bottom:2px solid var(--lead);color:#fff;font-family:var(--display);font-weight:800;font-size:2rem}
+.hcard .pane svg{width:44px;height:44px}
+.hcard .in{padding:14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.hcard .virtue{font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--season)}
+.hcard .ref{font-size:.82rem;color:var(--muted);font-weight:700;margin-top:auto}
+.hcard .back{display:none}
+.hcard[aria-expanded="true"] .front{display:none}
+.hcard[aria-expanded="true"] .back{display:block}
+.hcard .tap{font-size:.78rem;color:var(--muted);font-weight:700}
+
+.shelf-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:8px 0 16px}
+.shelf-title h3{font-size:1.5rem}
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:40px}
+.book{display:grid;grid-template-columns:62px 1fr;gap:14px;border:2px solid var(--lead);background:var(--surface);border-radius:var(--r);padding:14px;min-width:0}
+.spine{border-radius:4px 8px 8px 4px;border:2px solid var(--lead);height:92px;position:relative;display:grid;place-items:center;overflow:hidden}
+.spine::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:rgba(0,0,0,.25)}
+.spine span{font-family:var(--display);font-weight:800;color:#fff;font-size:1.4rem;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.spine img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.book .meta{min-width:0;display:flex;flex-direction:column;gap:5px}
+.book b{line-height:1.25}
+.book .by{font-size:.85rem;color:var(--muted)}
+.book p{font-size:.9rem}
+.book .links{display:flex;gap:12px;flex-wrap:wrap;font-size:.88rem;font-weight:800;margin-top:auto;align-items:center}
+
+.feature{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;border:3px solid var(--lead);border-radius:22px;background:var(--surface);padding:28px;margin-bottom:28px}
+.app-icon{width:120px;height:120px;border-radius:28px;border:3px solid var(--lead);overflow:hidden}
+.app-icon svg{width:100%;height:100%;display:block}
+.feature .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
+.feature h3{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.feature ul{margin:0;padding-left:20px;display:grid;gap:4px}
+@media (max-width:640px){.feature{grid-template-columns:1fr;padding:20px}.app-icon{width:90px;height:90px}}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.app{border:2px solid var(--lead);border-radius:var(--r);background:var(--surface);padding:16px;display:flex;flex-direction:column;gap:8px}
+.app .row{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.app p{font-size:.92rem;color:var(--muted)}
+.app .for{font-size:.8rem;font-weight:800;color:var(--ink)}
+.app .go{font-weight:800;font-size:.9rem;margin-top:auto}
+.app .go.plain{color:var(--muted);font-size:.8rem}
+.row-btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+/* Games */
+.launcher{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:20px}
+.gtile{border:2px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:14px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:6px}
+.gtile svg{width:34px;height:34px}
+.gtile b{font-family:var(--display);font-size:1.15rem;line-height:1.1}
+.gtile small{color:var(--muted);font-size:.78rem;font-weight:700;line-height:1.3}
+.gtile[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.gtile[aria-pressed="true"] small{color:var(--bg);opacity:.8}
+.panel{border:3px solid var(--lead);border-radius:22px;background:var(--surface);padding:24px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.panel h3{font-size:1.8rem}
+.panel .sub{color:var(--muted)}
+.pick{display:flex;gap:6px;flex-wrap:wrap}
+.score{font-weight:800;font-size:.88rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.riddle{background:var(--surface-2);border-radius:12px;padding:16px;font-family:var(--quote);font-style:italic;font-size:1.2rem}
+.opts{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.opt{border:2px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:10px;padding:11px 14px;text-align:left;font-weight:700}
+.opt.right{background:var(--emerald);color:var(--bg);border-color:var(--emerald)}
+.opt.wrong{background:var(--ruby);color:var(--bg);border-color:var(--ruby)}
+.feedback{min-height:1.6em;font-weight:800}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:760px}
+@media (max-width:560px){.mem.n12{grid-template-columns:repeat(3,1fr)}.mem{gap:6px}}
+.mcard{aspect-ratio:5/4;border:2px solid var(--lead);border-radius:12px;background:var(--lapis);color:#fff;font-weight:800;font-size:.85rem;line-height:1.2;padding:6px;display:grid;place-items:center;text-align:center;transition:transform .2s;overflow:hidden;word-break:break-word}
+@media (max-width:560px){.mcard{font-size:.72rem;padding:4px;aspect-ratio:4/5}}
+.mcard.back{background-color:#2447A1;background-image:linear-gradient(45deg,rgba(255,255,255,.14) 25%,transparent 25% 75%,rgba(255,255,255,.14) 75%),linear-gradient(45deg,rgba(255,255,255,.14) 25%,transparent 25% 75%,rgba(255,255,255,.14) 75%);background-size:18px 18px;background-position:0 0,9px 9px}
+.mcard.up.nm{background:var(--surface);color:var(--ink);font-family:var(--display);font-size:1.05rem}
+.mcard.up.cl{background:var(--gold-soft);color:var(--ink);font-weight:700}
+@media (max-width:560px){.mcard.up.nm{font-size:.85rem}}
+.mcard.up.done{background:var(--season-soft);color:var(--ink);border-color:var(--season)}
+.mcard:hover{transform:translateY(-2px)}
+.flash{border:2px solid var(--lead);border-radius:14px;min-height:190px;background:var(--surface-2);color:var(--ink);padding:20px;display:flex;flex-direction:column;justify-content:center;gap:10px;text-align:left;width:100%;max-width:640px}
+.flash .q{font-family:var(--display);font-size:1.4rem;font-weight:700}
+.flash .hint{font-size:.8rem;color:var(--muted);font-weight:700}
+.ws-wrap{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+@media (max-width:700px){.ws-wrap{grid-template-columns:1fr}}
+.ws{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;width:min(100%,440px);touch-action:manipulation}
+.ws button{aspect-ratio:1;border:1.5px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:6px;font-weight:800;font-size:clamp(.8rem,3.4vw,1.05rem);padding:0}
+.ws button.sel{background:var(--gold);color:var(--bg)}
+.ws button.found{background:var(--season-soft);color:var(--season);border-color:var(--season)}
+.wlist{display:flex;flex-wrap:wrap;gap:6px}
+.wlist span{border:2px solid var(--lead);border-radius:999px;padding:3px 12px;font-weight:800;font-size:.85rem}
+.wlist span.got{text-decoration:line-through;opacity:.5}
+.tiles{display:flex;flex-wrap:wrap;gap:8px}
+.tile{border:2px solid var(--lead);background:var(--gold-soft);color:var(--ink);border-radius:10px;min-width:46px;height:50px;padding:0 12px;font-family:var(--display);font-weight:800;font-size:1.3rem}
+.tile.word{font-family:var(--body);font-size:1rem;height:44px}
+.tile[disabled]{opacity:.25;cursor:default}
+.tile.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.slots{display:flex;flex-wrap:wrap;gap:8px;min-height:54px}
+.slot{width:46px;height:50px;border-bottom:4px solid var(--lead);display:grid;place-items:end center;font-family:var(--display);font-weight:800;font-size:1.4rem;padding-bottom:4px}
+.built{font-family:var(--quote);font-style:italic;font-size:1.35rem;min-height:2.2em;background:var(--surface-2);border-radius:12px;padding:12px 16px}
+.clue{font-weight:700;color:var(--muted)}
+.win{background:var(--season-soft);color:var(--ink);border-radius:12px;padding:14px 16px;font-weight:800}
+
+.stories{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.story{border:2px solid var(--lead);border-radius:var(--r);background:var(--surface);padding:18px;display:flex;flex-direction:column;gap:8px;text-align:left;color:var(--ink)}
+.story .age{font-size:.78rem;font-weight:800;color:var(--season);letter-spacing:.08em;text-transform:uppercase}
+.story p{font-size:.92rem;color:var(--muted)}
+.story .go{margin-top:auto;font-weight:800;color:var(--lapis)}
+dialog{border:3px solid var(--lead);border-radius:20px;background:var(--surface);color:var(--ink);max-width:640px;width:calc(100% - 32px);padding:0;max-height:86vh}
+dialog::backdrop{background:rgba(5,8,20,.6)}
+.dlg{padding:26px;display:flex;flex-direction:column;gap:14px;overflow:auto;max-height:86vh}
+.dlg h3{font-size:1.8rem}
+.dlg .storytext p{margin-bottom:12px;font-size:1.08rem;line-height:1.75}
+.dlg .storytext p:first-child::first-letter{font-family:var(--display);font-size:3.2em;float:left;line-height:.85;padding:4px 8px 0 0;color:var(--ruby)}
+.prayers{display:grid;grid-template-columns:240px 1fr;gap:20px;align-items:start}
+@media (max-width:720px){.prayers{grid-template-columns:1fr}}
+.plist{display:flex;flex-direction:column;gap:6px}
+@media (max-width:720px){.plist{flex-direction:row;overflow-x:auto;padding-bottom:4px}}
+.plist button{border:2px solid var(--lead);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 12px;text-align:left;font-weight:800;white-space:nowrap}
+.plist button[aria-pressed="true"]{background:var(--season);color:var(--on-season);border-color:var(--season)}
+.ptext{border:2px solid var(--lead);border-radius:18px;background:var(--surface);padding:26px;min-width:0}
+.ptext h3{font-size:1.7rem;margin-bottom:12px}
+.ptext .body{font-family:var(--quote);font-style:italic;font-size:1.25rem;line-height:1.7;max-width:56ch;white-space:pre-line}
+.ptext .tip{margin-top:14px;color:var(--muted);font-size:.92rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.res{border:2px solid var(--lead);border-radius:var(--r);background:var(--surface);padding:18px;display:flex;flex-direction:column;gap:6px}
+.res p{color:var(--muted);font-size:.92rem}
+.res a{font-weight:800;margin-top:auto}
+footer{border-top:2px solid var(--lead);background:var(--lead);color:#D9DFF0;padding-block:44px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+footer h3{color:#fff;font-size:1.6rem;margin-bottom:8px}
+footer p{color:#B7C0DA;font-size:.92rem;max-width:56ch}
+footer a{color:#F3D78A}
+footer .verse{font-family:var(--quote);font-style:italic;color:#F3D78A;font-size:1.1rem}
+@media (max-width:720px){footer .wrap{grid-template-columns:1fr}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#today" aria-label="Bible and Christian Heroes home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="#2447A1" stroke="#1B2440" stroke-width="2"/><path d="M17 6v22M9 13h16" stroke="#F3D78A" stroke-width="4" stroke-linecap="round"/><circle cx="17" cy="13" r="3" fill="#B0233A"/></svg>
+      <span><b id="siteName">Bible &amp; Christian Heroes</b><small id="siteTag">Faith for little &amp; big pilgrims</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#today">Today</a><a href="#watch">Watch</a><a href="#saints">Saints</a><a href="#heroes">Bible Heroes</a><a href="#games">Games</a><a href="#books">Books</a><a href="#apps">Apps</a><a href="#stories">Stories</a><a href="#prayers">Prayers</a><a href="#grownups">Grown-ups</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<div class="season-strip" role="note"><div class="wrap"><span id="seasonName">Ordinary Time</span><span id="seasonTip">Green means growing in faith.</span></div></div>
+<div class="announce" id="announce" hidden><div class="wrap" id="announceText"></div></div>
+
+<main>
+<section class="hero" id="today">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="date-line"><span id="heroDate">Today</span><span class="chip" id="heroRank">Memorial</span></div>
+      <p class="eyebrow">Hero of the day</p>
+      <h1 id="heroName">Saint of the day</h1>
+      <p class="blurb" id="heroBlurb"></p>
+      <div class="actions">
+        <button class="btn primary" id="readHero"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>Read it to me</button>
+        <button class="btn" id="prevDay" aria-label="Previous day">&larr; Yesterday</button>
+        <button class="btn" id="nextDay" aria-label="Next day">Tomorrow &rarr;</button>
+        <button class="btn" id="backToday" hidden>Back to today</button>
+      </div>
+    </div>
+    <div class="rose" aria-hidden="true"><canvas id="rose" width="920" height="920"></canvas><div class="center" id="roseLabel">Pray for us</div></div>
+  </div>
+</section>
+
+<section class="block alt" id="watch">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>Watch &amp; pray</p>
+      <h2>Our YouTube channels</h2>
+      <p class="lede">Pray the Rosary together each day, and watch Bible stories come to life. New videos appear here automatically.</p>
+    </div>
+    <div class="channels" id="channels"></div>
+  </div>
+</section>
+
+<section class="block" id="saints">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>A saint for every day</p>
+      <h2>The Saints Calendar</h2>
+      <p class="lede">Pick a month, tap a day, and meet a friend of God. Looking for a patron? Try searching “teachers”, “animals”, “students” or “music”.</p>
+    </div>
+    <div class="cal-tools">
+      <div class="months" id="months" role="group" aria-label="Choose a month"></div>
+      <label class="sr" for="saintSearch">Search saints</label>
+      <input class="search" id="saintSearch" type="search" placeholder="Search saints or patrons…">
+    </div>
+    <div class="days" id="days"></div>
+    <p class="cal-note">Colours show the liturgical colour: gold for white feasts, red for martyrs and apostles. Days follow the General Roman Calendar, with a few beloved North American and modern saints on open days (marked “Remembered”). Moveable feasts like Easter, Pentecost and Christ the King change every year, so check your parish calendar too.</p>
+  </div>
+</section>
+
+<section class="block alt" id="heroes">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>The Hall of Heroes</p>
+      <h2>Heroes of the Bible</h2>
+      <p class="lede">Every hero had a superpower from God. Tap a card to find out what we can learn from them.</p>
+    </div>
+    <div class="heroes" id="heroGrid"></div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>Play &amp; learn</p>
+      <h2>Games</h2>
+      <p class="lede">Pick a game. The match games have new decks every time you play. No sign-up, no ads.</p>
+    </div>
+    <div class="launcher" id="launcher" role="group" aria-label="Choose a game"></div>
+    <div class="panel" id="gamePanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="books">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>The Library</p>
+      <h2>Books for the whole family</h2>
+      <p class="lede">Free classics you can read tonight, our own books, and Catholic favourites worth buying for the family shelf.</p>
+    </div>
+    <div class="shelf-title"><h3>Bible &amp; Christian Heroes originals</h3><span class="chip">Our books</span></div>
+    <div class="books" id="ourBooks"></div>
+    <div class="shelf-title"><h3>Free to read</h3><span class="chip free">Free</span></div>
+    <div class="books" id="freeBooks"></div>
+    <div class="shelf-title"><h3>Worth buying</h3><span class="chip paid">Paid</span></div>
+    <div class="books" id="paidBooks"></div>
+  </div>
+</section>
+
+<section class="block" id="apps">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>Apps</p>
+      <h2>Faith in your pocket</h2>
+    </div>
+    <article class="feature">
+      <div class="app-icon" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><rect width="120" height="120" fill="#2447A1"/><circle cx="60" cy="60" r="38" fill="#F3D78A" stroke="#1B2440" stroke-width="4"/><circle cx="60" cy="60" r="28" fill="none" stroke="#9A6A00" stroke-width="3" stroke-dasharray="4 5"/><path d="M60 40v40M46 54h28" stroke="#B0233A" stroke-width="7" stroke-linecap="round"/><path d="M14 100l10-10 10 10-10 10z" fill="#5FC898" stroke="#1B2440" stroke-width="3"/><path d="M86 18l8-8 8 8-8 8z" fill="#F2738A" stroke="#1B2440" stroke-width="3"/></svg>
+      </div>
+      <div class="txt">
+        <p class="eyebrow" id="appStatus">Our own app · Coming soon</p>
+        <h3 id="appName">Penny Catechism Quest</h3>
+        <p>The classic <em>Penny Catechism</em> (A Catechism of Christian Doctrine), turned into a quest. Answer questions, earn coins, and climb from Pilgrim to Saint. Made for children, for grown-ups going deeper, and for anyone preparing to join the Church through RCIA/OCIA.</p>
+        <ul>
+          <li>Bite-size lessons drawn from the catechism’s 370 questions and answers</li>
+          <li>Kid mode and adult mode, with read-aloud</li>
+          <li>Plays in the browser and installs on your phone</li>
+        </ul>
+        <div class="row-btns" id="appBtns"></div>
+      </div>
+    </article>
+    <div class="shelf-title"><h3>Apps we recommend</h3></div>
+    <div class="apps" id="appList"></div>
+    <p class="cal-note">Parents: please preview any app before handing it to young children. Prices and features change, so check the store listing.</p>
+  </div>
+</section>
+
+<section class="block alt" id="stories">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>Free read-alouds</p>
+      <h2>Story Time</h2>
+      <p class="lede">Short original stories for bedtime or class. Read them together, or press “Read it to me”.</p>
+    </div>
+    <div class="stories" id="storyList"></div>
+  </div>
+</section>
+<dialog id="storyDlg" aria-labelledby="dlgTitle">
+  <div class="dlg">
+    <p class="eyebrow" id="dlgAge"></p>
+    <h3 id="dlgTitle"></h3>
+    <div class="storytext" id="dlgBody"></div>
+    <div class="row-btns"><button class="btn primary" id="dlgRead">Read it to me</button><button class="btn" id="dlgClose">Close</button></div>
+  </div>
+</dialog>
+
+<section class="block" id="prayers">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>Prayer corner</p>
+      <h2>Prayers to know by heart</h2>
+    </div>
+    <div class="prayers">
+      <div class="plist" id="plist" role="group" aria-label="Choose a prayer"></div>
+      <div class="ptext"><h3 id="pTitle"></h3><div class="body" id="pBody"></div><p class="tip" id="pTip"></p><div class="row-btns" style="margin-top:16px"><button class="btn" id="pRead">Pray it aloud</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="grownups">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="diamond"></span>For parents, catechists &amp; RCIA</p>
+      <h2>Grown-ups’ corner</h2>
+      <p class="lede">Trusted sources for going deeper yourself, and for answering the big questions children ask.</p>
+    </div>
+    <div class="grid2" id="resList"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Bible &amp; Christian Heroes</h3>
+      <p>Stories, saints, games and apps that help children and grown-ups fall in love with Jesus and His friends.</p>
+      <p class="verse" style="margin-top:14px">“Let the children come to me, and do not hinder them.” Mark 10:14</p>
+      <p id="contactLine" style="margin-top:14px" hidden></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <h3 style="font-size:1.2rem">Support the mission</h3>
+      <p>Your gifts help us make more free books, stories and games.</p>
+      <div id="supportBox"></div>
+      <p style="font-size:.8rem">Book and app links go to publisher or official sites. We are not affiliated with them.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var S = [
+/* Jan */[
+"Mary, Mother of God|S|w|Jesus’ mother is our mother too. We start the new year in her loving care.",
+"Sts Basil the Great & Gregory Nazianzen|M|w|Two best friends who became bishops, explained the Holy Trinity, and fed the hungry.",
+"The Most Holy Name of Jesus|O|w|The name Jesus means “God saves.” Saying it with love is a tiny prayer.",
+"St Elizabeth Ann Seton|C|w|A mom from New York who started Catholic schools. The first saint born in the United States.",
+"St John Neumann|C|w|A bishop of Philadelphia who walked miles to visit families and built dozens of schools.",
+"The Epiphany of the Lord|S|w|Wise Men followed a star to find baby Jesus and gave Him gold, frankincense and myrrh.",
+"St Raymond of Penyafort|O|w|A wise priest who helped organize the Church’s laws and lived to almost 100.",
+"St Severinus of Noricum|C|w|A monk in old Austria who shared food and hope with people during wartime.",
+"St Adrian of Canterbury|C|w|Born in Africa, he became a great teacher of children and monks in England.",
+"St Gregory of Nyssa|C|w|Brother of St Basil. He wrote that knowing God is an adventure that never ends.",
+"St Theodosius the Cenobite|C|w|He built a monastery with a hospital, a home for the elderly and a guesthouse for travellers.",
+"St Marguerite Bourgeoys|C|w|Canada’s first teacher in Montreal. She opened a school in a stable!",
+"St Hilary of Poitiers|O|w|A bishop who bravely taught that Jesus is truly God, even when it was unpopular.",
+"St Macrina the Elder|C|w|The grandmother of St Basil and St Gregory. She taught them to love God.",
+"St Paul the First Hermit|C|w|He prayed alone in the desert, and the story says a raven brought him bread each day.",
+"St Marcellus I|C|r|A pope who welcomed sinners back with mercy and suffered for the faith.",
+"St Anthony of Egypt|M|w|He sold everything, lived in the desert to pray, and became the father of monks.",
+"St Margaret of Hungary|C|w|A princess who chose to serve the poor and the sick with her own hands.",
+"St Wulfstan|C|w|A bishop in England who spoke up for people being sold as slaves.",
+"Sts Fabian & Sebastian|O|r|Sebastian was a Roman soldier who stayed brave for Jesus. Patron of athletes.",
+"St Agnes|M|r|A brave girl of about twelve who would not give up Jesus. Her sign is a lamb.",
+"St Vincent of Saragossa|O|r|A deacon from Spain who stayed joyful and faithful even in prison.",
+"St Marianne Cope|C|w|A sister who sailed to Hawaii to care for people with leprosy whom others feared.",
+"St Francis de Sales|M|w|A gentle bishop who slipped little notes about God under doors. Patron of writers.",
+"The Conversion of St Paul|F|w|Saul met Jesus in a bright light on the road to Damascus and became Paul the Apostle.",
+"Sts Timothy & Titus|M|w|Young helpers of St Paul who became bishops and led the first churches.",
+"St Angela Merici|O|w|She gathered women to teach girls about God, long before most girls went to school.",
+"St Thomas Aquinas|M|w|Classmates called him “the dumb ox”, but he became one of the Church’s greatest teachers.",
+"St Gildas the Wise|C|w|A Welsh monk and writer who called his people back to God.",
+"St Hyacintha Mariscotti|C|w|She learned to be humble and then spent her life helping the sick and the elderly.",
+"St John Bosco|M|w|He loved boys who had no home, and taught them with games, music and magic tricks."],
+/* Feb */[
+"St Brigid of Kildare|C|w|A generous abbess of Ireland. Children still weave her little cross from rushes.",
+"The Presentation of the Lord|F|w|Mary and Joseph bring baby Jesus to the Temple. Old Simeon calls Him a light for all.",
+"St Blaise|O|r|A bishop who saved a boy from choking. Today throats are blessed with crossed candles.",
+"St Joan of Valois|C|w|A French princess with a hard life who chose to love and founded an order of sisters.",
+"St Agatha|M|r|A brave young martyr from Sicily. Patron of nurses and of people with illness.",
+"St Paul Miki & Companions|M|r|Twenty-six Christians in Japan, including boys, who forgave and sang on the way to die.",
+"St Richard the Pilgrim|C|w|An English father who set out with his children on a pilgrimage to Rome.",
+"St Josephine Bakhita|O|w|Kidnapped as a child in Sudan and enslaved, she found freedom and joy in Jesus.",
+"St Apollonia|C|r|A brave woman of Alexandria. Patron of dentists and toothaches!",
+"St Scholastica|M|w|St Benedict’s twin sister. She prayed for a storm so they could talk about heaven longer.",
+"Our Lady of Lourdes|O|w|Mary appeared to young Bernadette in France. Many sick people pray there today.",
+"St Benedict of Aniane|C|w|A soldier who became a monk and helped monasteries pray and work well.",
+"St Catherine de’ Ricci|C|w|A cheerful nun people came to for advice, from poor folk to princes.",
+"Sts Cyril & Methodius|M|w|Brothers who invented an alphabet so Slavic people could read the Bible.",
+"St Claude de la Colombière|C|w|A Jesuit priest who helped spread love for the Sacred Heart of Jesus.",
+"St Onesimus|C|w|A runaway slave who met St Paul and became a brother in Christ (Letter to Philemon).",
+"Seven Holy Founders of the Servites|O|w|Seven friends from Florence who left riches to serve Mary and the poor.",
+"Blessed Fra Angelico|C|w|A friar who painted heaven so beautifully that his art is still a prayer. Patron of artists.",
+"St Conrad of Piacenza|C|w|After causing a big fire by accident, he made it right and became a holy hermit.",
+"Sts Francisco & Jacinta Marto|C|w|Two little shepherds of Fatima who saw Mary and prayed hard for sinners.",
+"St Peter Damian|O|w|A monk and bishop who called everyone, even popes, to be holy.",
+"The Chair of St Peter|F|w|We thank God for St Peter and the popes who lead the Church after him.",
+"St Polycarp|M|r|A disciple of St John. At 86 he said he would never deny the King who saved him.",
+"St Ethelbert of Kent|C|w|An English king who welcomed missionaries and was baptized.",
+"St Walburga|C|w|An English nun who travelled to Germany to teach the faith and heal the sick.",
+"St Porphyry of Gaza|C|w|A bishop who cared for the poor and built a church for his city.",
+"St Gregory of Narek|O|w|An Armenian monk-poet. His prayers are so beautiful he was named a Doctor of the Church.",
+"St Oswald of Worcester|C|w|A bishop who washed the feet of twelve poor people every day.",
+"St John Cassian|C|w|A monk who wrote down the wisdom of the desert fathers for others to learn."],
+/* Mar */[
+"St David of Wales|C|w|Patron of Wales. His last words: “Be joyful, keep the faith, and do the little things.”",
+"St Chad|C|w|A humble English bishop who walked everywhere so he could talk with people on the way.",
+"St Katharine Drexel|C|w|A rich young woman who gave her fortune to build schools for Black and Native American children.",
+"St Casimir|O|w|A prince of Poland who loved the poor and loved praying to Mary.",
+"St John Joseph of the Cross|C|w|A kind friar who always took the hardest jobs so others did not have to.",
+"St Colette|C|w|A carpenter’s daughter who renewed the Poor Clares. Animals and birds loved her.",
+"Sts Perpetua & Felicity|M|r|A young mother and her servant friend who stood together bravely for Jesus.",
+"St John of God|O|w|He started a hospital for the poor. Patron of hospitals, nurses and the sick.",
+"St Frances of Rome|O|w|A wife and mother who said: a married woman must leave God at the altar to find Him in housework.",
+"Forty Martyrs of Sebaste|C|r|Forty soldiers who stayed faithful together on a frozen lake.",
+"St Eulogius of Córdoba|C|r|A priest who loved books and encouraged Christians in hard times in Spain.",
+"St Seraphina|C|w|A young girl from Italy who stayed patient and kind through a long illness.",
+"St Euphrasia|C|w|A girl who gave away her riches to live a simple life of prayer.",
+"St Matilda|C|w|A queen of Germany famous for being generous to the poor.",
+"St Clement Mary Hofbauer|C|w|A baker’s son who became a priest and helped young people in Vienna.",
+"St Heribert|C|w|A bishop of Cologne who prayed for rain in a drought, and the rain came.",
+"St Patrick|O|w|Once a slave in Ireland, he went back as a missionary. He used a shamrock to teach about the Trinity.",
+"St Cyril of Jerusalem|O|w|A bishop who taught new Christians about the sacraments in clear, simple talks.",
+"St Joseph, Spouse of Mary|S|w|The quiet carpenter who protected Jesus and Mary. Patron of fathers and workers.",
+"St Cuthbert|C|w|A shepherd boy who became a bishop. Otters are said to have warmed his feet after he prayed in the sea.",
+"St Nicholas of Flüe|C|w|A Swiss farmer and father who became a hermit and a peacemaker for his country.",
+"St Lea of Rome|C|w|A widow who chose a simple life of prayer and service.",
+"St Turibius of Mogrovejo|O|w|A bishop in Peru who learned native languages to share the Gospel.",
+"St Óscar Romero|C|r|An archbishop in El Salvador who spoke up for the poor and was killed while saying Mass.",
+"The Annunciation of the Lord|S|w|The angel Gabriel asks Mary to be the mother of Jesus, and she says yes.",
+"St Ludger|C|w|A missionary bishop who taught the faith in Germany and the Netherlands.",
+"St Rupert of Salzburg|C|w|A bishop who helped start the city of Salzburg and its salt mines.",
+"St Tutilo|C|w|A monk who was a painter, poet and musician, all for the glory of God.",
+"St Berthold|C|w|One of the early leaders of the Carmelites on Mount Carmel.",
+"St John Climacus|C|w|He wrote “The Ladder”, a book about climbing toward God one step at a time.",
+"St Benjamin the Deacon|C|r|A deacon in Persia who kept preaching about Jesus even when told to stop."],
+/* Apr */[
+"St Hugh of Grenoble|C|w|A bishop who helped St Bruno build the first Carthusian monastery in the mountains.",
+"St Francis of Paola|O|w|A hermit known for great kindness to animals and to the poor. Patron of sailors.",
+"St Richard of Chichester|C|w|His prayer: “May I know you more clearly, love you more dearly, follow you more nearly.”",
+"St Isidore of Seville|O|w|He wrote an early encyclopedia of everything known. Patron of the internet!",
+"St Vincent Ferrer|O|w|A Spanish preacher who travelled all over Europe calling people back to God.",
+"St Notker the Stammerer|C|w|A monk who stuttered but wrote beautiful songs for the Church.",
+"St John Baptist de La Salle|M|w|He started schools for poor boys and trained teachers. Patron of teachers.",
+"St Julie Billiart|C|w|Unable to walk for years, she still taught children. Later she was healed and founded schools.",
+"St Casilda of Toledo|C|w|A Muslim princess who secretly brought bread to Christian prisoners.",
+"St Magdalene of Canossa|C|w|A noblewoman who left her palace to teach poor girls.",
+"St Stanislaus|O|r|A bishop of Kraków who bravely corrected a cruel king.",
+"St Teresa of the Andes|C|w|A joyful teenager from Chile who loved horses, sports and Jesus. She became a Carmelite.",
+"St Martin I|O|r|A pope who was sent far away but never stopped teaching the truth about Jesus.",
+"St Lidwina|C|w|After a fall while ice skating, she offered her suffering to God. Patron of skaters.",
+"St Paternus of Avranches|C|w|A monk and bishop in France who brought the Gospel to many villages.",
+"St Bernadette Soubirous|C|w|A poor, sickly girl to whom Mary appeared at Lourdes. She stayed humble all her life.",
+"St Kateri Tekakwitha|C|w|A Mohawk woman, the “Lily of the Mohawks”, who loved Jesus in the forests of New York and Canada.",
+"St Apollonius|C|r|A Roman senator who explained his faith beautifully before a judge.",
+"St Leo IX|C|w|A pope who travelled across Europe to help the Church become holy again.",
+"St Agnes of Montepulciano|C|w|She became a nun at nine and later led her convent with wisdom.",
+"St Anselm|O|w|A teacher who said: “I believe so that I may understand.”",
+"St Soter|C|r|An early pope known for sending help to Christians in need.",
+"St George|O|r|A soldier who gave his life for Jesus. Legends say he fought a dragon. Patron of England.",
+"St Fidelis of Sigmaringen|O|r|A lawyer for the poor who became a Capuchin preacher.",
+"St Mark the Evangelist|F|r|He wrote the shortest Gospel. His symbol is a lion.",
+"Our Lady of Good Counsel|C|w|Mary helps us make good choices. We can ask her for advice!",
+"St Zita|C|w|A housekeeper who prayed while she worked and shared her food with the poor.",
+"St Peter Chanel|O|r|The first martyr of Oceania, a gentle missionary on the island of Futuna.",
+"St Catherine of Siena|M|w|She told the pope to go back to Rome, and he did! Doctor of the Church.",
+"St Pius V|O|w|A pope who lived simply, cared for the poor and asked all to pray the Rosary."],
+/* May */[
+"St Joseph the Worker|O|w|Jesus learned carpentry from Joseph. All honest work can be offered to God.",
+"St Athanasius|M|w|A bishop sent away five times for teaching that Jesus is God. He never gave up.",
+"Sts Philip & James|F|r|Two of the twelve Apostles. Philip said, “Lord, show us the Father.”",
+"St Florian|C|r|A Roman soldier who was brave for Jesus. Patron of firefighters.",
+"St Hilary of Arles|C|w|A bishop who worked with his hands and gave what he earned to the poor.",
+"St Dominic Savio|C|w|A student of St John Bosco who said, “I’d rather die than commit a sin.” Patron of choirboys.",
+"St Rose Venerini|C|w|She opened free schools for girls in Italy.",
+"St Victor the Moor|C|r|A soldier from Africa who would not give up his faith.",
+"St Pachomius|C|w|He started the first monasteries where monks lived and prayed together.",
+"St Damien of Molokai|C|w|A priest who lived with people with leprosy in Hawaii and became one of them.",
+"St Ignatius of Laconi|C|w|A friar who went door to door collecting food for the poor for 40 years.",
+"Sts Nereus, Achilleus & Pancras|O|r|Pancras was a teenage martyr in Rome, brave beyond his years.",
+"Our Lady of Fatima|O|w|Mary appeared to three shepherd children in Portugal and asked for the daily Rosary.",
+"St Matthias|F|r|He was chosen to take the place of Judas among the Twelve Apostles.",
+"St Isidore the Farmer|C|w|A farmer who went to Mass every morning. Angels were said to plough while he prayed.",
+"St Brendan the Navigator|C|w|An Irish monk who sailed the open sea to find new lands for God.",
+"St Paschal Baylon|C|w|A shepherd boy who loved Jesus in the Eucharist more than anything.",
+"St John I|O|r|A pope who died in prison for the faith.",
+"St Dunstan|C|w|A bishop who was also a metalworker and musician. Patron of blacksmiths.",
+"St Bernardine of Siena|O|w|He held up a sign with the name of Jesus (IHS) when he preached.",
+"St Christopher Magallanes & Companions|O|r|Priests and laypeople of Mexico who died crying “Viva Cristo Rey!”",
+"St Rita of Cascia|O|w|A wife, mother and nun who forgave much. Patron of impossible causes.",
+"St John Baptist de Rossi|C|w|A priest in Rome who spent hours hearing confessions and helping the homeless.",
+"Our Lady, Help of Christians|C|w|St John Bosco’s favourite title for Mary.",
+"St Bede the Venerable|O|w|A monk who wrote the first history of England. Doctor of the Church.",
+"St Philip Neri|M|w|The joyful saint of Rome who loved jokes, music and young people.",
+"St Augustine of Canterbury|O|w|Sent by Pope Gregory to bring the Gospel to England.",
+"St Germanus of Paris|C|w|A bishop who used his money to free captives.",
+"St Paul VI|O|w|The pope who finished the Second Vatican Council and travelled the world.",
+"St Joan of Arc|C|r|A farm girl who obeyed God’s voice and led an army for France. Patron of soldiers.",
+"The Visitation|F|w|Mary visits her cousin Elizabeth, and baby John leaps for joy."],
+/* Jun */[
+"St Justin Martyr|M|r|A philosopher who searched for truth and found it in Jesus.",
+"Sts Marcellinus & Peter|O|r|A priest and an exorcist in Rome who gave their lives for Christ.",
+"St Charles Lwanga & Companions|M|r|Young men of Uganda who stayed pure and faithful to Jesus. Patron of African youth.",
+"St Francis Caracciolo|C|w|He loved to pray before the Blessed Sacrament.",
+"St Boniface|M|r|He cut down a tree people worshipped and taught the Germans about the true God.",
+"St Norbert|O|w|A rich young man who changed his life after nearly being struck by lightning.",
+"St Anne of St Bartholomew|C|w|A shepherd girl who became St Teresa of Ávila’s helper and friend.",
+"St Medard|C|w|A bishop in France. Legend says an eagle sheltered him from the rain.",
+"St Ephrem|O|w|A deacon called the “Harp of the Holy Spirit” for his hymns.",
+"St Landry of Paris|C|w|A bishop who sold the church’s treasures to feed the hungry.",
+"St Barnabas|M|r|His name means “son of encouragement.” He was St Paul’s missionary partner.",
+"St Gaspar Bertoni|C|w|A priest who started youth groups and taught that God is a loving Father.",
+"St Anthony of Padua|M|w|A great preacher. We ask his help to find lost things.",
+"St Methodius of Constantinople|C|w|He defended holy pictures (icons) in churches.",
+"St Germaine Cousin|C|w|A poor shepherd girl, treated unkindly, who still shared her bread with beggars.",
+"St John Francis Regis|C|w|A priest who walked through snowy mountains to reach far-away villages.",
+"St Albert Chmielowski|C|w|A painter who put down his brushes to care for the homeless of Kraków.",
+"St Gregory Barbarigo|C|w|A cardinal who loved books and founded a great school for priests.",
+"St Romuald|O|w|He founded monasteries where monks lived like hermits in prayer.",
+"St Alban|C|r|The first martyr of Britain. He hid a priest and took his place.",
+"St Aloysius Gonzaga|M|w|A young Jesuit who died caring for plague victims. Patron of young people.",
+"Sts John Fisher & Thomas More|O|r|A bishop and a lawyer who chose God over their king. “The king’s good servant, but God’s first.”",
+"St Joseph Cafasso|C|w|A priest who visited prisoners and helped young Don Bosco.",
+"The Nativity of St John the Baptist|S|w|God gives Elizabeth and Zechariah a son, who will prepare the way for Jesus.",
+"St William of Vercelli|C|w|He went on pilgrimage barefoot and founded a monastery.",
+"St Josemaría Escrivá|C|w|He taught that ordinary work and family life can make us saints.",
+"St Cyril of Alexandria|O|w|He taught that Mary is truly the Mother of God.",
+"St Irenaeus|M|w|“The glory of God is a human being fully alive.”",
+"Sts Peter & Paul|S|r|The fisherman and the tentmaker, two great Apostles who gave their lives in Rome.",
+"First Martyrs of the Church of Rome|O|r|The first Christians in Rome who gave their lives for Jesus."],
+/* Jul */[
+"St Junípero Serra|C|w|A Franciscan who walked up and down California founding missions.",
+"St Bernardino Realino|C|w|A lawyer turned Jesuit, beloved by the people of his town.",
+"St Thomas the Apostle|F|r|He doubted, then saw Jesus and said: “My Lord and my God!”",
+"St Pier Giorgio Frassati|C|w|A young hiker who loved mountains, friends and the poor. Canonized in 2025. Motto: “To the heights!”",
+"St Anthony Mary Zaccaria|O|w|A doctor who became a priest and taught people to love the Letters of St Paul.",
+"St Maria Goretti|O|r|A girl of eleven who forgave her attacker. He later became a changed man.",
+"St Willibald|C|w|An English pilgrim who travelled to the Holy Land and became a bishop in Germany.",
+"Sts Aquila & Priscilla|C|w|A married couple, tentmakers and friends of St Paul, who opened their home as a church.",
+"St Augustine Zhao Rong & Companions|O|r|120 martyrs of China, including children, who loved Jesus to the end.",
+"St Veronica Giuliani|C|w|A Capuchin nun who loved the Cross of Jesus deeply.",
+"St Benedict|M|w|Father of Western monks. His rule: “Pray and work.” Patron of Europe.",
+"Sts Louis & Zélie Martin|C|w|The holy parents of St Thérèse. A watchmaker and a lacemaker who made home a little church.",
+"St Henry|O|w|An emperor who used his power to help the Church and the poor.",
+"St Camillus de Lellis|O|w|A soldier who gambled everything away, then became a nurse to the sick.",
+"St Bonaventure|M|w|A Franciscan teacher who wrote the life of St Francis.",
+"Our Lady of Mount Carmel|O|w|Mary’s gift of the brown scapular reminds us she is always near.",
+"St Alexius|C|w|A rich man’s son who lived as a beggar to follow Jesus.",
+"St Frederick of Utrecht|C|w|A bishop who taught the faith to people in the Netherlands.",
+"St Macrina the Younger|C|w|Big sister of St Basil and St Gregory, and their teacher in holiness.",
+"St Apollinaris|O|r|First bishop of Ravenna, who suffered much for the Gospel.",
+"St Lawrence of Brindisi|O|w|He spoke many languages and once led an army carrying only a crucifix.",
+"St Mary Magdalene|F|w|The first to see the risen Jesus. She ran to tell the Apostles.",
+"St Bridget of Sweden|O|w|A mother of eight, pilgrim and mystic. Patron of Europe.",
+"St Sharbel Makhlouf|O|w|A hermit-monk from Lebanon known for deep prayer and many miracles.",
+"St James the Apostle|F|r|A fisherman and the first Apostle to die for Jesus. Pilgrims walk the Camino to his shrine.",
+"Sts Joachim & Anne|M|w|Mary’s parents and Jesus’ grandparents. Patrons of grandparents!",
+"St Pantaleon|C|r|A doctor who healed people for free. Patron of physicians.",
+"St Alphonsa of India|C|w|The first woman saint from India, who bore pain with a smile.",
+"Sts Martha, Mary & Lazarus|M|w|Jesus’ dear friends in Bethany. He raised Lazarus from the dead.",
+"St Peter Chrysologus|O|w|“Golden-worded Peter”, a bishop famous for short, beautiful sermons.",
+"St Ignatius of Loyola|M|w|A soldier hurt in battle who read about saints and founded the Jesuits."],
+/* Aug */[
+"St Alphonsus Liguori|M|w|A lawyer who became a priest and wrote prayers for ordinary people.",
+"St Peter Julian Eymard|O|w|He spread love for Jesus in the Eucharist and Eucharistic adoration.",
+"St Lydia|C|w|A seller of purple cloth and the first Christian in Europe (Acts 16).",
+"St John Vianney|M|w|A country priest who heard confessions up to 16 hours a day. Patron of priests.",
+"Dedication of the Basilica of St Mary Major|O|w|Legend says Mary marked the spot with snow in summer.",
+"The Transfiguration of the Lord|F|w|On the mountain, Jesus shines like the sun and the Father says, “Listen to Him.”",
+"St Cajetan|O|w|He started banks to help the poor borrow without being cheated.",
+"St Dominic|M|w|He founded the Order of Preachers and loved the Rosary.",
+"St Teresa Benedicta of the Cross|O|r|Edith Stein, a brilliant Jewish philosopher who became a Carmelite nun.",
+"St Lawrence|F|r|A deacon who called the poor “the treasures of the Church.”",
+"St Clare of Assisi|M|w|Friend of St Francis. She founded the Poor Clares. Patron of television!",
+"St Jane Frances de Chantal|O|w|A widow and mother who founded an order with St Francis de Sales.",
+"Sts Pontian & Hippolytus|O|r|A pope and a priest who became friends and martyrs together.",
+"St Maximilian Kolbe|M|r|A priest in Auschwitz who gave his life to save a father of a family.",
+"The Assumption of Mary|S|w|At the end of her life, Mary was taken body and soul into heaven.",
+"St Stephen of Hungary|O|w|The first king of Hungary, who built churches and cared for the poor.",
+"St Hyacinth|C|w|A Dominican missionary. Legend says he carried a statue of Mary out of a burning church.",
+"St Helena|C|w|Mother of Emperor Constantine. She searched for the true Cross in Jerusalem.",
+"St John Eudes|O|w|He helped spread devotion to the Hearts of Jesus and Mary.",
+"St Bernard of Clairvaux|M|w|A monk with a voice “sweet as honey”. Patron of beekeepers.",
+"St Pius X|M|w|The pope who let young children receive Holy Communion.",
+"The Queenship of Mary|M|w|Jesus is King, and His mother is Queen of heaven and earth.",
+"St Rose of Lima|O|w|The first saint of the Americas, who grew flowers to help her family.",
+"St Bartholomew|F|r|An Apostle Jesus called “a man with no deceit”.",
+"St Louis of France|O|w|A king who fed the poor at his own table.",
+"St Mariam Baouardy|C|w|“The Little Arab”, a Carmelite from Galilee full of love for the Holy Spirit.",
+"St Monica|M|w|She prayed for her son Augustine for years, and he became a saint. Patron of mothers.",
+"St Augustine of Hippo|M|w|“Our heart is restless until it rests in You.”",
+"The Passion of St John the Baptist|M|r|John told the truth to King Herod and gave his life for it.",
+"St Jeanne Jugan|C|w|She took a blind, elderly woman into her own bed and founded the Little Sisters of the Poor.",
+"Sts Joseph of Arimathea & Nicodemus|C|w|Secret disciples who bravely buried Jesus’ body."],
+/* Sep */[
+"St Giles|C|w|A hermit who protected a deer from hunters. Patron of people with disabilities.",
+"St Ingrid of Sweden|C|w|A pilgrim who founded the first Dominican convent in Sweden.",
+"St Gregory the Great|M|w|A pope who sent missionaries to England and loved music. Gregorian chant is named for him.",
+"St Rose of Viterbo|C|w|A girl who preached in the streets of her town about Jesus.",
+"St Teresa of Calcutta|C|w|Mother Teresa cared for the poorest of the poor. “Do small things with great love.”",
+"St Bega|C|w|An Irish princess who became a hermit in England.",
+"St Cloud|C|w|A royal prince who gave up the throne to become a priest.",
+"The Nativity of Mary|F|w|We celebrate Mary’s birthday!",
+"St Peter Claver|C|w|He met slave ships in Colombia with food and medicine, calling himself “slave of the slaves”.",
+"St Nicholas of Tolentino|C|w|A friar who prayed for the souls in purgatory and shared bread with the sick.",
+"St John Gabriel Perboyre|C|r|A French missionary martyred in China.",
+"The Most Holy Name of Mary|O|w|Mary’s name is a sweet prayer for help.",
+"St John Chrysostom|M|w|“Golden Mouth”, the great preacher of Constantinople.",
+"The Exaltation of the Holy Cross|F|r|We honour the Cross, where Jesus showed His greatest love.",
+"Our Lady of Sorrows|M|w|Mary stood by Jesus at the Cross. She is with us when we are sad.",
+"Sts Cornelius & Cyprian|M|r|A pope and a bishop who were friends and martyrs.",
+"St Hildegard of Bingen|O|w|A nun who wrote music, studied plants and medicine, and saw visions. Doctor of the Church.",
+"St Joseph of Cupertino|C|w|He struggled at school but loved God so much he was said to float in prayer. Patron of students and pilots.",
+"St Januarius|O|r|A bishop martyr. His blood in Naples is said to turn liquid on his feast.",
+"Sts Andrew Kim Taegon, Paul Chong Hasang & Companions|M|r|103 martyrs of Korea, mostly lay people who taught each other the faith.",
+"St Matthew|F|r|A tax collector who left his table to follow Jesus. He wrote a Gospel.",
+"St Thomas of Villanova|C|w|A bishop so generous he was called “father of the poor”.",
+"St Pio of Pietrelcina|M|w|Padre Pio, a Capuchin friar who heard confessions and prayed with great faith.",
+"Our Lady of Walsingham|C|w|England’s Nazareth, a shrine to the Holy House.",
+"St Finbarr|C|w|An Irish monk who founded the city of Cork.",
+"Sts Cosmas & Damian|O|r|Twin doctors who healed people for free. (In Canada: the Canadian Martyrs.)",
+"St Vincent de Paul|M|w|A priest who organized help for the poor and orphans. Patron of charities.",
+"St Wenceslaus|O|r|“Good King Wenceslas” of the Christmas carol, who brought firewood to the poor.",
+"Sts Michael, Gabriel & Raphael|F|w|The archangels: Michael protects, Gabriel announces, Raphael heals.",
+"St Jerome|M|w|He translated the Bible into Latin. “Ignorance of Scripture is ignorance of Christ.”"],
+/* Oct */[
+"St Thérèse of the Child Jesus|M|w|“The Little Flower” found a “little way” to heaven: doing small things with great love.",
+"The Holy Guardian Angels|M|w|God gives each of us an angel to guard and guide us.",
+"St Théodore Guérin|C|w|A French sister who crossed the ocean to start schools in the Indiana woods.",
+"St Francis of Assisi|M|w|He loved Lady Poverty, preached to birds and called all creatures his brothers and sisters.",
+"St Faustina Kowalska|O|w|A Polish nun who shared Jesus’ message of Divine Mercy: “Jesus, I trust in You.”",
+"St Bruno|O|w|He founded the Carthusians, monks who live in silence and prayer.",
+"Our Lady of the Rosary|M|w|We ask Mary’s prayers with the Rosary, a walk through Jesus’ life.",
+"St Pelagia|C|w|A famous actress of Antioch who changed her life and became a hermit.",
+"St John Henry Newman|C|w|An English thinker who followed the truth into the Catholic Church. “Lead, kindly light.”",
+"St Francis Borgia|C|w|A duke who became a Jesuit and sent missionaries around the world.",
+"St John XXIII|O|w|“Good Pope John”, who opened the Second Vatican Council with a smile.",
+"St Carlo Acutis|C|w|A teenager who loved video games, computers and Jesus in the Eucharist. Canonized in 2025.",
+"St Edward the Confessor|C|w|A peaceful king of England who built Westminster Abbey.",
+"St Callistus I|O|r|A former slave who became pope and was known for mercy.",
+"St Teresa of Ávila|M|w|A Carmelite reformer: “Let nothing disturb you. God alone suffices.”",
+"St Margaret Mary Alacoque|O|w|Jesus showed her His Sacred Heart, burning with love for us.",
+"St Ignatius of Antioch|M|r|He wrote letters to churches on his way to martyrdom in Rome.",
+"St Luke the Evangelist|F|r|A doctor who wrote a Gospel and the Acts of the Apostles. Patron of artists.",
+"Sts John de Brébeuf, Isaac Jogues & Companions|O|r|The North American Martyrs, Jesuit missionaries among the Huron and Mohawk.",
+"St Paul of the Cross|O|w|He founded the Passionists, who preach about Jesus’ love on the Cross.",
+"St Ursula|C|r|A princess and her companions who were martyred for their faith.",
+"St John Paul II|O|w|The pope who loved young people, skiing and Mary. “Be not afraid!”",
+"St John of Capistrano|O|w|A lawyer turned preacher. Patron of military chaplains.",
+"St Anthony Mary Claret|O|w|A weaver turned missionary and archbishop who printed books for everyone.",
+"Sts Crispin & Crispinian|C|r|Brothers who made shoes and preached about Jesus. Patrons of shoemakers.",
+"St Evaristus|C|r|One of the earliest popes, after St Peter.",
+"St Frumentius|C|w|A shipwrecked boy who grew up to bring the Gospel to Ethiopia.",
+"Sts Simon & Jude|F|r|Two Apostles. Jude is patron of hopeless causes.",
+"St Narcissus of Jerusalem|C|w|A bishop who lived to over 100. Legend says he turned water into lamp oil.",
+"St Alphonsus Rodríguez|C|w|A doorkeeper who greeted every visitor as if he were Jesus.",
+"St Wolfgang|C|w|A bishop and teacher. Tonight is All Hallows’ Eve, the vigil of All Saints."],
+/* Nov */[
+"All Saints|S|w|We celebrate everyone in heaven, famous saints and hidden ones. You are called to be one too!",
+"All Souls|X|p|We pray for everyone who has died, that they may rest in God’s peace.",
+"St Martin de Porres|O|w|A Dominican brother in Peru who cared for the sick and loved animals, even mice.",
+"St Charles Borromeo|M|w|A cardinal who taught the catechism to children and cared for the sick in a plague.",
+"Sts Zechariah & Elizabeth|C|w|The parents of John the Baptist, who waited a long time for God’s gift.",
+"St Leonard|C|w|A hermit who prayed for prisoners. Patron of prisoners.",
+"St Willibrord|C|w|An English monk who became the apostle to the Netherlands.",
+"Blessed John Duns Scotus|C|w|A Franciscan teacher who explained Mary’s Immaculate Conception.",
+"Dedication of the Lateran Basilica|F|w|The pope’s cathedral in Rome, “mother of all churches”.",
+"St Leo the Great|M|w|A pope who met Attila the Hun and persuaded him to spare Rome.",
+"St Martin of Tours|M|w|A soldier who cut his cloak in half to share with a freezing beggar.",
+"St Josaphat|M|r|A bishop who gave his life working for unity between Christians.",
+"St Stanislaus Kostka|C|w|A teenager who walked 450 miles to join the Jesuits. Patron of students.",
+"St Laurence O’Toole|C|w|An archbishop of Dublin and a peacemaker.",
+"St Albert the Great|O|w|He studied plants, animals and stars, and taught St Thomas Aquinas. Patron of scientists.",
+"St Margaret of Scotland|O|w|A queen who fed the poor every day before she ate.",
+"St Elizabeth of Hungary|M|w|A princess who gave food to the poor. Legend says the bread in her cloak turned to roses.",
+"St Rose Philippine Duchesne|C|w|A missionary sister the Potawatomi called “the woman who prays always”.",
+"St Mechtilde|C|w|A nun known for her beautiful singing.",
+"St Edmund the Martyr|C|r|A young king of East Anglia who would not give up his faith.",
+"The Presentation of Mary|M|w|Young Mary is presented to God in the Temple by her parents.",
+"St Cecilia|M|r|A Roman martyr who sang to God in her heart. Patron of musicians.",
+"St Columban|O|w|An Irish monk who walked across Europe founding monasteries.",
+"St Andrew Dũng-Lạc & Companions|M|r|117 martyrs of Vietnam, priests, catechists and families.",
+"St Catherine of Alexandria|O|r|A wise young woman who out-argued fifty philosophers. Patron of students.",
+"St Leonard of Port Maurice|C|w|A preacher who spread the Stations of the Cross.",
+"St Virgil of Salzburg|C|w|An Irish bishop who taught that the earth is round.",
+"St James of the Marches|C|w|A Franciscan preacher who started low-cost banks for the poor.",
+"St Saturninus|C|r|First bishop of Toulouse, a brave martyr.",
+"St Andrew the Apostle|F|r|A fisherman who brought his brother Peter to Jesus. Patron of Scotland."],
+/* Dec */[
+"St Charles de Foucauld|C|w|A soldier and explorer who became a hermit in the Sahara, a brother to all.",
+"St Bibiana|C|r|A young Roman woman who stayed faithful through persecution.",
+"St Francis Xavier|M|w|A missionary to India and Japan. Patron of missions.",
+"St John Damascene|O|w|A monk who defended icons and wrote hymns.",
+"St Sabbas|C|w|A desert monk who founded a monastery that still exists today.",
+"St Nicholas|O|w|A bishop who secretly gave gifts to the poor. He inspired the tradition of Santa Claus.",
+"St Ambrose|M|w|A bishop with a voice like honey who baptized St Augustine. Patron of beekeepers.",
+"The Immaculate Conception|S|w|Mary was kept free from all sin from the first moment of her life.",
+"St Juan Diego|O|w|An Aztec farmer to whom Mary appeared. Roses filled his cloak with her picture.",
+"Our Lady of Loreto|O|w|The Holy House of Nazareth is honoured at Loreto. Patron of pilots.",
+"St Damasus I|O|w|A pope who asked St Jerome to translate the Bible.",
+"Our Lady of Guadalupe|F|w|Mary appeared in Mexico as a mother expecting a baby. Patroness of the Americas.",
+"St Lucy|M|r|Her name means light. In Sweden girls wear candle crowns on her day.",
+"St John of the Cross|M|w|A Carmelite poet who wrote about the soul’s journey to God.",
+"St Mary di Rosa|C|w|She organized nurses to care for wounded soldiers.",
+"St Adelaide|C|w|An empress who forgave her enemies and helped the poor.",
+"St Lazarus|C|w|Jesus’ friend whom He raised from the dead. The “O Antiphons” begin today.",
+"St Winebald|C|w|An English missionary and brother of St Willibald and St Walburga.",
+"Blessed Urban V|C|w|A humble pope who founded universities.",
+"St Dominic of Silos|C|w|An abbot who freed captives. Patron of expectant mothers.",
+"St Peter Canisius|O|w|He wrote catechisms to teach the faith clearly to children.",
+"St Frances Xavier Cabrini|C|w|An Italian sister who served immigrants in America. Patron of immigrants.",
+"St John of Kanty|O|w|A professor in Kraków who gave away his coat to a poor man.",
+"Christmas Eve · Sts Adam & Eve|C|w|Tonight we wait for the Saviour promised since the very first parents.",
+"The Nativity of the Lord|S|w|Merry Christmas! God becomes a baby, born in Bethlehem.",
+"St Stephen|F|r|The first martyr, who forgave those who stoned him.",
+"St John the Apostle|F|w|The beloved disciple who stood at the Cross. His symbol is an eagle.",
+"The Holy Innocents|F|r|The baby boys of Bethlehem, killed by King Herod. We pray for all children.",
+"St Thomas Becket|O|r|An archbishop who stood up to his friend the king for the Church.",
+"St Egwin of Worcester|C|w|A bishop who went on pilgrimage to Rome to make peace.",
+"St Sylvester I|O|w|Pope when Christians were finally free to worship in the open."]
+];
+
+var RANK={S:"Solemnity",F:"Feast",M:"Memorial",O:"Optional memorial",C:"Remembered",X:"Commemoration"};
+var MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+function getSaint(d){var s=S[d.getMonth()][d.getDate()-1];if(!s)return null;var p=s.split("|");return {name:p[0],rank:p[1],color:p[2],blurb:p[3]};}
+var ICONS={
+ ark:'<path d="M6 30h36l-6 9H12z" fill="#8B5A2B" stroke="#1B2440" stroke-width="2.5"/><rect x="14" y="20" width="20" height="10" fill="#C98A4B" stroke="#1B2440" stroke-width="2.5"/><path d="M8 16a16 16 0 0 1 32 0" fill="none" stroke="#F2738A" stroke-width="3"/><path d="M12 16a12 12 0 0 1 24 0" fill="none" stroke="#E9BC52" stroke-width="3"/>',
+ star:'<path d="M24 5l5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1z" fill="#E9BC52" stroke="#1B2440" stroke-width="2.5"/>',
+ tablets:'<path d="M8 40V16a8 8 0 0 1 16 0v24zM24 40V16a8 8 0 0 1 16 0v24z" fill="#D8DCE6" stroke="#1B2440" stroke-width="2.5"/><path d="M12 22h8M12 28h8M28 22h8M28 28h8" stroke="#1B2440" stroke-width="2"/>',
+ wheat:'<path d="M24 44V12" stroke="#9A6A00" stroke-width="3"/><g fill="#E9BC52" stroke="#1B2440" stroke-width="2"><ellipse cx="19" cy="16" rx="4" ry="6" transform="rotate(-25 19 16)"/><ellipse cx="29" cy="16" rx="4" ry="6" transform="rotate(25 29 16)"/><ellipse cx="19" cy="26" rx="4" ry="6" transform="rotate(-25 19 26)"/><ellipse cx="29" cy="26" rx="4" ry="6" transform="rotate(25 29 26)"/><ellipse cx="24" cy="9" rx="4" ry="6"/></g>',
+ sling:'<path d="M8 8c10 22 22 22 32 0" fill="none" stroke="#8B5A2B" stroke-width="3"/><circle cx="24" cy="25" r="6" fill="#9AA3B5" stroke="#1B2440" stroke-width="2.5"/><circle cx="34" cy="38" r="5" fill="#9AA3B5" stroke="#1B2440" stroke-width="2.5"/>',
+ crown:'<path d="M8 36l-2-20 10 8 8-14 8 14 10-8-2 20z" fill="#E9BC52" stroke="#1B2440" stroke-width="2.5"/><circle cx="24" cy="29" r="3" fill="#B0233A"/>',
+ lion:'<circle cx="24" cy="25" r="16" fill="#C9971F" stroke="#1B2440" stroke-width="2.5"/><circle cx="24" cy="26" r="10" fill="#F3D78A" stroke="#1B2440" stroke-width="2"/><circle cx="20" cy="24" r="1.6" fill="#1B2440"/><circle cx="28" cy="24" r="1.6" fill="#1B2440"/><path d="M22 30q2 2 4 0" stroke="#1B2440" stroke-width="2" fill="none"/>',
+ fish:'<path d="M6 24q14-14 28 0-14 14-28 0z" fill="#5E86F0" stroke="#1B2440" stroke-width="2.5"/><path d="M34 24l9-8v16z" fill="#5E86F0" stroke="#1B2440" stroke-width="2.5"/><circle cx="14" cy="22" r="2" fill="#1B2440"/>',
+ lily:'<path d="M24 44V20" stroke="#1C7650" stroke-width="3"/><path d="M24 22c-8-2-12-10-10-16 4 4 8 4 10 8 2-4 6-4 10-8 2 6-2 14-10 16z" fill="#F7F7FB" stroke="#1B2440" stroke-width="2.5"/><path d="M24 36c-5 0-9-3-10-7 5 0 8 2 10 5" fill="#1C7650"/>',
+ keys:'<circle cx="15" cy="15" r="7" fill="none" stroke="#E9BC52" stroke-width="3.5"/><path d="M20 20l20 20M34 34l5-5M30 30l4-4" stroke="#E9BC52" stroke-width="3.5"/><circle cx="33" cy="15" r="7" fill="none" stroke="#C7CCD8" stroke-width="3.5"/><path d="M28 20L8 40M14 34l-5-5M18 30l-4-4" stroke="#C7CCD8" stroke-width="3.5"/>',
+ sword:'<path d="M24 4v30" stroke="#C7CCD8" stroke-width="5"/><path d="M14 32h20" stroke="#9A6A00" stroke-width="4"/><path d="M24 34v10" stroke="#8B5A2B" stroke-width="4"/>',
+ shell:'<path d="M24 40L8 18a18 14 0 0 1 32 0z" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5"/><path d="M24 40L14 14M24 40V10M24 40l10-26" stroke="#1B2440" stroke-width="2"/>'
+};
+
+var C=null;
+var $=function(id){return document.getElementById(id);};
+function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e;}
+function link(href,text,cls){var a=el("a",cls,text);a.href=href;if(/^https?:/.test(href)){a.target="_blank";a.rel="noopener";}return a;}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem("bch-"+k)||"null");localStorage.setItem("bch-"+k,JSON.stringify(v));}catch(e){return null;}}
+var framed=(function(){try{return window.self!==window.top;}catch(e){return true;}})();
+
+/* ---------- Liturgical season ---------- */
+function easter(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(y,mo-1,da);}
+function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
+function day0(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate());}
+function season(d){
+  d=day0(d);var y=d.getFullYear(),E=easter(y),ash=addDays(E,-46),pent=addDays(E,49);
+  var xmas=new Date(y,11,25),adv=addDays(xmas,-((xmas.getDay()||7))-21);
+  var ep=new Date(y,0,6),bap=addDays(ep,7-ep.getDay());
+  if(d>=adv&&d<xmas)return d.getDay()===0&&Math.round((d-adv)/864e5)===14?["Advent · Gaudete Sunday","rose","Rose means rejoice: Christmas is near!"]:["Advent","violet","Purple means we are getting ready for Jesus."];
+  if(d>=xmas||d<=bap)return ["Christmas","white","White and gold mean joy: Jesus is born!"];
+  if(d>=ash&&d<E){if(d>=addDays(E,-7))return ["Holy Week","violet","We walk with Jesus to the Cross."];return ["Lent","violet","Purple means we pray, fast and give to get ready for Easter."];}
+  if(d>=E&&d<=pent)return ["Easter","white","White and gold mean Jesus is risen! Alleluia!"];
+  return ["Ordinary Time","green","Green means growing in faith, like a garden."];
+}
+
+/* ---------- Theme & speech ---------- */
+var root=document.documentElement;
+function isDark(){var t=root.getAttribute("data-theme");if(t)return t==="dark";return window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches;}
+var savedTheme=store("theme");if(savedTheme)root.setAttribute("data-theme",savedTheme);
+$("themeBtn").addEventListener("click",function(){var n=isDark()?"light":"dark";root.setAttribute("data-theme",n);store("theme",n);drawRose();});
+if(window.matchMedia)matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){drawRose();});
+var canSpeak="speechSynthesis" in window;
+function speak(t){if(!canSpeak)return;try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.rate=.92;u.pitch=1.05;speechSynthesis.speak(u);}catch(e){}}
+if(!canSpeak){["readHero","dlgRead","pRead"].forEach(function(id){$(id).hidden=true;});}
+
+/* ---------- Hero of the day ---------- */
+var TODAY=day0(new Date()),cur=new Date(TODAY);
+var se=season(TODAY);
+root.setAttribute("data-season",se[1]);
+$("seasonName").textContent="Season: "+se[0];$("seasonTip").textContent=se[2];
+function palette(c){var dark=isDark();
+  var gold=dark?"#E9BC52":"#C9971F",ruby=dark?"#E8566F":"#B0233A",lapis=dark?"#5E86F0":"#2447A1",em=dark?"#3FB683":"#1C7650",vi=dark?"#9B7BE0":"#6A3E9E",sky=dark?"#3E5FB8":"#7FA2E8";
+  if(c==="r")return [ruby,gold,ruby,lapis,ruby,gold];if(c==="p")return [vi,lapis,vi,sky,vi,lapis];return [lapis,gold,em,ruby,sky,gold];}
+var rot=0;
+function drawRose(){
+  var cv=$("rose");var x=cv.getContext("2d"),W=cv.width,c=W/2;var s=getSaint(cur)||{color:"w"};var cols=palette(s.color);var lead=isDark()?"#04070F":"#1B2440";
+  x.clearRect(0,0,W,W);x.save();x.translate(c,c);x.rotate(rot);
+  var R=c-14,N=16,i,a;x.lineWidth=10;x.strokeStyle=lead;
+  x.beginPath();x.arc(0,0,R,0,Math.PI*2);x.fillStyle=cols[3];x.fill();x.stroke();
+  for(i=0;i<N;i++){a=i*Math.PI*2/N;x.beginPath();x.arc(Math.cos(a)*(R-46),Math.sin(a)*(R-46),36,0,Math.PI*2);x.fillStyle=cols[i%2?1:4];x.fill();x.stroke();}
+  var P=12,r2=R-92;x.beginPath();x.arc(0,0,r2,0,Math.PI*2);x.fillStyle=cols[2];x.fill();x.stroke();
+  for(i=0;i<P;i++){a=i*Math.PI*2/P;x.save();x.rotate(a);x.beginPath();x.moveTo(0,r2*0.36);x.quadraticCurveTo(r2*0.36,r2*0.62,0,r2*0.98);x.quadraticCurveTo(-r2*0.36,r2*0.62,0,r2*0.36);x.fillStyle=cols[i%3===0?0:(i%3===1?5:1)];x.fill();x.stroke();
+    x.beginPath();x.arc(0,r2*0.72,r2*0.07,0,Math.PI*2);x.fillStyle=cols[3];x.fill();x.lineWidth=6;x.stroke();x.lineWidth=10;x.restore();}
+  x.beginPath();x.arc(0,0,r2*0.36,0,Math.PI*2);x.fillStyle=cols[0];x.fill();x.stroke();x.restore();
+  var g=x.createRadialGradient(c*0.7,c*0.6,10,c,c,c);g.addColorStop(0,"rgba(255,255,255,.28)");g.addColorStop(.6,"rgba(255,255,255,0)");x.fillStyle=g;x.beginPath();x.arc(c,c,R,0,Math.PI*2);x.fill();
+}
+function spin(){rot+=0.0009;drawRose();requestAnimationFrame(spin);}
+function fmt(d){return d.toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"});}
+function renderHero(){
+  var s=getSaint(cur);
+  $("heroDate").textContent=(+cur===+TODAY?"Today · ":"")+fmt(cur);
+  var rk=$("heroRank");rk.textContent=RANK[s.rank];rk.className="chip"+(s.color==="r"?" red":"");
+  $("heroName").textContent=s.name;$("heroBlurb").textContent=s.blurb;
+  $("roseLabel").textContent=s.color==="r"?"Brave for Jesus":(/^St|^Bl|^Sts/.test(s.name)?"Pray for us":"Rejoice!");
+  $("backToday").hidden=+cur===+TODAY;drawRose();markToday();
+}
+$("prevDay").onclick=function(){cur=addDays(cur,-1);if(!getSaint(cur))cur=addDays(cur,-1);renderHero();};
+$("nextDay").onclick=function(){cur=addDays(cur,1);if(!getSaint(cur))cur=addDays(cur,1);renderHero();};
+$("backToday").onclick=function(){cur=new Date(TODAY);renderHero();};
+$("readHero").onclick=function(){var s=getSaint(cur);speak(fmt(cur)+". "+s.name+". "+s.blurb);};
+
+/* ---------- Calendar ---------- */
+var monthsEl=$("months"),daysEl=$("days"),q=$("saintSearch"),curMonth=TODAY.getMonth();
+MONTHS.forEach(function(m,i){var b=el("button",null,m.slice(0,3));b.setAttribute("aria-label",m);b.setAttribute("aria-pressed",i===curMonth);b.onclick=function(){curMonth=i;q.value="";[].forEach.call(monthsEl.children,function(c,j){c.setAttribute("aria-pressed",j===i);});renderDays();};monthsEl.appendChild(b);});
+function dayBtn(mi,di){
+  var p=S[mi][di].split("|");var b=el("button","day");b.dataset.m=mi;b.dataset.d=di+1;
+  var n=el("span","num "+p[2],String(di+1));var w=el("span");w.appendChild(el("span","nm",p[0]));w.appendChild(el("br"));w.appendChild(el("span","rk",(q.value?MONTHS[mi].slice(0,3)+" "+(di+1)+" · ":"")+RANK[p[1]]));
+  b.appendChild(n);b.appendChild(w);b.setAttribute("aria-label",MONTHS[mi]+" "+(di+1)+": "+p[0]);
+  b.onclick=function(){cur=new Date(TODAY.getFullYear(),mi,di+1);renderHero();$("today").scrollIntoView();};return b;
+}
+function renderDays(){
+  daysEl.innerHTML="";var term=q.value.trim().toLowerCase();
+  if(term){var n=0;S.forEach(function(arr,mi){arr.forEach(function(s,di){if(s.toLowerCase().indexOf(term)>-1&&n<60){daysEl.appendChild(dayBtn(mi,di));n++;}});});
+    if(!n)daysEl.appendChild(el("p","empty","No saint found for “"+q.value+"”. Try a shorter word, like “teach” or “sea”."));
+  } else S[curMonth].forEach(function(_,di){daysEl.appendChild(dayBtn(curMonth,di));});
+  markToday();
+}
+function markToday(){[].forEach.call(daysEl.querySelectorAll(".day"),function(b){b.classList.toggle("today",+b.dataset.m===cur.getMonth()&&+b.dataset.d===cur.getDate());});}
+q.addEventListener("input",renderDays);
+
+/* ---------- Content-driven sections ---------- */
+function renderSettings(){
+  var st=C.settings||{};
+  if(st.siteName)$("siteName").textContent=st.siteName;
+  if(st.tagline)$("siteTag").textContent=st.tagline;
+  if(st.announcement){$("announceText").textContent=st.announcement;$("announce").hidden=false;}
+  var sb=$("supportBox");sb.innerHTML="";
+  if(st.supportUrl)sb.appendChild(link(st.supportUrl,st.supportLabel||"Support the mission","btn primary"));
+  else{var d=el("button","btn","Support link coming soon");d.disabled=true;sb.appendChild(d);}
+  if(st.contactEmail){var cl=$("contactLine");cl.textContent="Contact us: "+st.contactEmail;cl.hidden=false;}
+  $("appName").textContent=st.appName||"Penny Catechism Quest";
+  var ab=$("appBtns");ab.innerHTML="";var live=st.appWebUrl||st.appStoreUrl||st.playStoreUrl;
+  $("appStatus").textContent=live?"Our own app · Available now":"Our own app · Coming soon";
+  if(st.appWebUrl)ab.appendChild(link(st.appWebUrl,"Play in your browser","btn primary"));
+  else{var t=link("#games","Try the catechism cards","btn primary");t.onclick=function(){openGame("cat");};ab.appendChild(t);}
+  [["appStoreUrl","App Store"],["playStoreUrl","Google Play"]].forEach(function(k){if(st[k[0]])ab.appendChild(link(st[k[0]],k[1],"btn"));else{var b=el("button","btn",k[1]+" · soon");b.disabled=true;ab.appendChild(b);}});
+}
+
+function renderChannels(){
+  var box=$("channels");box.innerHTML="";
+  (C.youtube||[]).forEach(function(ch){
+    var card=el("article","channel"),h=el("div","ch-head");
+    var top=el("div","ch-row");top.appendChild(el("span","chip free",ch.audience||"YouTube"));h.appendChild(top);
+    h.appendChild(el("h3",null,ch.title||ch.name));h.appendChild(el("p",null,ch.desc||""));
+    var row=el("div","ch-row");row.appendChild(link(ch.url+(/\?/.test(ch.url)?"&":"?")+"sub_confirmation=1","Subscribe","btn yt"));row.appendChild(link(ch.url,"Open "+ch.name,"btn"));h.appendChild(row);card.appendChild(h);
+    var player=el("div","player");card.appendChild(player);
+    var vids=el("div","vids");card.appendChild(vids);
+    var list="UU"+(ch.channelId||"").slice(2);
+    function poster(){player.innerHTML="";var a=link(ch.url,"","poster");var sp=el("span");sp.innerHTML='<svg width="64" height="46" viewBox="0 0 64 46" aria-hidden="true"><rect width="64" height="46" rx="12" fill="#C4302B"/><path d="M26 13l16 10-16 10z" fill="#fff"/></svg>';sp.appendChild(el("span",null,"Watch "+ch.name+" on YouTube"));a.appendChild(sp);player.appendChild(a);}
+    function play(src){if(framed){poster();return;}player.innerHTML="";var f=document.createElement("iframe");f.src=src;f.title=ch.name+" video";f.loading="lazy";f.allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen";f.allowFullscreen=true;f.referrerPolicy="strict-origin-when-cross-origin";player.appendChild(f);}
+    if(ch.channelId)play("https://www.youtube-nocookie.com/embed/videoseries?list="+list);else poster();
+    if(ch.channelId&&!framed){
+      fetch("/api/youtube?id="+encodeURIComponent(ch.channelId)).then(function(r){return r.ok?r.json():[];}).then(function(items){
+        if(!Array.isArray(items))return;items.slice(0,6).forEach(function(v,i){
+          var b=el("button","vid");var im=document.createElement("img");im.src="https://i.ytimg.com/vi/"+v.id+"/mqdefault.jpg";im.alt="";im.loading="lazy";b.appendChild(im);b.appendChild(el("span",null,v.title));
+          b.onclick=function(){[].forEach.call(vids.children,function(x){x.removeAttribute("aria-current");});b.setAttribute("aria-current","true");play("https://www.youtube-nocookie.com/embed/"+v.id+"?autoplay=1");};
+          vids.appendChild(b);});
+      }).catch(function(){});
+    }
+    box.appendChild(card);
+  });
+}
+
+function renderHeroes(){
+  var hg=$("heroGrid");hg.innerHTML="";
+  (C.heroes||[]).forEach(function(h){var b=el("button","hcard");b.setAttribute("aria-expanded","false");
+    var pane=el("div","pane");pane.style.background=h.color||"#2447A1";
+    if(ICONS[h.icon])pane.innerHTML='<svg viewBox="0 0 48 48" aria-hidden="true">'+ICONS[h.icon]+'</svg>';else pane.textContent=(h.name||"?").charAt(0);
+    var inn=el("div","in");inn.appendChild(el("span","virtue",h.virtue||""));inn.appendChild(el("h3",null,h.name));inn.appendChild(el("p","front tap","Tap to learn their lesson"));inn.appendChild(el("p","back",h.lesson||""));inn.appendChild(el("span","ref",h.ref||""));
+    b.appendChild(pane);b.appendChild(inn);
+    b.onclick=function(){b.setAttribute("aria-expanded",b.getAttribute("aria-expanded")==="true"?"false":"true");};hg.appendChild(b);});
+}
+
+function bookCard(b,kind){
+  var d=el("article","book");var sp=el("div","spine");sp.style.background=b.color||"#2447A1";sp.appendChild(el("span",null,(b.title||"?").replace(/^(The|A|An) /,"").charAt(0)));
+  if(b.image){var im=document.createElement("img");im.src=b.image;im.alt="";im.onerror=function(){im.remove();};sp.appendChild(im);}
+  var m=el("div","meta");m.appendChild(el("b",null,b.title));if(b.by)m.appendChild(el("span","by",b.by));if(b.desc)m.appendChild(el("p",null,b.desc));
+  var L=el("div","links");
+  if(kind==="free"){if(b.url)L.appendChild(link(b.url,"Read free"));if(b.listenUrl)L.appendChild(link(b.listenUrl,"Listen free"));}
+  else if(kind==="paid"){if(b.url)L.appendChild(link(b.url,b.linkLabel||"Visit publisher"));if(b.price)L.appendChild(el("span","chip paid",b.price));}
+  else{if(b.url)L.appendChild(link(b.url,b.linkLabel||"Get it"));else L.appendChild(el("span","chip","Coming soon"));if(b.price)L.appendChild(el("span","chip "+(/free/i.test(b.price)?"free":"paid"),b.price));}
+  m.appendChild(L);d.appendChild(sp);d.appendChild(m);return d;
+}
+function renderBooks(){[["freeBooks","free"],["paidBooks","paid"],["ourBooks","our"]].forEach(function(k){var box=$(k[0]);box.innerHTML="";(C[k[0]]||[]).forEach(function(b){box.appendChild(bookCard(b,k[1]));});box.previousElementSibling.hidden=box.hidden=!(C[k[0]]||[]).length;});}
+
+function renderApps(){var box=$("appList");box.innerHTML="";(C.apps||[]).forEach(function(a){var d=el("article","app");var r=el("div","row");r.appendChild(el("h3",null,a.name));r.appendChild(el("span","chip "+(/^free$/i.test(a.price||"")?"free":"paid"),a.price||""));d.appendChild(r);
+  if(a["for"])d.appendChild(el("span","for","Best for: "+a["for"]));d.appendChild(el("p",null,a.desc||""));
+  if(a.url)d.appendChild(link(a.url,"Official site","go"));else d.appendChild(el("span","go plain","Search “"+a.name+"” in your app store"));box.appendChild(d);});}
+
+var dlg=$("storyDlg"),curStory=null;
+function renderStories(){var box=$("storyList");box.innerHTML="";(C.stories||[]).forEach(function(s){var b=el("button","story");b.appendChild(el("span","age",s.age||""));b.appendChild(el("h3",null,s.title));b.appendChild(el("p",null,s.summary||""));b.appendChild(el("span","go","Read the story →"));
+  b.onclick=function(){curStory=s;$("dlgAge").textContent=s.age||"";$("dlgTitle").textContent=s.title;var body=$("dlgBody");body.innerHTML="";(s.body||[]).forEach(function(p){body.appendChild(el("p",null,p));});if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");};box.appendChild(b);});}
+$("dlgClose").onclick=function(){if(canSpeak)speechSynthesis.cancel();if(dlg.close)dlg.close();else dlg.removeAttribute("open");};
+$("dlgRead").onclick=function(){if(curStory)speak(curStory.title+". "+(curStory.body||[]).join(" "));};
+dlg.addEventListener("close",function(){if(canSpeak)speechSynthesis.cancel();});
+
+var pi=0;
+function renderPrayers(){var pl=$("plist");pl.innerHTML="";var PR=C.prayers||[];if(!PR.length)return;if(pi>=PR.length)pi=0;
+  PR.forEach(function(p,i){var b=el("button",null,p.title);b.setAttribute("aria-pressed",i===pi);b.onclick=function(){pi=i;[].forEach.call(pl.children,function(c,j){c.setAttribute("aria-pressed",j===i);});showP();};pl.appendChild(b);});showP();}
+function showP(){var p=C.prayers[pi];$("pTitle").textContent=p.title;$("pBody").textContent=p.text;$("pTip").textContent=p.tip||"";}
+$("pRead").onclick=function(){var p=C.prayers[pi];if(p)speak(p.text.replace(/\n/g," "));};
+
+function renderRes(){var box=$("resList");box.innerHTML="";(C.resources||[]).forEach(function(r){var d=el("article","res");d.appendChild(el("span","chip",r.source||""));d.appendChild(el("h3",null,r.title));d.appendChild(el("p",null,r.desc||""));if(r.url)d.appendChild(link(r.url,"Open"));box.appendChild(d);});}
+
+/* ================= GAMES ================= */
+var GI={
+ quiz:'<rect x="6" y="6" width="36" height="36" rx="8" fill="#2447A1" stroke="#1B2440" stroke-width="2.5"/><path d="M18 19a6 6 0 1 1 8 5.6c-1.4.6-2 1.6-2 3V30" fill="none" stroke="#F3D78A" stroke-width="3.5" stroke-linecap="round"/><circle cx="24" cy="36" r="2.3" fill="#F3D78A"/>',
+ hero:'<rect x="5" y="9" width="18" height="26" rx="4" fill="#2447A1" stroke="#1B2440" stroke-width="2.5" transform="rotate(-8 14 22)"/><rect x="24" y="11" width="18" height="26" rx="4" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5" transform="rotate(8 33 24)"/><path d="M31 19l2 4 4 .5-3 3 1 4-4-2-4 2 1-4-3-3 4-.5z" fill="#B0233A"/>',
+ saint:'<rect x="5" y="9" width="18" height="26" rx="4" fill="#B0233A" stroke="#1B2440" stroke-width="2.5" transform="rotate(-8 14 22)"/><rect x="24" y="11" width="18" height="26" rx="4" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5" transform="rotate(8 33 24)"/><circle cx="33" cy="20" r="5" fill="none" stroke="#9A6A00" stroke-width="2.5"/><path d="M33 26v7" stroke="#1B2440" stroke-width="3"/>',
+ cat:'<path d="M8 10h14a4 4 0 0 1 4 4v24a3 3 0 0 0-3-3H8z" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5"/><path d="M40 10H28a4 4 0 0 0-4 4v24a3 3 0 0 1 3-3h13z" fill="#fff" stroke="#1B2440" stroke-width="2.5"/><path d="M32 16v12M28 20h8" stroke="#B0233A" stroke-width="3"/>',
+ ws:'<rect x="6" y="6" width="36" height="36" rx="6" fill="#fff" stroke="#1B2440" stroke-width="2.5"/><g fill="#1B2440" font-family="sans-serif" font-weight="800" font-size="9"><text x="11" y="18">A</text><text x="21" y="18">M</text><text x="31" y="18">E</text><text x="11" y="29">N</text><text x="21" y="29">O</text><text x="31" y="29">A</text><text x="11" y="39">H</text><text x="21" y="39">P</text><text x="31" y="39">S</text></g><rect x="8" y="10" width="32" height="11" rx="5" fill="none" stroke="#1C7650" stroke-width="2.5"/>',
+ scr:'<rect x="4" y="16" width="12" height="16" rx="3" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5"/><rect x="18" y="12" width="12" height="16" rx="3" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5" transform="rotate(10 24 20)"/><rect x="32" y="18" width="12" height="16" rx="3" fill="#F3D78A" stroke="#1B2440" stroke-width="2.5" transform="rotate(-8 38 26)"/><path d="M10 40h28" stroke="#1B2440" stroke-width="2.5" stroke-dasharray="4 3"/>',
+ verse:'<path d="M10 8h22l6 6v26H10z" fill="#fff" stroke="#1B2440" stroke-width="2.5"/><path d="M15 18h18M15 24h18M15 30h12" stroke="#2447A1" stroke-width="3" stroke-linecap="round"/><path d="M30 34l4 4 8-9" fill="none" stroke="#1C7650" stroke-width="3.5" stroke-linecap="round"/>'
+};
+var GAMES=[["quiz","Quizzes","Riddles, Bible heroes and more"],["hero","Hero Match","Bible heroes & their signs"],["saint","Saints Match","Saints & what they’re known for"],["ws","Word Search","Find hidden hero names"],["scr","Name Scramble","Unscramble the hero"],["verse","Verse Builder","Put Bible verses in order"],["cat","Catechism Cards","Penny Catechism flashcards"]];
+var curGame=null;
+function openGame(id){curGame=id;[].forEach.call($("launcher").children,function(b){b.setAttribute("aria-pressed",b.dataset.g===id);});var p=$("gamePanel");p.innerHTML="";({quiz:gQuiz,hero:function(p){gMatch(p,"heroDecks","Hero Match","Match each Bible hero to what they’re known for.");},saint:function(p){gMatch(p,"saintDecks","Saints Match","Match each saint to what they’re known for.");},ws:gWS,scr:gScr,verse:gVerse,cat:gCat})[id](p);}
+function renderLauncher(){var L=$("launcher");L.innerHTML="";GAMES.forEach(function(g){var b=el("button","gtile");b.dataset.g=g[0];b.innerHTML='<svg viewBox="0 0 48 48" aria-hidden="true">'+GI[g[0]]+'</svg>';b.appendChild(el("b",null,g[1]));b.appendChild(el("small",null,g[2]));b.onclick=function(){openGame(g[0]);};L.appendChild(b);});}
+function head(p,title,sub){var h=el("div");h.appendChild(el("h3",null,title));if(sub)h.appendChild(el("p","sub",sub));p.appendChild(h);}
+function pickRow(items,active,onPick,label){var r=el("div","pick");r.setAttribute("role","group");if(label)r.setAttribute("aria-label",label);items.forEach(function(it,i){var b=el("button",null,it);b.setAttribute("aria-pressed",i===active);b.onclick=function(){onPick(i);};r.appendChild(b);});return r;}
+
+/* --- Quizzes --- */
+var quizIdx=0;
+function gQuiz(p){
+  var Q=C.quizzes||[];if(!Q.length){p.appendChild(el("p",null,"No quizzes yet."));return;}if(quizIdx>=Q.length)quizIdx=0;
+  var quiz=Q[quizIdx];head(p,quiz.title,quiz.intro);
+  p.appendChild(pickRow(Q.map(function(x){return x.title;}),quizIdx,function(i){quizIdx=i;openGame("quiz");},"Choose a quiz"));
+  var qs=shuffle(quiz.questions||[]).slice(0,10),i=0,score=0,done=false;
+  var sc=el("div","score"),txt=el("div","riddle"),opts=el("div","opts"),fb=el("div","feedback"),row=el("div","row-btns"),nx=el("button","btn","Next question");
+  row.appendChild(nx);[sc,txt,opts,fb,row].forEach(function(x){p.appendChild(x);});
+  function show(){done=false;var item=qs[i];sc.textContent="Question "+(i+1)+" of "+qs.length+" · Score "+score;txt.textContent=item.q;fb.textContent="";opts.innerHTML="";nx.hidden=true;
+    shuffle([item.a].concat(item.wrong||[])).forEach(function(o){var b=el("button","opt",(quiz.prefix||"")+o);b.onclick=function(){if(done)return;done=true;
+      if(o===item.a){b.classList.add("right");score++;fb.textContent=shuffle(["Yes! Well done.","Correct! Great job.","That’s right!","Excellent, little pilgrim!"])[0];}
+      else{b.classList.add("wrong");[].forEach.call(opts.children,function(c){if(c.textContent===(quiz.prefix||"")+item.a)c.classList.add("right");});fb.textContent="Good try! The answer is "+(quiz.prefix||"")+item.a+".";}
+      sc.textContent="Question "+(i+1)+" of "+qs.length+" · Score "+score;nx.hidden=false;nx.textContent=i===qs.length-1?"See my score":"Next question";};opts.appendChild(b);});}
+  nx.onclick=function(){if(i<qs.length-1){i++;show();return;}
+    txt.textContent="You scored "+score+" out of "+qs.length+"! "+(score===qs.length?"Perfect! You are a true hero.":score>=qs.length/2?"Great work. Keep learning!":"Every saint started somewhere. Try again!");opts.innerHTML="";fb.textContent="";sc.textContent="Finished";
+    row.innerHTML="";var a=el("button","btn primary","Play again");a.onclick=function(){openGame("quiz");};row.appendChild(a);
+    if(Q.length>1){var b=el("button","btn","Next quiz: "+Q[(quizIdx+1)%Q.length].title);b.onclick=function(){quizIdx=(quizIdx+1)%Q.length;openGame("quiz");};row.appendChild(b);}};
+  show();
+}
+
+/* --- Match (Hero / Saints) --- */
+var matchState={};
+function gMatch(p,key,title,sub){
+  var decks=(C[key]||[]).filter(function(d){return d.pairs&&d.pairs.length>=3;});if(!decks.length){p.appendChild(el("p",null,"No decks yet."));return;}
+  var st=matchState[key]||(matchState[key]={deck:Math.floor(Math.random()*decks.length),size:6,mix:false});
+  if(st.deck>=decks.length)st.deck=0;
+  var doneSet=store("done-"+key)||[];
+  head(p,title,sub);
+  var names=decks.map(function(d){return (doneSet.indexOf(d.title)>-1?"✓ ":"")+d.title;});names.push("Surprise mix");
+  p.appendChild(pickRow(names,st.mix?decks.length:st.deck,function(i){if(i===decks.length){st.mix=true;}else{st.mix=false;st.deck=i;}gMatchRedraw();},"Choose a deck"));
+  var sizeRow=pickRow(["Easy · 6 pairs","Hard · 8 pairs"],st.size===8?1:0,function(i){st.size=i?8:6;gMatchRedraw();},"Difficulty");p.appendChild(sizeRow);
+  var pool,deckTitle;
+  if(st.mix){var all=[];decks.forEach(function(d){all=all.concat(d.pairs);});pool=shuffle(all).slice(0,st.size);deckTitle="Surprise mix";}
+  else{var d=decks[st.deck];pool=shuffle(d.pairs.slice());if(pool.length<st.size){var extra=[];decks.forEach(function(x,j){if(j!==st.deck)extra=extra.concat(x.pairs);});pool=pool.concat(shuffle(extra).slice(0,st.size-pool.length));}pool=pool.slice(0,st.size);deckTitle=d.title;}
+  var sc=el("div","score");p.appendChild(sc);
+  var grid=el("div","mem"+(st.size===6?" n12":""));p.appendChild(grid);
+  var fb=el("div","feedback");p.appendChild(fb);
+  var row=el("div","row-btns");var again=el("button","btn","Shuffle & restart");again.onclick=gMatchRedraw;var nextB=el("button","btn primary","New deck →");nextB.onclick=function(){if(st.mix){gMatchRedraw();return;}var order=decks.map(function(_,j){return (st.deck+1+j)%decks.length;});var nd=order.filter(function(j){return doneSet.indexOf(decks[j].title)<0;})[0];st.deck=nd==null?order[0]:nd;gMatchRedraw();};
+  row.appendChild(nextB);row.appendChild(again);p.appendChild(row);
+  var first=null,lock=false,moves=0,got=0;
+  function upd(){sc.textContent=deckTitle+" · Moves "+moves+" · Pairs "+got+" of "+pool.length;}upd();
+  var cards=[];pool.forEach(function(pr,i){cards.push({id:i,t:pr[0],k:"nm"});cards.push({id:i,t:pr[1],k:"cl"});});
+  shuffle(cards).forEach(function(c){var b=el("button","mcard back");b.setAttribute("aria-label","Hidden card");
+    b.onclick=function(){if(lock||b.classList.contains("up")||b.classList.contains("done"))return;b.classList.remove("back");b.classList.add("up",c.k);b.textContent=c.t;b.setAttribute("aria-label",c.t);
+      if(!first){first={b:b,c:c};return;}moves++;var a=first;first=null;
+      if(a.c.id===c.id){a.b.classList.add("done");b.classList.add("done");got++;upd();
+        fb.textContent=pool[c.id][0]+": "+pool[c.id][1]+"!";
+        if(got===pool.length){fb.textContent="All matched in "+moves+" moves! You know your "+(key==="heroDecks"?"Bible heroes":"saints")+".";if(!st.mix&&doneSet.indexOf(deckTitle)<0){doneSet.push(deckTitle);store("done-"+key,doneSet);}}}
+      else{lock=true;upd();setTimeout(function(){[a.b,b].forEach(function(x){x.className="mcard back";x.textContent="";x.setAttribute("aria-label","Hidden card");});lock=false;},900);}};
+    grid.appendChild(b);});
+  function gMatchRedraw(){openGame(key==="heroDecks"?"hero":"saint");}
+}
+
+/* --- word pool from decks --- */
+function norm(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toUpperCase();}
+function wordPool(which){var out=[],seen={};(C[which]||[]).forEach(function(d){(d.pairs||[]).forEach(function(pr){var first=pr[0].replace(/^(Archangel|St|Saint|Blessed)\s+/i,"").split(/[\s,&]+/)[0];var w=norm(first).replace(/[^A-Z]/g,"");if(w.length>=3&&w.length<=9&&!seen[w]){seen[w]=1;out.push({w:w,name:pr[0],clue:pr[1]});}});});return out;}
+
+/* --- Word search --- */
+var wsSrc=0;
+function gWS(p){
+  head(p,"Word Search","Tap the first letter of a word, then its last letter. Words go across, down or diagonally.");
+  p.appendChild(pickRow(["Bible heroes","Saints"],wsSrc,function(i){wsSrc=i;openGame("ws");},"Word list"));
+  var pool=wordPool(wsSrc?"saintDecks":"heroDecks"),N=10,grid,placed,tries=0;
+  do{tries++;grid=[];for(var r=0;r<N;r++){grid.push(new Array(N).fill(""));}placed=[];
+    shuffle(pool).some(function(item){if(placed.length>=8)return true;var w=item.w,dirs=shuffle([[0,1],[1,0],[1,1]]);
+      for(var t=0;t<40;t++){var d=dirs[t%3],r0=Math.floor(Math.random()*N),c0=Math.floor(Math.random()*N),re=r0+d[0]*(w.length-1),ce=c0+d[1]*(w.length-1);if(re>=N||ce>=N)continue;
+        var ok=true;for(var k=0;k<w.length;k++){var g=grid[r0+d[0]*k][c0+d[1]*k];if(g&&g!==w[k]){ok=false;break;}}
+        if(ok){for(k=0;k<w.length;k++)grid[r0+d[0]*k][c0+d[1]*k]=w[k];placed.push({w:w,item:item,r0:r0,c0:c0,d:d});break;}}return false;});
+  }while(placed.length<6&&tries<5);
+  var AZ="ABCDEFGHIJKLMNOPRSTUVWY";for(var r1=0;r1<N;r1++)for(var c1=0;c1<N;c1++)if(!grid[r1][c1])grid[r1][c1]=AZ[Math.floor(Math.random()*AZ.length)];
+  var wrap=el("div","ws-wrap"),g=el("div","ws"),side=el("div");side.style.display="flex";side.style.flexDirection="column";side.style.gap="12px";
+  var cells=[];for(var r2=0;r2<N;r2++)for(var c2=0;c2<N;c2++){(function(r,c){var b=el("button",null,grid[r][c]);b.setAttribute("aria-label","Row "+(r+1)+" column "+(c+1)+": "+grid[r][c]);b.onclick=function(){tap(r,c,b);};g.appendChild(b);cells.push(b);})(r2,c2);}
+  var list=el("div","wlist");placed.forEach(function(pl){pl.tag=el("span",null,pl.w);list.appendChild(pl.tag);});
+  var sc=el("div","score"),fb=el("div","feedback"),nb=el("button","btn primary","New puzzle");nb.onclick=function(){openGame("ws");};
+  side.appendChild(sc);side.appendChild(list);side.appendChild(fb);var rb=el("div","row-btns");rb.appendChild(nb);side.appendChild(rb);
+  wrap.appendChild(g);wrap.appendChild(side);p.appendChild(wrap);
+  var start=null,found=0;function upd(){sc.textContent="Found "+found+" of "+placed.length;}upd();
+  function cell(r,c){return cells[r*N+c];}
+  function tap(r,c,b){if(!start){start=[r,c];b.classList.add("sel");return;}
+    var s=start;start=null;cell(s[0],s[1]).classList.remove("sel");
+    var hit=placed.filter(function(pl){if(pl.got)return false;var re=pl.r0+pl.d[0]*(pl.w.length-1),ce=pl.c0+pl.d[1]*(pl.w.length-1);return (pl.r0===s[0]&&pl.c0===s[1]&&re===r&&ce===c)||(pl.r0===r&&pl.c0===c&&re===s[0]&&ce===s[1]);})[0];
+    if(hit){hit.got=true;found++;for(var k=0;k<hit.w.length;k++)cell(hit.r0+hit.d[0]*k,hit.c0+hit.d[1]*k).classList.add("found");hit.tag.classList.add("got");fb.textContent=hit.item.name+": "+hit.item.clue;upd();if(found===placed.length)fb.textContent="You found them all! Tap New puzzle for another.";}
+    else if(s[0]===r&&s[1]===c){}else{fb.textContent="Not quite. Tap the first letter, then the last letter of a word.";}}
+}
+
+/* --- Name scramble --- */
+var scrSrc=0,scrStreak=0;
+function gScr(p){
+  head(p,"Name Scramble","Tap the letters in the right order to spell the hero’s name.");
+  p.appendChild(pickRow(["Bible heroes","Saints"],scrSrc,function(i){scrSrc=i;scrStreak=0;openGame("scr");},"Word list"));
+  var pool=wordPool(scrSrc?"saintDecks":"heroDecks").filter(function(x){return x.w.length<=8;});var item=pool[Math.floor(Math.random()*pool.length)];
+  var letters=item.w.split(""),mixed=shuffle(letters);var tries=0;while(mixed.join("")===item.w&&tries++<10)mixed=shuffle(letters);
+  var sc=el("div","score","Streak "+scrStreak);var clue=el("p","clue","Clue: "+item.clue);var slots=el("div","slots"),tiles=el("div","tiles"),fb=el("div","feedback");
+  [sc,clue,slots,tiles,fb].forEach(function(x){p.appendChild(x);});
+  var sl=letters.map(function(){var s=el("div","slot");slots.appendChild(s);return s;});var pos=0,used=[];
+  mixed.forEach(function(ch){var t=el("button","tile",ch);t.onclick=function(){if(t.disabled)return;sl[pos].textContent=ch;pos++;t.disabled=true;used.push(t);if(pos===letters.length)check();};tiles.appendChild(t);});
+  function check(){var guess=sl.map(function(s){return s.textContent;}).join("");if(guess===item.w){scrStreak++;sc.textContent="Streak "+scrStreak;fb.className="win";fb.textContent="Yes! "+item.name+": "+item.clue+".";}else{fb.className="feedback";fb.textContent="Not quite. Tap Clear and try again.";tiles.classList.add("shake");setTimeout(function(){tiles.classList.remove("shake");},400);}}
+  var rb=el("div","row-btns");var clr=el("button","btn","Clear");clr.onclick=function(){pos=0;sl.forEach(function(s){s.textContent="";});used.forEach(function(t){t.disabled=false;});used=[];fb.className="feedback";fb.textContent="";};
+  var undo=el("button","btn","Undo");undo.onclick=function(){if(!pos)return;pos--;sl[pos].textContent="";var t=used.pop();t.disabled=false;fb.textContent="";fb.className="feedback";};
+  var hint=el("button","btn","Show first letter");hint.onclick=function(){fb.className="feedback";fb.textContent="It starts with “"+item.w[0]+"”.";};
+  var nx=el("button","btn primary","Next name →");nx.onclick=function(){if(fb.className!=="win")scrStreak=0;openGame("scr");};
+  [nx,undo,clr,hint].forEach(function(b){rb.appendChild(b);});p.appendChild(rb);
+}
+
+/* --- Verse builder --- */
+var verseOrder=null,verseI=0;
+function gVerse(p){
+  var V=(C.verses||[]).filter(function(v){return v.text;});if(!V.length){p.appendChild(el("p",null,"No verses yet."));return;}
+  if(!verseOrder||verseOrder.length!==V.length){verseOrder=shuffle(V.map(function(_,i){return i;}));verseI=0;}
+  var v=V[verseOrder[verseI%V.length]];head(p,"Verse Builder","Tap the words in the right order to build the Bible verse.");
+  var words=v.text.replace(/[.,;:!?“”"]/g,"").split(/\s+/).filter(Boolean);
+  var sc=el("div","score","Verse "+(verseI%V.length+1)+" of "+V.length+" · "+v.ref);var built=el("div","built");built.textContent="…";var tiles=el("div","tiles"),fb=el("div","feedback");
+  [sc,built,tiles,fb].forEach(function(x){p.appendChild(x);});
+  var next=0,out=[];
+  shuffle(words.map(function(w,i){return {w:w,i:i};})).forEach(function(o){var t=el("button","tile word",o.w);t.onclick=function(){if(t.disabled)return;
+    if(o.w.toLowerCase()===words[next].toLowerCase()){t.disabled=true;out.push(words[next]);next++;built.textContent=out.join(" ")+(next<words.length?" …":"");fb.textContent="";
+      if(next===words.length){fb.className="win";fb.textContent="“"+v.text+"” ("+v.ref+")";}}
+    else{t.classList.add("shake");setTimeout(function(){t.classList.remove("shake");},400);fb.textContent="Not that one yet. What comes next?";}};tiles.appendChild(t);});
+  var rb=el("div","row-btns");var nx=el("button","btn primary","Next verse →");nx.onclick=function(){verseI++;openGame("verse");};var rd=el("button","btn","Read it aloud");rd.onclick=function(){speak(v.text+". "+v.ref);};if(!canSpeak)rd.hidden=true;
+  rb.appendChild(nx);rb.appendChild(rd);p.appendChild(rb);
+}
+
+/* --- Catechism cards --- */
+var fi=0;
+function gCat(p){
+  var CAT=C.catechism||[];if(!CAT.length){p.appendChild(el("p",null,"No cards yet."));return;}if(fi>=CAT.length)fi=0;
+  head(p,"Catechism Cards","From the Penny Catechism. Think of the answer, then tap the card.");
+  var sc=el("div","score"),card=el("button","flash"),up=false;p.appendChild(sc);p.appendChild(card);
+  function r(){var c=CAT[fi];card.innerHTML="";card.appendChild(el("span","q",c.q));if(up)card.appendChild(el("span",null,c.a));card.appendChild(el("span","hint",up?"Say it with me, then tap for the next one.":"Tap to see the answer."));sc.textContent="Question "+(fi+1)+" of "+CAT.length+(fi===CAT.length-1?" · More in "+((C.settings&&C.settings.appName)||"Penny Catechism Quest")+"!":"");}
+  card.onclick=function(){if(up){fi=(fi+1)%CAT.length;up=false;}else up=true;r();};
+  var rb=el("div","row-btns"),pv=el("button","btn","←"),nx=el("button","btn","Next question →"),rd=el("button","btn","Read aloud");pv.setAttribute("aria-label","Previous question");
+  pv.onclick=function(){fi=(fi-1+CAT.length)%CAT.length;up=false;r();};nx.onclick=function(){fi=(fi+1)%CAT.length;up=false;r();};rd.onclick=function(){var c=CAT[fi];speak(c.q+" ... "+c.a);up=true;r();};if(!canSpeak)rd.hidden=true;
+  [pv,nx,rd].forEach(function(b){rb.appendChild(b);});p.appendChild(rb);r();
+}
+
+/* ---------- Load content ---------- */
+function loadContent(){
+  return fetch("/api/content",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+  .then(function(d){if(d&&d.settings)return d;return fetch("content.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});});
+}
+renderDays();renderHero();
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduce)spin();else drawRose();
+loadContent().then(function(d){
+  C=d||{settings:{},youtube:[],heroes:[],quizzes:[],heroDecks:[],saintDecks:[],catechism:[],verses:[],stories:[],prayers:[],resources:[],freeBooks:[],paidBooks:[],ourBooks:[],apps:[]};
+  renderSettings();renderChannels();renderHeroes();renderBooks();renderApps();renderStories();renderPrayers();renderRes();renderLauncher();
+  var g=(location.hash||"").replace("#","");openGame(GAMES.some(function(x){return x[0]===g;})?g:"hero");
+});
+})();
+</script>
+</body>
+</html>

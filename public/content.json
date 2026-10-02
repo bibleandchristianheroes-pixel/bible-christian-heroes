@@ -1,0 +1,1621 @@
+{
+ "settings": {
+  "siteName": "Bible & Christian Heroes",
+  "tagline": "Faith for little & big pilgrims",
+  "announcement": "",
+  "supportUrl": "",
+  "supportLabel": "Support the mission",
+  "appName": "Penny Catechism Quest",
+  "appWebUrl": "",
+  "appStoreUrl": "",
+  "playStoreUrl": "",
+  "contactEmail": ""
+ },
+ "youtube": [
+  {
+   "name": "Sacred Peace Daily",
+   "url": "https://www.youtube.com/@SacredPeaceDaily",
+   "channelId": "UCkzb-CZfh6QrwK1RB7Ig92A",
+   "title": "Pray the Rosary with us",
+   "desc": "Daily Rosary, morning and evening prayers, the Divine Mercy Chaplet and quiet meditations. A peaceful place to pray each day.",
+   "audience": "Families & adults"
+  },
+  {
+   "name": "Christian Bible Heroes Animated",
+   "url": "https://www.youtube.com/@christianbibleheroesanimated",
+   "channelId": "UC90qKQ5ktWXodad44XbVhQw",
+   "title": "Animated Bible stories",
+   "desc": "Old and New Testament stories brought to life with animation: prophets, kings, brave women of the Bible and the life of Jesus.",
+   "audience": "Kids & families"
+  }
+ ],
+ "heroes": [
+  {
+   "name": "Noah",
+   "virtue": "Obedience",
+   "ref": "Genesis 6–9",
+   "icon": "ark",
+   "color": "#2447A1",
+   "lesson": "When everyone laughed, Noah kept building because God asked him to. God kept His promise with a rainbow. Lesson: trust God even when others don’t."
+  },
+  {
+   "name": "Abraham",
+   "virtue": "Faith",
+   "ref": "Genesis 12–22",
+   "icon": "star",
+   "color": "#6A3E9E",
+   "lesson": "God promised Abraham children as many as the stars, and he believed. Lesson: God keeps His promises, even when we must wait."
+  },
+  {
+   "name": "Moses",
+   "virtue": "Courage",
+   "ref": "Exodus 3–20",
+   "icon": "tablets",
+   "color": "#B0233A",
+   "lesson": "Moses was shy about speaking, but God sent him to free His people from Egypt and gave him the Ten Commandments. Lesson: God gives strength for the job He asks."
+  },
+  {
+   "name": "Ruth",
+   "virtue": "Loyalty",
+   "ref": "Book of Ruth",
+   "icon": "wheat",
+   "color": "#1C7650",
+   "lesson": "Ruth said to Naomi, “Where you go, I will go.” She became King David’s great-grandmother. Lesson: kindness to family matters to God."
+  },
+  {
+   "name": "David",
+   "virtue": "Trust",
+   "ref": "1 Samuel 17",
+   "icon": "sling",
+   "color": "#9A6A00",
+   "lesson": "A shepherd boy with five stones faced the giant Goliath, trusting God, not armour. Lesson: with God, small can beat big."
+  },
+  {
+   "name": "Esther",
+   "virtue": "Bravery",
+   "ref": "Book of Esther",
+   "icon": "crown",
+   "color": "#B24C7A",
+   "lesson": "Queen Esther risked her life to save her people. “Perhaps you became queen for such a time as this.” Lesson: God puts you where you are for a reason."
+  },
+  {
+   "name": "Daniel",
+   "virtue": "Prayer",
+   "ref": "Daniel 6",
+   "icon": "lion",
+   "color": "#C9971F",
+   "lesson": "Daniel kept praying three times a day even when it was against the law. God shut the lions’ mouths. Lesson: never stop praying."
+  },
+  {
+   "name": "Jonah",
+   "virtue": "Second chances",
+   "ref": "Book of Jonah",
+   "icon": "fish",
+   "color": "#2447A1",
+   "lesson": "Jonah ran away from God and ended up inside a great fish. God gave him another chance. Lesson: it’s never too late to say yes to God."
+  },
+  {
+   "name": "Mary",
+   "virtue": "Saying yes",
+   "ref": "Luke 1–2",
+   "icon": "lily",
+   "color": "#5B7BD6",
+   "lesson": "Mary said to the angel, “Let it be done to me according to your word.” Lesson: the greatest hero is the one who says yes to God."
+  },
+  {
+   "name": "Peter",
+   "virtue": "Forgiveness",
+   "ref": "Matthew 16 · John 21",
+   "icon": "keys",
+   "color": "#1B2440",
+   "lesson": "Peter said three times he did not know Jesus, and Jesus forgave him three times. Jesus gave him the keys of the Kingdom. Lesson: Jesus always welcomes us back."
+  },
+  {
+   "name": "Paul",
+   "virtue": "Zeal",
+   "ref": "Acts 9–28",
+   "icon": "sword",
+   "color": "#8C2A3A",
+   "lesson": "Paul hurt Christians until he met Jesus. Then he travelled the world telling everyone about Him. Lesson: anyone can change."
+  },
+  {
+   "name": "James",
+   "virtue": "Pilgrim heart",
+   "ref": "Mark 1 · Acts 12",
+   "icon": "shell",
+   "color": "#7A5A1E",
+   "lesson": "A fisherman whom Jesus called a “son of thunder”. Pilgrims still walk the Camino to honour him. Lesson: life is a journey with Jesus."
+  }
+ ],
+ "freeBooks": [
+  {
+   "title": "A Child’s Book of Saints",
+   "by": "William Canton · 1898",
+   "desc": "Gentle tales of saints told to a little girl. A classic for bedtime.",
+   "url": "https://www.gutenberg.org/ebooks/22112",
+   "listenUrl": "",
+   "image": "",
+   "color": "#2447A1"
+  },
+  {
+   "title": "In God’s Garden",
+   "by": "Amy Steedman · Stories of the Saints for Little Children",
+   "desc": "Short saint stories written just for young children.",
+   "url": "https://www.gutenberg.org/ebooks/36674",
+   "listenUrl": "",
+   "image": "",
+   "color": "#1C7650"
+  },
+  {
+   "title": "Stories of the Saints by Candle-Light",
+   "by": "Vera C. Barclay",
+   "desc": "Saint stories written to be told around a campfire. Free audiobook too.",
+   "url": "https://www.gutenberg.org/ebooks/26130",
+   "listenUrl": "https://librivox.org/stories-of-the-saints-by-candle-light-by-vera-charlesworth-barclay/",
+   "image": "",
+   "color": "#B0233A"
+  },
+  {
+   "title": "The Children’s Bible",
+   "by": "Henry A. Sherman & Charles Foster Kent",
+   "desc": "Bible stories in simple language for young readers.",
+   "url": "https://www.gutenberg.org/ebooks/23580",
+   "listenUrl": "",
+   "image": "",
+   "color": "#6A3E9E"
+  },
+  {
+   "title": "For Greater Things",
+   "by": "William T. Kane",
+   "desc": "The story of St Stanislaus Kostka, the teen who walked 450 miles to follow God.",
+   "url": "https://www.gutenberg.org/ebooks/2494",
+   "listenUrl": "",
+   "image": "",
+   "color": "#9A6A00"
+  }
+ ],
+ "paidBooks": [
+  {
+   "title": "The Story of All Stories",
+   "by": "Emily Stimpson Chapman · illus. Diana Renzina · Word on Fire",
+   "desc": "A storybook Bible that tells salvation history in a clearly Catholic way.",
+   "url": "https://www.wordonfire.org",
+   "price": "",
+   "image": "",
+   "color": "#9A6A00"
+  },
+  {
+   "title": "Young Saints",
+   "by": "Ignatius Press",
+   "desc": "Fifteen lives from St Blandina to St Carlo Acutis, with comic strips. Ages 9+.",
+   "url": "https://www.ignatius.com",
+   "price": "",
+   "image": "",
+   "color": "#B0233A"
+  },
+  {
+   "title": "Sibling Saints",
+   "by": "Ignatius Press",
+   "desc": "Twelve stories of saintly brothers and sisters, from James and John to Edith and Rosa Stein.",
+   "url": "https://www.ignatius.com",
+   "price": "",
+   "image": "",
+   "color": "#1C7650"
+  },
+  {
+   "title": "Saints Come in All Shapes and Sizes",
+   "by": "Ascension",
+   "desc": "A rhyming board book for toddlers and preschoolers.",
+   "url": "https://ascensionpress.com",
+   "price": "",
+   "image": "",
+   "color": "#B24C7A"
+  },
+  {
+   "title": "How Edith Found Jesus",
+   "by": "OSV",
+   "desc": "St Teresa Benedicta of the Cross’s journey to faith, for young readers.",
+   "url": "https://www.osv.com",
+   "price": "",
+   "image": "",
+   "color": "#6A3E9E"
+  },
+  {
+   "title": "There Is No Saint Named Kelly",
+   "by": "Pauline Books & Media",
+   "desc": "For every child without a saint’s name: you can still be a saint.",
+   "url": "https://paulinestore.com",
+   "price": "",
+   "image": "",
+   "color": "#2447A1"
+  },
+  {
+   "title": "The Sparrow Who Fell to the Ground",
+   "by": "Anthony DeStefano · Sophia Institute Press",
+   "desc": "A picture book about fear and how much Jesus cares for us.",
+   "url": "https://www.sophiainstitute.com",
+   "price": "",
+   "image": "",
+   "color": "#7A5A1E"
+  },
+  {
+   "title": "Picture Book of Saints",
+   "by": "Fr Lawrence Lovasik",
+   "desc": "One saint per page with feast day, prayer and patronage. A family classic.",
+   "url": "https://catholicbookpublishing.com",
+   "price": "",
+   "image": "",
+   "color": "#8C2A3A"
+  }
+ ],
+ "ourBooks": [
+  {
+   "title": "Read-aloud stories",
+   "by": "Bible & Christian Heroes · Free",
+   "desc": "Four original stories: David, Francis, Thérèse and Carlo. Read them on this page.",
+   "url": "#stories",
+   "price": "Free",
+   "linkLabel": "Read now",
+   "image": "",
+   "color": "#B0233A"
+  },
+  {
+   "title": "Illustrated editions",
+   "by": "Bible & Christian Heroes · Coming soon",
+   "desc": "Printed and e-book editions of our stories are in the works. Your support helps make them.",
+   "url": "",
+   "price": "",
+   "linkLabel": "",
+   "image": "",
+   "color": "#2447A1"
+  }
+ ],
+ "apps": [
+  {
+   "name": "Laudate",
+   "price": "Free",
+   "for": "Families & adults",
+   "desc": "Daily readings, Rosary, prayers, saints of the day and the Catechism in one free app.",
+   "url": ""
+  },
+  {
+   "name": "Hallow",
+   "price": "Free + paid",
+   "for": "Families & adults",
+   "desc": "Guided prayer, Rosary, Bible stories and sleep prayers. Many families pray it at bedtime.",
+   "url": "https://hallow.com"
+  },
+  {
+   "name": "FORMED",
+   "price": "Subscription · often free via your parish",
+   "for": "Kids & families",
+   "desc": "The “Catholic Netflix”: animated shows like Brother Francis, films and studies. Ask your parish for free access.",
+   "url": "https://formed.org"
+  },
+  {
+   "name": "The Chosen",
+   "price": "Free",
+   "for": "Families with older kids",
+   "desc": "The series about Jesus and His disciples. Parents, preview episodes for little ones.",
+   "url": "https://www.thechosen.tv"
+  },
+  {
+   "name": "Rosario",
+   "price": "Free",
+   "for": "All ages",
+   "desc": "A simple guided Rosary with audio. Great for learning the mysteries.",
+   "url": ""
+  },
+  {
+   "name": "Ascension",
+   "price": "Free + paid",
+   "for": "Teens & adults",
+   "desc": "Home of Bible in a Year and Catechism in a Year with Fr Mike Schmitz.",
+   "url": "https://ascensionpress.com"
+  },
+  {
+   "name": "iBreviary",
+   "price": "Free",
+   "for": "Adults",
+   "desc": "The Liturgy of the Hours, Mass readings and prayers in many languages.",
+   "url": "https://www.ibreviary.com"
+  },
+  {
+   "name": "Universalis",
+   "price": "Free + paid",
+   "for": "Adults",
+   "desc": "Daily readings, the Divine Office and saints for your country’s calendar.",
+   "url": "https://universalis.com"
+  }
+ ],
+ "quizzes": [
+  {
+   "title": "Saint Riddles",
+   "intro": "Read the clues. Who am I?",
+   "prefix": "St ",
+   "questions": [
+    {
+     "q": "I cut my cloak in half to share with a freezing beggar. I was a Roman soldier.",
+     "a": "Martin of Tours",
+     "wrong": [
+      "George",
+      "Sebastian"
+     ]
+    },
+    {
+     "q": "I preached to birds and made peace with a wolf. I called the sun my brother.",
+     "a": "Francis of Assisi",
+     "wrong": [
+      "Anthony of Padua",
+      "Benedict"
+     ]
+    },
+    {
+     "q": "I called my way to heaven the Little Way and promised a shower of roses.",
+     "a": "Thérèse of Lisieux",
+     "wrong": [
+      "Rose of Lima",
+      "Bernadette"
+     ]
+    },
+    {
+     "q": "I loved computers and built a website about Eucharistic miracles. I was canonized in 2025.",
+     "a": "Carlo Acutis",
+     "wrong": [
+      "Dominic Savio",
+      "Pier Giorgio Frassati"
+     ]
+    },
+    {
+     "q": "People ask me to help them find lost things. I was a great preacher from Portugal who lived in Italy.",
+     "a": "Anthony of Padua",
+     "wrong": [
+      "Patrick",
+      "Jude"
+     ]
+    },
+    {
+     "q": "I used a shamrock to teach about the Holy Trinity. Once I was a slave in the land I came back to save.",
+     "a": "Patrick",
+     "wrong": [
+      "Columba",
+      "David of Wales"
+     ]
+    },
+    {
+     "q": "Mary appeared to me in a grotto. Later, many sick people came to the spring there.",
+     "a": "Bernadette",
+     "wrong": [
+      "Juan Diego",
+      "Lucy"
+     ]
+    },
+    {
+     "q": "I am the quiet carpenter who protected Jesus and Mary.",
+     "a": "Joseph",
+     "wrong": [
+      "Joachim",
+      "John the Baptist"
+     ]
+    },
+    {
+     "q": "Roses filled my cloak, and Our Lady’s picture appeared on it in Mexico.",
+     "a": "Juan Diego",
+     "wrong": [
+      "Martin de Porres",
+      "Junípero Serra"
+     ]
+    },
+    {
+     "q": "I secretly gave gifts to the poor. Children still put out shoes or stockings on my feast.",
+     "a": "Nicholas",
+     "wrong": [
+      "Wenceslaus",
+      "Valentine"
+     ]
+    },
+    {
+     "q": "I was a doorkeeper in Montreal. People came to me for prayers, and I built a great oratory to St Joseph.",
+     "a": "André Bessette",
+     "wrong": [
+      "John de Brébeuf",
+      "François de Laval"
+     ]
+    },
+    {
+     "q": "I wrote the Huron Carol, a Christmas song for the Wendat people of Canada.",
+     "a": "John de Brébeuf",
+     "wrong": [
+      "Isaac Jogues",
+      "Junípero Serra"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Bible Heroes Quiz",
+   "intro": "How well do you know the heroes of the Bible?",
+   "prefix": "",
+   "questions": [
+    {
+     "q": "Who built an ark to save his family and the animals?",
+     "a": "Noah",
+     "wrong": [
+      "Moses",
+      "Abraham"
+     ]
+    },
+    {
+     "q": "Who faced the giant Goliath with a sling and stones?",
+     "a": "David",
+     "wrong": [
+      "Samson",
+      "Saul"
+     ]
+    },
+    {
+     "q": "Who was swallowed by a great fish?",
+     "a": "Jonah",
+     "wrong": [
+      "Daniel",
+      "Peter"
+     ]
+    },
+    {
+     "q": "Who was thrown into a den of lions for praying?",
+     "a": "Daniel",
+     "wrong": [
+      "Jeremiah",
+      "Elijah"
+     ]
+    },
+    {
+     "q": "Who led God’s people out of Egypt?",
+     "a": "Moses",
+     "wrong": [
+      "Joshua",
+      "Aaron"
+     ]
+    },
+    {
+     "q": "Whose great strength was tied to his long hair?",
+     "a": "Samson",
+     "wrong": [
+      "Gideon",
+      "Goliath"
+     ]
+    },
+    {
+     "q": "Which queen bravely saved her people?",
+     "a": "Esther",
+     "wrong": [
+      "Ruth",
+      "The Queen of Sheba"
+     ]
+    },
+    {
+     "q": "Who climbed a sycamore tree to see Jesus?",
+     "a": "Zacchaeus",
+     "wrong": [
+      "Matthew",
+      "Nicodemus"
+     ]
+    },
+    {
+     "q": "Who stepped out of the boat and walked on water toward Jesus?",
+     "a": "Peter",
+     "wrong": [
+      "John",
+      "Andrew"
+     ]
+    },
+    {
+     "q": "Who had a coat of many colours?",
+     "a": "Joseph",
+     "wrong": [
+      "Jacob",
+      "Benjamin"
+     ]
+    },
+    {
+     "q": "Who saw a bush that burned but did not burn up?",
+     "a": "Moses",
+     "wrong": [
+      "Elijah",
+      "Abraham"
+     ]
+    },
+    {
+     "q": "Who called down fire from heaven on Mount Carmel?",
+     "a": "Elijah",
+     "wrong": [
+      "Elisha",
+      "Samuel"
+     ]
+    },
+    {
+     "q": "The angel Gabriel visited whom to announce the birth of Jesus?",
+     "a": "Mary",
+     "wrong": [
+      "Elizabeth",
+      "Anna"
+     ]
+    },
+    {
+     "q": "Who baptized Jesus in the Jordan River?",
+     "a": "John the Baptist",
+     "wrong": [
+      "Peter",
+      "Andrew"
+     ]
+    },
+    {
+     "q": "Whose walls fell down when the people shouted and the trumpets blew?",
+     "a": "Jericho",
+     "wrong": [
+      "Jerusalem",
+      "Babylon"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Who Said It?",
+   "intro": "Famous words from the Bible. Who said them?",
+   "prefix": "",
+   "questions": [
+    {
+     "q": "“Here I am! Send me.”",
+     "a": "Isaiah",
+     "wrong": [
+      "Jeremiah",
+      "Moses"
+     ]
+    },
+    {
+     "q": "“Speak, Lord, for your servant is listening.”",
+     "a": "Samuel",
+     "wrong": [
+      "Eli",
+      "David"
+     ]
+    },
+    {
+     "q": "“Let it be done to me according to your word.”",
+     "a": "Mary",
+     "wrong": [
+      "Elizabeth",
+      "Martha"
+     ]
+    },
+    {
+     "q": "“My Lord and my God!”",
+     "a": "Thomas",
+     "wrong": [
+      "Peter",
+      "John"
+     ]
+    },
+    {
+     "q": "“Where you go, I will go.”",
+     "a": "Ruth",
+     "wrong": [
+      "Naomi",
+      "Esther"
+     ]
+    },
+    {
+     "q": "“The Lord is my shepherd; I shall not want.”",
+     "a": "David",
+     "wrong": [
+      "Solomon",
+      "Moses"
+     ]
+    },
+    {
+     "q": "“Behold, the Lamb of God!”",
+     "a": "John the Baptist",
+     "wrong": [
+      "Andrew",
+      "Simeon"
+     ]
+    },
+    {
+     "q": "“Lord, I am not worthy to have you come under my roof.”",
+     "a": "The centurion",
+     "wrong": [
+      "Zacchaeus",
+      "Nicodemus"
+     ]
+    },
+    {
+     "q": "“Jesus, remember me when you come into your kingdom.”",
+     "a": "The good thief",
+     "wrong": [
+      "Peter",
+      "Lazarus"
+     ]
+    },
+    {
+     "q": "“Who are you, Lord?”",
+     "a": "Saul (Paul)",
+     "wrong": [
+      "Stephen",
+      "Philip"
+     ]
+    },
+    {
+     "q": "“The Lord gave, and the Lord has taken away; blessed be the name of the Lord.”",
+     "a": "Job",
+     "wrong": [
+      "Jonah",
+      "Jeremiah"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Faith Basics",
+   "intro": "Quick questions about our Catholic faith.",
+   "prefix": "",
+   "questions": [
+    {
+     "q": "How many sacraments are there?",
+     "a": "Seven",
+     "wrong": [
+      "Five",
+      "Ten"
+     ]
+    },
+    {
+     "q": "What season do we celebrate to get ready for Christmas?",
+     "a": "Advent",
+     "wrong": [
+      "Lent",
+      "Easter"
+     ]
+    },
+    {
+     "q": "How many days did Jesus fast in the desert?",
+     "a": "40",
+     "wrong": [
+      "12",
+      "3"
+     ]
+    },
+    {
+     "q": "Which sacrament do we usually receive first?",
+     "a": "Baptism",
+     "wrong": [
+      "Confirmation",
+      "Marriage"
+     ]
+    },
+    {
+     "q": "How many Apostles did Jesus choose?",
+     "a": "Twelve",
+     "wrong": [
+      "Seven",
+      "Ten"
+     ]
+    },
+    {
+     "q": "On which day did Jesus rise from the dead?",
+     "a": "Easter Sunday",
+     "wrong": [
+      "Good Friday",
+      "Christmas Day"
+     ]
+    },
+    {
+     "q": "Which prayer uses beads and has mysteries?",
+     "a": "The Rosary",
+     "wrong": [
+      "The Our Father",
+      "Grace before meals"
+     ]
+    },
+    {
+     "q": "Who leads the whole Church on earth?",
+     "a": "The Pope",
+     "wrong": [
+      "A bishop",
+      "A king"
+     ]
+    },
+    {
+     "q": "What colour does the priest wear during Lent?",
+     "a": "Purple",
+     "wrong": [
+      "Green",
+      "Red"
+     ]
+    },
+    {
+     "q": "The Holy Trinity is the Father, the Son and the…",
+     "a": "Holy Spirit",
+     "wrong": [
+      "Angels",
+      "Saints"
+     ]
+    },
+    {
+     "q": "What is the name of the Mass where Jesus gave us the Eucharist?",
+     "a": "The Last Supper",
+     "wrong": [
+      "The Wedding at Cana",
+      "The Sermon on the Mount"
+     ]
+    },
+    {
+     "q": "Who is the mother of Jesus?",
+     "a": "Mary",
+     "wrong": [
+      "Elizabeth",
+      "Anne"
+     ]
+    }
+   ]
+  }
+ ],
+ "heroDecks": [
+  {
+   "title": "In the Beginning",
+   "pairs": [
+    [
+     "Adam & Eve",
+     "First man and woman in Eden"
+    ],
+    [
+     "Noah",
+     "Built the ark"
+    ],
+    [
+     "Abraham",
+     "Family as many as the stars"
+    ],
+    [
+     "Sarah",
+     "Had a baby at ninety"
+    ],
+    [
+     "Isaac",
+     "Saved when God provided a ram"
+    ],
+    [
+     "Jacob",
+     "Dreamed of a ladder to heaven"
+    ]
+   ]
+  },
+  {
+   "title": "Joseph to Moses",
+   "pairs": [
+    [
+     "Joseph",
+     "Coat of many colours"
+    ],
+    [
+     "Rebekah",
+     "Kindness at the well"
+    ],
+    [
+     "Moses",
+     "Parted the Red Sea"
+    ],
+    [
+     "Miriam",
+     "Watched baby Moses in the basket"
+    ],
+    [
+     "Aaron",
+     "Moses’ brother and spokesman"
+    ],
+    [
+     "Caleb",
+     "Brave spy who trusted God"
+    ]
+   ]
+  },
+  {
+   "title": "The Promised Land",
+   "pairs": [
+    [
+     "Joshua",
+     "The walls of Jericho fell"
+    ],
+    [
+     "Rahab",
+     "A red cord in the window"
+    ],
+    [
+     "Deborah",
+     "Judge under the palm tree"
+    ],
+    [
+     "Gideon",
+     "Trumpets, jars and torches"
+    ],
+    [
+     "Samson",
+     "Strength in his long hair"
+    ],
+    [
+     "Ruth",
+     "“Where you go, I will go”"
+    ]
+   ]
+  },
+  {
+   "title": "Kings & Prophets",
+   "pairs": [
+    [
+     "Hannah",
+     "Prayed for a son"
+    ],
+    [
+     "Samuel",
+     "“Speak, Lord, I’m listening”"
+    ],
+    [
+     "David",
+     "Defeated Goliath"
+    ],
+    [
+     "Jonathan",
+     "David’s loyal friend"
+    ],
+    [
+     "Solomon",
+     "Asked God for wisdom"
+    ],
+    [
+     "Elijah",
+     "Fire from heaven on Mount Carmel"
+    ]
+   ]
+  },
+  {
+   "title": "Brave in Exile",
+   "pairs": [
+    [
+     "Elisha",
+     "A double share of Elijah’s spirit"
+    ],
+    [
+     "Naaman",
+     "Healed by washing seven times"
+    ],
+    [
+     "Daniel",
+     "Safe in the lions’ den"
+    ],
+    [
+     "Shadrach, Meshach & Abednego",
+     "Safe in the fiery furnace"
+    ],
+    [
+     "Esther",
+     "Queen who saved her people"
+    ],
+    [
+     "Jonah",
+     "Swallowed by a great fish"
+    ]
+   ]
+  },
+  {
+   "title": "Faithful Hearts",
+   "pairs": [
+    [
+     "Job",
+     "Patient through great suffering"
+    ],
+    [
+     "Isaiah",
+     "“Here I am! Send me”"
+    ],
+    [
+     "Jeremiah",
+     "Lowered into a muddy well"
+    ],
+    [
+     "Nehemiah",
+     "Rebuilt Jerusalem’s walls"
+    ],
+    [
+     "Tobias",
+     "Travelled with the angel Raphael"
+    ],
+    [
+     "Judith",
+     "Saved her city with courage"
+    ]
+   ]
+  },
+  {
+   "title": "The First Christmas",
+   "pairs": [
+    [
+     "Mary",
+     "Said yes to the angel Gabriel"
+    ],
+    [
+     "Joseph of Nazareth",
+     "Protected Jesus after a dream"
+    ],
+    [
+     "Elizabeth",
+     "Her baby leapt for joy"
+    ],
+    [
+     "Zechariah",
+     "Could not speak until “John”"
+    ],
+    [
+     "Simeon",
+     "Held baby Jesus in the Temple"
+    ],
+    [
+     "Anna",
+     "Prophetess who prayed in the Temple"
+    ]
+   ]
+  },
+  {
+   "title": "Following Jesus",
+   "pairs": [
+    [
+     "John the Baptist",
+     "Baptized Jesus in the Jordan"
+    ],
+    [
+     "Peter",
+     "Walked on water"
+    ],
+    [
+     "Andrew",
+     "Found the boy with loaves and fish"
+    ],
+    [
+     "Matthew",
+     "Tax collector called by Jesus"
+    ],
+    [
+     "Thomas",
+     "Touched the risen Jesus’ wounds"
+    ],
+    [
+     "John the Apostle",
+     "The beloved disciple"
+    ]
+   ]
+  },
+  {
+   "title": "They Met Jesus",
+   "pairs": [
+    [
+     "Zacchaeus",
+     "Climbed a sycamore tree"
+    ],
+    [
+     "Bartimaeus",
+     "Blind man who shouted to Jesus"
+    ],
+    [
+     "Martha",
+     "Busy serving dinner"
+    ],
+    [
+     "Lazarus",
+     "Raised from the tomb"
+    ],
+    [
+     "Nicodemus",
+     "Visited Jesus at night"
+    ],
+    [
+     "Mary Magdalene",
+     "First to see the risen Jesus"
+    ]
+   ]
+  },
+  {
+   "title": "The Early Church",
+   "pairs": [
+    [
+     "Stephen",
+     "The first martyr"
+    ],
+    [
+     "Philip",
+     "Baptized an Ethiopian traveller"
+    ],
+    [
+     "Paul",
+     "Blinded on the road to Damascus"
+    ],
+    [
+     "Barnabas",
+     "“Son of encouragement”"
+    ],
+    [
+     "Lydia",
+     "Seller of purple cloth"
+    ],
+    [
+     "Priscilla & Aquila",
+     "Tentmakers who hosted a church"
+    ]
+   ]
+  }
+ ],
+ "saintDecks": [
+  {
+   "title": "Famous Friends of God",
+   "pairs": [
+    [
+     "Francis of Assisi",
+     "Preached to the birds"
+    ],
+    [
+     "Clare of Assisi",
+     "Founded the Poor Clares"
+    ],
+    [
+     "Anthony of Padua",
+     "Helps find lost things"
+    ],
+    [
+     "Thérèse of Lisieux",
+     "The Little Way"
+    ],
+    [
+     "Patrick",
+     "Taught with a shamrock"
+    ],
+    [
+     "Nicholas",
+     "Secret gifts in shoes"
+    ]
+   ]
+  },
+  {
+   "title": "Brave Hearts",
+   "pairs": [
+    [
+     "Joan of Arc",
+     "Led the army of France"
+    ],
+    [
+     "George",
+     "Slew the dragon (legend)"
+    ],
+    [
+     "Martin of Tours",
+     "Cut his cloak for a beggar"
+    ],
+    [
+     "Maximilian Kolbe",
+     "Gave his life at Auschwitz"
+    ],
+    [
+     "Agnes",
+     "Brave girl with a lamb"
+    ],
+    [
+     "Lawrence",
+     "Called the poor “the Church’s treasure”"
+    ]
+   ]
+  },
+  {
+   "title": "Mary’s Messengers",
+   "pairs": [
+    [
+     "Juan Diego",
+     "Roses in his tilma"
+    ],
+    [
+     "Bernadette",
+     "Saw Mary at Lourdes"
+    ],
+    [
+     "Francisco & Jacinta",
+     "Saw Mary at Fatima"
+    ],
+    [
+     "Dominic",
+     "Spread the Rosary"
+    ],
+    [
+     "Faustina",
+     "The Divine Mercy image"
+    ],
+    [
+     "Archangel Gabriel",
+     "Announced Jesus to Mary"
+    ]
+   ]
+  },
+  {
+   "title": "Modern Saints",
+   "pairs": [
+    [
+     "Teresa of Calcutta",
+     "Served the poorest in India"
+    ],
+    [
+     "John Paul II",
+     "“Be not afraid!”"
+    ],
+    [
+     "Padre Pio",
+     "Hours in the confessional"
+    ],
+    [
+     "Carlo Acutis",
+     "Website of Eucharistic miracles"
+    ],
+    [
+     "Pier Giorgio Frassati",
+     "“To the heights!” mountaineer"
+    ],
+    [
+     "Gianna Beretta Molla",
+     "Doctor and loving mom"
+    ]
+   ]
+  },
+  {
+   "title": "Teachers & Thinkers",
+   "pairs": [
+    [
+     "Augustine",
+     "“Our heart is restless until it rests in You”"
+    ],
+    [
+     "Monica",
+     "Prayed years for her son"
+    ],
+    [
+     "Thomas Aquinas",
+     "Nicknamed “the dumb ox”"
+    ],
+    [
+     "Jerome",
+     "Translated the Bible into Latin"
+    ],
+    [
+     "Catherine of Siena",
+     "Brought the pope back to Rome"
+    ],
+    [
+     "Hildegard of Bingen",
+     "Music, herbs and visions"
+    ]
+   ]
+  },
+  {
+   "title": "Founders & Missionaries",
+   "pairs": [
+    [
+     "Benedict",
+     "“Pray and work”"
+    ],
+    [
+     "Ignatius of Loyola",
+     "Founded the Jesuits"
+    ],
+    [
+     "Francis Xavier",
+     "Missionary to India and Japan"
+    ],
+    [
+     "Teresa of Ávila",
+     "“God alone suffices”"
+    ],
+    [
+     "Vincent de Paul",
+     "Patron of charities"
+    ],
+    [
+     "John of the Cross",
+     "Poet of the “dark night”"
+    ]
+   ]
+  },
+  {
+   "title": "Saints of the Americas",
+   "pairs": [
+    [
+     "Kateri Tekakwitha",
+     "Lily of the Mohawks"
+    ],
+    [
+     "Rose of Lima",
+     "First saint of the Americas"
+    ],
+    [
+     "Martin de Porres",
+     "A broom and kindness to animals"
+    ],
+    [
+     "Elizabeth Ann Seton",
+     "First US-born saint"
+    ],
+    [
+     "Katharine Drexel",
+     "Gave her fortune for schools"
+    ],
+    [
+     "Junípero Serra",
+     "Founded the California missions"
+    ]
+   ]
+  },
+  {
+   "title": "Saints of Canada",
+   "pairs": [
+    [
+     "Marguerite Bourgeoys",
+     "Montreal’s first teacher"
+    ],
+    [
+     "André Bessette",
+     "Doorkeeper who built St Joseph’s Oratory"
+    ],
+    [
+     "John de Brébeuf",
+     "Wrote the Huron Carol"
+    ],
+    [
+     "Marie of the Incarnation",
+     "Brought the Ursulines to Quebec"
+    ],
+    [
+     "François de Laval",
+     "First bishop of Quebec"
+    ],
+    [
+     "Marguerite d’Youville",
+     "Founded the Grey Nuns"
+    ]
+   ]
+  },
+  {
+   "title": "Young Saints",
+   "pairs": [
+    [
+     "Dominic Savio",
+     "“Death rather than sin”"
+    ],
+    [
+     "Maria Goretti",
+     "Forgave her attacker"
+    ],
+    [
+     "Aloysius Gonzaga",
+     "Nursed plague victims"
+    ],
+    [
+     "Stanislaus Kostka",
+     "Walked 450 miles to join the Jesuits"
+    ],
+    [
+     "José Sánchez del Río",
+     "Teen martyr: “Viva Cristo Rey!”"
+    ],
+    [
+     "Kizito",
+     "Youngest of the Uganda martyrs"
+    ]
+   ]
+  },
+  {
+   "title": "Patrons & Helpers",
+   "pairs": [
+    [
+     "Jude",
+     "Patron of hopeless causes"
+    ],
+    [
+     "Rita of Cascia",
+     "Patron of impossible causes"
+    ],
+    [
+     "Christopher",
+     "Carried a child across a river"
+    ],
+    [
+     "Blaise",
+     "Blessing of throats"
+    ],
+    [
+     "Joseph of Cupertino",
+     "Floated in prayer; patron of students"
+    ],
+    [
+     "Isidore of Seville",
+     "Patron of the internet"
+    ]
+   ]
+  },
+  {
+   "title": "Joyful & Heavenly",
+   "pairs": [
+    [
+     "Philip Neri",
+     "The saint who loved jokes"
+    ],
+    [
+     "John Bosco",
+     "Magic tricks for street boys"
+    ],
+    [
+     "Francis de Sales",
+     "Notes slipped under doors"
+    ],
+    [
+     "Cecilia",
+     "Patron of music"
+    ],
+    [
+     "Archangel Michael",
+     "Defender against evil"
+    ],
+    [
+     "Archangel Raphael",
+     "Angel of healing"
+    ]
+   ]
+  },
+  {
+   "title": "Servants of All",
+   "pairs": [
+    [
+     "Joseph",
+     "Carpenter of Nazareth"
+    ],
+    [
+     "Lucy",
+     "Crown of candles"
+    ],
+    [
+     "John Vianney",
+     "Patron of parish priests"
+    ],
+    [
+     "Pius X",
+     "First Communion for children"
+    ],
+    [
+     "Elizabeth of Hungary",
+     "Bread turned to roses"
+    ],
+    [
+     "Damien of Molokai",
+     "Served people with leprosy"
+    ]
+   ]
+  }
+ ],
+ "catechism": [
+  {
+   "q": "Who made you?",
+   "a": "God made me."
+  },
+  {
+   "q": "Why did God make you?",
+   "a": "God made me to know Him, love Him and serve Him in this world, and to be happy with Him for ever in the next."
+  },
+  {
+   "q": "To whose image and likeness did God make you?",
+   "a": "God made me to His own image and likeness."
+  },
+  {
+   "q": "Is this likeness to God in your body, or in your soul?",
+   "a": "This likeness to God is chiefly in my soul."
+  },
+  {
+   "q": "How is your soul like to God?",
+   "a": "My soul is like to God because it is a spirit, and is immortal."
+  },
+  {
+   "q": "What do you mean when you say that your soul is immortal?",
+   "a": "When I say that my soul is immortal, I mean that my soul can never die."
+  },
+  {
+   "q": "What must you do to save your soul?",
+   "a": "To save my soul I must worship God by Faith, Hope and Charity; that is, I must believe in Him, I must hope in Him, and I must love Him with my whole heart."
+  },
+  {
+   "q": "What is faith?",
+   "a": "Faith is a supernatural gift of God, which enables us to believe without doubting whatever God has revealed."
+  }
+ ],
+ "verses": [
+  {
+   "text": "Let the children come to me",
+   "ref": "Mark 10:14"
+  },
+  {
+   "text": "The Lord is my shepherd I shall not want",
+   "ref": "Psalm 23:1"
+  },
+  {
+   "text": "For God so loved the world that he gave his only Son",
+   "ref": "John 3:16"
+  },
+  {
+   "text": "I can do all things in him who strengthens me",
+   "ref": "Philippians 4:13"
+  },
+  {
+   "text": "Be still and know that I am God",
+   "ref": "Psalm 46:10"
+  },
+  {
+   "text": "Love one another as I have loved you",
+   "ref": "John 15:12"
+  },
+  {
+   "text": "Your word is a lamp to my feet",
+   "ref": "Psalm 119:105"
+  },
+  {
+   "text": "With God all things are possible",
+   "ref": "Matthew 19:26"
+  },
+  {
+   "text": "Rejoice in the Lord always",
+   "ref": "Philippians 4:4"
+  },
+  {
+   "text": "I am the light of the world",
+   "ref": "John 8:12"
+  },
+  {
+   "text": "Behold I am the handmaid of the Lord",
+   "ref": "Luke 1:38"
+  },
+  {
+   "text": "This is the day the Lord has made",
+   "ref": "Psalm 118:24"
+  }
+ ],
+ "stories": [
+  {
+   "title": "David and the Giant",
+   "age": "Ages 4–8 · 3 min",
+   "summary": "A shepherd boy, five smooth stones, and a very big problem.",
+   "body": [
+    "Long ago, in the green hills of Bethlehem, a boy named David looked after his father’s sheep. He played songs on his harp, and when a lion or a bear came near, he chased it away. David was small, but he was not afraid, because he knew God was with him.",
+    "One day David brought bread to his big brothers in the army. Across the valley stood a giant named Goliath. He was taller than a doorway, with a bronze helmet and a spear like a tree trunk. “Send someone to fight me!” he roared. All the soldiers trembled.",
+    "“I will go,” said David. King Saul gave him armour, but it was so heavy David could barely walk. So he took it off. Instead he went to the stream and picked five smooth stones.",
+    "Goliath laughed. “Am I a dog, that you come at me with sticks?” David answered, “You come with a sword, but I come in the name of the Lord.”",
+    "David put one stone in his sling, swung it round and round, and let it fly. It struck Goliath on the forehead, and the giant fell flat on the ground!",
+    "David knew it wasn’t his strong arm that won. It was God. And when we have giant problems, we can trust God too."
+   ]
+  },
+  {
+   "title": "Francis and the Wolf",
+   "age": "Ages 5–9 · 4 min",
+   "summary": "How St Francis made peace with a hungry wolf in the town of Gubbio.",
+   "body": [
+    "In the town of Gubbio lived a very hungry wolf. He prowled outside the walls, and the people were so frightened they would not go out to their fields.",
+    "Brother Francis came to visit. He wore a rough brown robe tied with a rope, and he called the sun his brother and the moon his sister. “I will go and talk to Brother Wolf,” he said. The people gasped.",
+    "Francis walked out of the gate. The wolf ran at him with sharp teeth. Francis made the Sign of the Cross and said, gently, “Come here, Brother Wolf. In the name of Jesus, do not hurt anyone.” The wolf stopped. He lay down at Francis’s feet like a puppy.",
+    "“You have done wrong,” said Francis, “but you were hungry. If the people feed you every day, will you promise to make peace?” The wolf put his paw in Francis’s hand.",
+    "From that day the people fed the wolf, and he went from door to door like a friend. When he grew old and died, the whole town was sad.",
+    "Francis showed that kindness can be stronger than fear. Who is your “wolf”? Maybe someone who just needs a friend."
+   ]
+  },
+  {
+   "title": "Thérèse and the Little Way",
+   "age": "Ages 6–10 · 3 min",
+   "summary": "A girl who wanted to be a great saint found an elevator to heaven.",
+   "body": [
+    "Thérèse Martin was the youngest of five sisters in a happy home in France. Her papa called her his “little queen”. She wanted to become a great saint, but she felt too small.",
+    "“The great saints are like mountains,” she thought, “and I am like a grain of sand.” Then she had an idea. In fancy houses there were new machines called elevators that carried you up when you were too small to climb the stairs.",
+    "“Jesus will be my elevator!” she said. “I will just stay little and let Him lift me.” She called it her Little Way.",
+    "In the convent, Thérèse did small things with great love. She smiled at a sister who annoyed her. She didn’t complain when someone splashed dirty water on her. She did her chores as gifts for Jesus.",
+    "Thérèse died when she was only twenty-four, but she promised, “I will spend my heaven doing good on earth.” She said she would let fall a shower of roses, and many people say she still sends them.",
+    "You don’t have to be big to be a saint. Today, do one small thing with great love."
+   ]
+  },
+  {
+   "title": "Carlo’s Map of Miracles",
+   "age": "Ages 7–12 · 3 min",
+   "summary": "A boy who loved computers used them to show the world Jesus.",
+   "body": [
+    "Carlo Acutis was a boy from Milan in Italy who loved football, his dogs and cats, funny videos and video games. He was also very, very good with computers.",
+    "But Carlo’s favourite thing in the world was Jesus in the Eucharist. He went to Mass every day he could. “The Eucharist is my highway to heaven,” he said.",
+    "Carlo set himself a rule: only one hour of video games a week. He wanted to keep his heart free for God and for people.",
+    "Then he had an idea. He would use his computer skills to build a website about Eucharistic miracles from all over the world, so that everyone could learn how much Jesus loves us. It took him years, and people still visit it.",
+    "Carlo also made friends with the poor people in his neighbourhood, bringing them food and sleeping bags. He died of an illness when he was fifteen. In 2025 the Church declared him a saint.",
+    "Carlo said, “All people are born as originals, but many die as photocopies.” God made you an original too!"
+   ]
+  }
+ ],
+ "prayers": [
+  {
+   "title": "Sign of the Cross",
+   "text": "In the name of the Father,\nand of the Son,\nand of the Holy Spirit.\nAmen.",
+   "tip": "Touch your forehead, your heart, your left shoulder, then your right."
+  },
+  {
+   "title": "Our Father",
+   "text": "Our Father, who art in heaven,\nhallowed be thy name;\nthy kingdom come,\nthy will be done\non earth as it is in heaven.\nGive us this day our daily bread,\nand forgive us our trespasses,\nas we forgive those who trespass against us;\nand lead us not into temptation,\nbut deliver us from evil.\nAmen.",
+   "tip": "Jesus taught this prayer to His friends (Matthew 6:9–13)."
+  },
+  {
+   "title": "Hail Mary",
+   "text": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou among women,\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\nAmen.",
+   "tip": "The first lines are the words of the angel Gabriel and of Elizabeth (Luke 1)."
+  },
+  {
+   "title": "Glory Be",
+   "text": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit,\nas it was in the beginning,\nis now, and ever shall be,\nworld without end.\nAmen.",
+   "tip": "A short prayer of praise to the Holy Trinity."
+  },
+  {
+   "title": "Guardian Angel",
+   "text": "Angel of God, my guardian dear,\nto whom God’s love commits me here,\never this day be at my side,\nto light and guard, to rule and guide.\nAmen.",
+   "tip": "A perfect prayer for the morning or before bed."
+  },
+  {
+   "title": "Grace Before Meals",
+   "text": "Bless us, O Lord,\nand these thy gifts,\nwhich we are about to receive\nfrom thy bounty,\nthrough Christ our Lord.\nAmen.",
+   "tip": "Say it together as a family before you eat."
+  },
+  {
+   "title": "Morning Offering",
+   "text": "O Jesus, through the Immaculate Heart of Mary,\nI offer you my prayers, works, joys and sufferings of this day\nfor all the intentions of your Sacred Heart.\nAmen.",
+   "tip": "A short form of the traditional Morning Offering. Give your whole day to Jesus."
+  },
+  {
+   "title": "Act of Contrition",
+   "text": "My God, I am sorry for my sins with all my heart.\nIn choosing to do wrong and failing to do good,\nI have sinned against you whom I should love above all things.\nI firmly intend, with your help, to do penance,\nto sin no more, and to avoid whatever leads me to sin.\nOur Saviour Jesus Christ suffered and died for us.\nIn his name, my God, have mercy.\nAmen.",
+   "tip": "Prayed in Confession, and at night before sleep."
+  }
+ ],
+ "resources": [
+  {
+   "title": "Daily Mass readings",
+   "desc": "Today’s Scripture readings, with audio and video reflections.",
+   "url": "https://bible.usccb.org/daily-bible-reading",
+   "source": "USCCB"
+  },
+  {
+   "title": "Catechism of the Catholic Church",
+   "desc": "The full Catechism, free on the Vatican’s website.",
+   "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM",
+   "source": "Vatican"
+  },
+  {
+   "title": "Penny Catechism",
+   "desc": "370 questions and answers, the classic summary of the faith. Our app is built on it.",
+   "url": "https://tanbooks.com/products/books/the-penny-catechism-a-catechism-of-christian-doctrine/",
+   "source": "TAN Books"
+  },
+  {
+   "title": "Catholic Encyclopedia",
+   "desc": "Long, detailed entries on saints, history and doctrine.",
+   "url": "https://www.newadvent.org/cathen/",
+   "source": "New Advent"
+  },
+  {
+   "title": "Canadian Conference of Catholic Bishops",
+   "desc": "Liturgical calendar and resources for Canada.",
+   "url": "https://www.cccb.ca",
+   "source": "CCCB"
+  },
+  {
+   "title": "Vatican News",
+   "desc": "Daily news from the Pope and the Church around the world.",
+   "url": "https://www.vaticannews.va/en.html",
+   "source": "Vatican News"
+  }
+ ]
+}
