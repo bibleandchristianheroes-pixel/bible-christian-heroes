@@ -1,0 +1,287 @@
+{
+ "apps_cta_rotation": [
+  "Read it in Scroll the Catholic Bible",
+  "Pray it with Ave – Catholic Prayer Lock",
+  "Read it in Scroll the Catholic Bible",
+  "Start your day with Ave Missal"
+ ],
+ "done": [
+  {
+   "day": "day001",
+   "title": "The Sower",
+   "refs": "Matthew 13:4, 13:6, 13:8"
+  },
+  {
+   "day": "day002",
+   "title": "Keep Knocking",
+   "refs": "Luke 18:1, 11:9, 11:10"
+  },
+  {
+   "day": "day003",
+   "title": "The Good Samaritan",
+   "refs": "Luke 10:31, 10:32, 10:33"
+  },
+  {
+   "day": "day004",
+   "title": "The Talents",
+   "refs": "Matthew 25:20, 25:22, 25:25"
+  },
+  {
+   "day": "day005",
+   "title": "Let Your Light Shine",
+   "refs": "Matthew 5:15, 5:15, 5:16"
+  },
+  {
+   "day": "day006",
+   "title": "Peter on the Water",
+   "refs": "Matthew 14:29, 14:30, 14:31"
+  },
+  {
+   "day": "day007",
+   "title": "A Threefold Cord",
+   "refs": "Ecclesiastes 4:10, 4:9, 4:12"
+  }
+ ],
+ "queue": [
+  {
+   "title": "Two Builders",
+   "refs": "Matthew 7:24, 7:26, 7:27",
+   "idea": "rock house stands / sand house storm / sand house falls; same builder, same storm"
+  },
+  {
+   "title": "The Lost Sheep",
+   "refs": "Luke 15:4, 15:5, 15:7",
+   "idea": "shepherd counts 99 / searches in dark / carries the one home on shoulders, joy"
+  },
+  {
+   "title": "The Ten Virgins",
+   "refs": "Matthew 25:3, 25:4, 25:10",
+   "idea": "lamps go out without oil / lamp with flask stays lit / door opens for the ready one"
+  },
+  {
+   "title": "The Prodigal Son",
+   "refs": "Luke 15:13, 15:20, 15:22",
+   "idea": "son leaves with coin bag / father sees him far off and runs / robe placed on him"
+  },
+  {
+   "title": "The Mustard Seed",
+   "refs": "Matthew 13:31, 13:32, 17:19",
+   "idea": "tiny seed planted / grows into tree / birds nest in its branches"
+  },
+  {
+   "title": "Pharisee and Tax Collector",
+   "refs": "Luke 18:11, 18:13, 18:14",
+   "idea": "one stands tall boasting / one beats breast far off / the humble one walks home lifted"
+  },
+  {
+   "title": "Martha and Mary",
+   "refs": "Luke 10:40, 10:39, 10:42",
+   "idea": "Martha rushing between pots / Mary sitting at the feet / Martha sits too"
+  },
+  {
+   "title": "The Widow's Mite",
+   "refs": "Mark 12:41, 12:42, 12:44",
+   "idea": "rich drop big bags / widow drops two small coins / her coins glow largest"
+  },
+  {
+   "title": "Zacchaeus",
+   "refs": "Luke 19:3, 19:4, 19:5",
+   "idea": "short man blocked by crowd / climbs sycamore / Jesus stops and looks up"
+  },
+  {
+   "title": "The Narrow Gate",
+   "refs": "Matthew 7:13, 7:14, 7:14",
+   "idea": "crowd streams through wide gate / one squeezes through narrow gate / path beyond opens into light"
+  },
+  {
+   "title": "Birds and Lilies",
+   "refs": "Matthew 6:26, 6:28, 6:34",
+   "idea": "man pacing with worries stacked on his back / birds fed / he sets the load down and sleeps"
+  },
+  {
+   "title": "Salt of the Earth",
+   "refs": "Matthew 5:13, 5:14, 5:16",
+   "idea": "salt that lost flavor tossed out / city on a hill seen from far / people drawn to the light"
+  },
+  {
+   "title": "The Unforgiving Servant",
+   "refs": "Matthew 18:27, 18:28, 18:33",
+   "idea": "king tears up the debt / freed servant chokes his fellow / king's question"
+  },
+  {
+   "title": "Lazarus",
+   "refs": "John 11:35, 11:39, 11:44",
+   "idea": "Jesus weeps at tomb / stone rolled away / Lazarus walks out bound"
+  },
+  {
+   "title": "Blind Bartimaeus",
+   "refs": "Mark 10:47, 10:48, 10:52",
+   "idea": "beggar calls out / crowd tells him to be silent, he shouts louder / sees and follows"
+  },
+  {
+   "title": "The Ten Lepers",
+   "refs": "Luke 17:14, 17:15, 17:17",
+   "idea": "ten healed walking away / one turns back / he alone kneels thanking"
+  },
+  {
+   "title": "Calming the Storm",
+   "refs": "Mark 4:37, 4:38, 4:39",
+   "idea": "waves fill boat / Jesus asleep on cushion / he rises, sea goes still"
+  },
+  {
+   "title": "Jonah",
+   "refs": "Jonah 1:3, 2:1, 3:3",
+   "idea": "Jonah runs the other way by ship / swallowed by fish / walks into Nineveh (check CPDV numbering)"
+  },
+  {
+   "title": "David and Goliath",
+   "refs": "1 Samuel 17:40, 17:45, 17:49",
+   "idea": "boy picks five stones / giant laughs / stone flies, giant falls (CPDV may call it 1 Kings)"
+  },
+  {
+   "title": "Noah's Dove",
+   "refs": "Genesis 7:12, 8:11, 9:13",
+   "idea": "rain / dove returns with olive leaf / rainbow"
+  },
+  {
+   "title": "Crossing the Sea",
+   "refs": "Exodus 14:13, 14:21, 14:22",
+   "idea": "people trapped at sea / Moses stretches hand / walls of water, walking through"
+  },
+  {
+   "title": "The Still Small Voice",
+   "refs": "1 Kings 19:11, 19:12, 19:13",
+   "idea": "wind breaks rocks / fire / whisper, Elijah covers face (check CPDV book naming)"
+  },
+  {
+   "title": "The Barren Fig Tree",
+   "refs": "Luke 13:7, 13:8, 13:9",
+   "idea": "owner with axe / gardener digs and fertilizes / tree fruits"
+  },
+  {
+   "title": "The Vine and Branches",
+   "refs": "John 15:4, 15:5, 15:6",
+   "idea": "branch cut off withers / attached branch / heavy grapes"
+  },
+  {
+   "title": "The Good Shepherd",
+   "refs": "John 10:11, 10:12, 10:14",
+   "idea": "wolf comes / hired man runs / shepherd stands between wolf and sheep"
+  },
+  {
+   "title": "Wheat and Weeds",
+   "refs": "Matthew 13:25, 13:29, 13:30",
+   "idea": "enemy sows at night / servants want to pull / harvest sorted"
+  },
+  {
+   "title": "The Hidden Treasure",
+   "refs": "Matthew 13:44, 13:45, 13:46",
+   "idea": "man finds treasure / sells everything / buys the field with joy"
+  },
+  {
+   "title": "The Two Sons",
+   "refs": "Matthew 21:28, 21:29, 21:30",
+   "idea": "father asks both / one says no then goes / one says yes then sits"
+  },
+  {
+   "title": "Workers in the Vineyard",
+   "refs": "Matthew 20:1, 20:6, 20:9",
+   "idea": "hired at dawn / hired late / all paid the same coin"
+  },
+  {
+   "title": "The Rich Fool",
+   "refs": "Luke 12:18, 12:19, 12:20",
+   "idea": "builds bigger barns / sits back to relax / candle goes out at night"
+  },
+  {
+   "title": "The Persistent Widow",
+   "refs": "Luke 18:3, 18:4, 18:5",
+   "idea": "widow knocks at judge daily / judge ignores / judge finally rises"
+  },
+  {
+   "title": "Washing Feet",
+   "refs": "John 13:4, 13:5, 13:15",
+   "idea": "Jesus removes outer garment / basin, washes feet / disciples wash each other's"
+  },
+  {
+   "title": "Peter Restored",
+   "refs": "John 18:27, 21:15, 21:17",
+   "idea": "rooster crows / fire on the beach / Peter's head lifts, 'Feed my sheep'"
+  },
+  {
+   "title": "The Road to Emmaus",
+   "refs": "Luke 24:15, 24:30, 24:32",
+   "idea": "two walk sad with stranger / he breaks bread / their hearts burned"
+  },
+  {
+   "title": "Five Loaves",
+   "refs": "John 6:9, 6:11, 6:13",
+   "idea": "boy gives small basket / bread passed out / twelve baskets left"
+  },
+  {
+   "title": "Come to Me",
+   "refs": "Matthew 11:28, 11:29, 11:30",
+   "idea": "man bent under heavy load / takes the yoke beside Jesus / walks light"
+  },
+  {
+   "title": "Trust in the Lord",
+   "refs": "Proverbs 3:5, 3:6, 3:6",
+   "idea": "man reads map alone, lost / holds a guiding hand / path straightens"
+  },
+  {
+   "title": "The Lord is My Shepherd",
+   "refs": "Psalm 22:1, 22:2, 22:4",
+   "idea": "Vulgate numbering: Hebrew Psalm 23 is CPDV Psalm 22; green pastures / still waters / dark valley with staff"
+  },
+  {
+   "title": "Love Is Patient",
+   "refs": "1 Corinthians 13:4, 13:7, 13:13",
+   "idea": "waiting / carrying another / three words remain"
+  },
+  {
+   "title": "Do Not Be Anxious",
+   "refs": "Philippians 4:6, 4:6, 4:7",
+   "idea": "worries piling up / kneels in prayer / peace like a guard at the door"
+  },
+  {
+   "title": "Faith and Works",
+   "refs": "James 2:15, 2:16, 2:17",
+   "idea": "cold person / passerby says 'be warm' and leaves / another gives coat"
+  },
+  {
+   "title": "Run the Race",
+   "refs": "Hebrews 12:1, 12:1, 12:2",
+   "idea": "runner weighed down / drops the weights / runs, eyes forward"
+  },
+  {
+   "title": "Mercies New Every Morning",
+   "refs": "Lamentations 3:22, 3:23, 3:23",
+   "idea": "night / sunrise / same man rises again"
+  },
+  {
+   "title": "Do Not Grow Weary",
+   "refs": "Galatians 6:9, 6:9, 6:10",
+   "idea": "farmer tired / keeps watering / harvest"
+  },
+  {
+   "title": "Love Your Enemies",
+   "refs": "Matthew 5:44, 5:39, 5:44",
+   "idea": "neighbor throws stone / man offers bread / neighbor softens"
+  },
+  {
+   "title": "The Annunciation",
+   "refs": "Luke 1:28, 1:29, 1:38",
+   "idea": "angel greets / Mary troubled / Mary's yes, light fills room"
+  },
+  {
+   "title": "The Wedding at Cana",
+   "refs": "John 2:3, 2:5, 2:9",
+   "idea": "wine runs out / Mary: do whatever he tells you / water tastes like wine"
+  },
+  {
+   "title": "The Woman Who Touched His Cloak",
+   "refs": "Mark 5:27, 5:28, 5:34",
+   "idea": "crowd presses / she reaches the hem / he turns, 'your faith has saved you'"
+  }
+ ]
+}
