@@ -83,4 +83,4 @@ class NotAlone(Episode):
                     mx_ = (x1 + x2) / 2; my_ = (y1 + y2) / 2 + 14 * (1 - hold) + off
                     cr.move_to(x1, y1 + off); cr.curve_to(mx_, my_, mx_, my_, x2, y2 - 20 + off); cr.stroke()
 
-OUTPUT_NAME = "day007_threefold_cord_ecclesiastes4"
+OUTPUT_NAME = "day07a_threefold_cord_ecclesiastes4"

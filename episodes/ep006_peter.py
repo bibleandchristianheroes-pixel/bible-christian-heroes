@@ -60,4 +60,4 @@ class Peter(Episode):
             for ang in (-0.9, -0.3, 0.3):
                 cr.move_to(px + 22 * math.cos(ang), hy + 22 * math.sin(ang)); cr.line_to(px + 40 * math.cos(ang), hy + 40 * math.sin(ang)); cr.stroke()
 
-OUTPUT_NAME = "day006_peter_on_the_water_matthew14"
+OUTPUT_NAME = "day06a_peter_on_the_water_matthew14"

@@ -63,4 +63,4 @@ class Talents(Episode):
             sp = body(t, sp, wa2)
         draw_figure(cr, sx, gy, sp, s=1.0)
 
-OUTPUT_NAME = "day004_talents_matthew25"
+OUTPUT_NAME = "day04a_talents_matthew25"

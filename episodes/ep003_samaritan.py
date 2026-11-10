@@ -59,4 +59,4 @@ class Samaritan(Episode):
             if 6.6 <= t <= 8.4: p = pose("kneel", rs=75, re=20 + 25 * tend)
             draw_figure(cr, x, gy, body(t, p, wa if t < 5.5 or t > 12.2 else 0, speed=1.2), s=1.05)
 
-OUTPUT_NAME = "day003_good_samaritan_luke10"
+OUTPUT_NAME = "day03a_good_samaritan_luke10"

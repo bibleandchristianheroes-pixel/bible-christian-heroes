@@ -7,39 +7,74 @@
  ],
  "done": [
   {
-   "day": "day001",
+   "day": "01a",
    "title": "The Sower",
    "refs": "Matthew 13:4, 13:6, 13:8"
   },
   {
-   "day": "day002",
+   "day": "01b",
+   "title": "The Ten Virgins",
+   "refs": "Matthew 25:3, 25:4, 25:10"
+  },
+  {
+   "day": "02a",
    "title": "Keep Knocking",
    "refs": "Luke 18:1, 11:9, 11:10"
   },
   {
-   "day": "day003",
+   "day": "02b",
+   "title": "Pharisee and Tax Collector",
+   "refs": "Luke 18:11, 18:13, 18:14"
+  },
+  {
+   "day": "03a",
    "title": "The Good Samaritan",
    "refs": "Luke 10:31, 10:32, 10:33"
   },
   {
-   "day": "day004",
+   "day": "03b",
+   "title": "The Widow's Offering",
+   "refs": "Mark 12:41, 12:42, 12:44"
+  },
+  {
+   "day": "04a",
    "title": "The Talents",
    "refs": "Matthew 25:20, 25:22, 25:25"
   },
   {
-   "day": "day005",
+   "day": "04b",
+   "title": "The Ten Lepers",
+   "refs": "Luke 17:14, 17:15, 17:17"
+  },
+  {
+   "day": "05a",
    "title": "Let Your Light Shine",
    "refs": "Matthew 5:15, 5:15, 5:16"
   },
   {
-   "day": "day006",
+   "day": "05b",
+   "title": "The Two Sons",
+   "refs": "Matthew 21:28, 21:29, 21:30"
+  },
+  {
+   "day": "06a",
    "title": "Peter on the Water",
    "refs": "Matthew 14:29, 14:30, 14:31"
   },
   {
-   "day": "day007",
+   "day": "06b",
+   "title": "Faith and Works",
+   "refs": "James 2:15, 2:16, 2:17"
+  },
+  {
+   "day": "07a",
    "title": "A Threefold Cord",
    "refs": "Ecclesiastes 4:10, 4:9, 4:12"
+  },
+  {
+   "day": "07b",
+   "title": "Run the Race",
+   "refs": "Hebrews 12:3, 12:1, 12:2"
   }
  ],
  "queue": [
@@ -54,11 +89,6 @@
    "idea": "shepherd counts 99 / searches in dark / carries the one home on shoulders, joy"
   },
   {
-   "title": "The Ten Virgins",
-   "refs": "Matthew 25:3, 25:4, 25:10",
-   "idea": "lamps go out without oil / lamp with flask stays lit / door opens for the ready one"
-  },
-  {
    "title": "The Prodigal Son",
    "refs": "Luke 15:13, 15:20, 15:22",
    "idea": "son leaves with coin bag / father sees him far off and runs / robe placed on him"
@@ -69,19 +99,9 @@
    "idea": "tiny seed planted / grows into tree / birds nest in its branches"
   },
   {
-   "title": "Pharisee and Tax Collector",
-   "refs": "Luke 18:11, 18:13, 18:14",
-   "idea": "one stands tall boasting / one beats breast far off / the humble one walks home lifted"
-  },
-  {
    "title": "Martha and Mary",
    "refs": "Luke 10:40, 10:39, 10:42",
    "idea": "Martha rushing between pots / Mary sitting at the feet / Martha sits too"
-  },
-  {
-   "title": "The Widow's Mite",
-   "refs": "Mark 12:41, 12:42, 12:44",
-   "idea": "rich drop big bags / widow drops two small coins / her coins glow largest"
   },
   {
    "title": "Zacchaeus",
@@ -117,11 +137,6 @@
    "title": "Blind Bartimaeus",
    "refs": "Mark 10:47, 10:48, 10:52",
    "idea": "beggar calls out / crowd tells him to be silent, he shouts louder / sees and follows"
-  },
-  {
-   "title": "The Ten Lepers",
-   "refs": "Luke 17:14, 17:15, 17:17",
-   "idea": "ten healed walking away / one turns back / he alone kneels thanking"
   },
   {
    "title": "Calming the Storm",
@@ -177,11 +192,6 @@
    "title": "The Hidden Treasure",
    "refs": "Matthew 13:44, 13:45, 13:46",
    "idea": "man finds treasure / sells everything / buys the field with joy"
-  },
-  {
-   "title": "The Two Sons",
-   "refs": "Matthew 21:28, 21:29, 21:30",
-   "idea": "father asks both / one says no then goes / one says yes then sits"
   },
   {
    "title": "Workers in the Vineyard",
@@ -244,16 +254,6 @@
    "idea": "worries piling up / kneels in prayer / peace like a guard at the door"
   },
   {
-   "title": "Faith and Works",
-   "refs": "James 2:15, 2:16, 2:17",
-   "idea": "cold person / passerby says 'be warm' and leaves / another gives coat"
-  },
-  {
-   "title": "Run the Race",
-   "refs": "Hebrews 12:1, 12:1, 12:2",
-   "idea": "runner weighed down / drops the weights / runs, eyes forward"
-  },
-  {
    "title": "Mercies New Every Morning",
    "refs": "Lamentations 3:22, 3:23, 3:23",
    "idea": "night / sunrise / same man rises again"
@@ -283,5 +283,6 @@
    "refs": "Mark 5:27, 5:28, 5:34",
    "idea": "crowd presses / she reaches the hem / he turns, 'your faith has saved you'"
   }
- ]
+ ],
+ "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."
 }

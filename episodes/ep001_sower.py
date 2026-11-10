@@ -123,4 +123,4 @@ class Sower(Episode):
         p = self.sower_pose(i, t)
         draw_figure(cr, self.walk_x(t), gy, p, s=1.05, prop="bag")
 
-OUTPUT_NAME = "day001_sower_matthew13"
+OUTPUT_NAME = "day01a_sower_matthew13"

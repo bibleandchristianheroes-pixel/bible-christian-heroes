@@ -69,4 +69,4 @@ class Knock(Episode):
                             cr.move_to(self.HX + 30 + 14 * math.cos(ang) * -1, gy - 110 + 14 * math.sin(ang))
                             cr.line_to(self.HX + 30 - 30 * math.cos(ang), gy - 110 + 30 * math.sin(ang)); cr.stroke()
 
-OUTPUT_NAME = "day002_keep_knocking_luke11"
+OUTPUT_NAME = "day02a_keep_knocking_luke11"

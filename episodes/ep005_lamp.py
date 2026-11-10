@@ -61,4 +61,4 @@ class Lamp(Episode):
                     draw_figure(cr, px, gy, body(t, pp, pwa), s=0.95, face=-1 if sx > ex else 1)
         darkness(cr, y0, PANEL_H, night, lights)
 
-OUTPUT_NAME = "day005_let_your_light_shine_matthew5"
+OUTPUT_NAME = "day05a_let_your_light_shine_matthew5"

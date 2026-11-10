@@ -1,8 +1,8 @@
 # Daily Verse Parables: runbook for the daily run
 
-Each run makes **two** new videos and stops there. Each video is 18 seconds, 1080x1920 and 30 fps, and loops seamlessly.
+Each run makes **two** new videos for one day, named `dayNNa_...` and `dayNNb_...`, and stops there. Each video is 18 seconds, 1080x1920 and 30 fps, and loops seamlessly.
 The look: a cream background, black silhouettes, three stacked panels, and one CPDV verse per panel.
-Day 1 to day 7 (`episodes/ep001`–`ep007`) are the reference for quality and style. Read two of them before writing anything new.
+Days 1–7 (`episodes/ep001`–`ep014`) are the reference for quality and style. Read two of them before writing anything new.
 
 ## 0. Setup (fresh workspace)
 ```
@@ -11,7 +11,7 @@ Day 1 to day 7 (`episodes/ep001`–`ep007`) are the reference for quality and st
 
 ## 1. Pick the next two stories
 - Take the first two items in `queue.json` → `queue`. Their refs and ideas are suggestions only.
-- Numbering: the next day number is the last `done[].day` plus 1, then plus 2.
+- Numbering: the next day is the day after the last entry in `done[]`, and its two videos are `NNa` and `NNb`. For example, after `07b` comes `08a` and `08b`.
 - Choose three verses that tell **one story in three outcomes**. Every panel starts the same way and then the outcomes split, as in the original sample, where three people shoot the same basketball.
   The best formats are: two who fail and one who perseveres, three different responses, or a contrast in what's chosen.
 - Look up the exact text with `from engine import verse; verse("Luke", 15, 4)`.
@@ -26,8 +26,8 @@ Copy the closest existing episode to `episodes/epNNN_<slug>.py` and set:
 - `captions`: three entries of `(cpdv(book, ch, vs, "exact excerpt"), "Book ch:vs", time_in_seconds)`.
   `cpdv()` checks the wording against the CPDV and fails on anything that isn't verbatim. Use `…` to trim text.
   Each excerpt should be at most about 20 words. Make each caption appear at the moment its panel's outcome happens.
-- `cta`: rotate through `queue.json` → `apps_cta_rotation`, picking by day number modulo its length.
-- `OUTPUT_NAME = "dayNNN_<slug>_<book><chapter>"`.
+- `cta`: give the two videos of a day different apps, and rotate through `queue.json` → `apps_cta_rotation`.
+- `OUTPUT_NAME = "dayNNa_<slug>_<book><chapter>"` (or `NNb`). Episode files keep counting up: `ep015`, `ep016` and so on.
 - `draw_panel(cr, i, t, y0, gy)`: put the choreography here.
   Helpers: `track()` for walking positions, `keyed()` for pose keyframes, `body()` to blend in a walk cycle, `draw_figure()` and `draw_rotated()` for people, and the props in `props.py` (house/door/light, coin, lamp, lampstand, basket, darkness, water, boat, wind, sun, bird, sprout, wheat).
   Add new props to `props.py`, never inline, so later days can reuse them.
