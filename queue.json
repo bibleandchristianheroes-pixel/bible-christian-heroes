@@ -85,208 +85,318 @@
    "day": "08b",
    "title": "The Lost Sheep",
    "refs": "Luke 15:4, 15:5, 15:7"
+  },
+  {
+   "day": "09a",
+   "title": "The Prodigal Son",
+   "refs": "Luke 15:13, 15:20, 15:22"
+  },
+  {
+   "day": "09b",
+   "title": "The Mustard Seed",
+   "refs": "Matthew 13:31, 13:32, 17:19"
+  },
+  {
+   "day": "10a",
+   "title": "Martha and Mary",
+   "refs": "Luke 10:40, 10:39, 10:42"
+  },
+  {
+   "day": "10b",
+   "title": "Zacchaeus",
+   "refs": "Luke 19:3, 19:4, 19:5"
+  },
+  {
+   "day": "11a",
+   "title": "The Narrow Gate",
+   "refs": "Matthew 7:13, 7:14, 7:14"
+  },
+  {
+   "day": "11b",
+   "title": "Birds and Lilies",
+   "refs": "Matthew 6:26, 6:28, 6:34"
+  },
+  {
+   "day": "12a",
+   "title": "Salt of the Earth",
+   "refs": "Matthew 5:13, 5:14, 5:16"
+  },
+  {
+   "day": "12b",
+   "title": "The Unforgiving Servant",
+   "refs": "Matthew 18:27, 18:28, 18:33"
+  },
+  {
+   "day": "13a",
+   "title": "The Raising of Lazarus",
+   "refs": "John 11:35, 11:39, 11:44"
+  },
+  {
+   "day": "13b",
+   "title": "Blind Bartimaeus",
+   "refs": "Mark 10:47, 10:48, 10:52"
+  },
+  {
+   "day": "14a",
+   "title": "Calming the Storm",
+   "refs": "Mark 4:37, 4:38, 4:39"
+  },
+  {
+   "day": "14b",
+   "title": "Jonah",
+   "refs": "Jonah 1:3, 2:1, 3:3"
+  },
+  {
+   "day": "15a",
+   "title": "David and Goliath",
+   "refs": "1 Samuel 17:40, 17:45, 17:49"
+  },
+  {
+   "day": "15b",
+   "title": "Noah's Dove",
+   "refs": "Genesis 7:12, 8:11, 9:13"
+  },
+  {
+   "day": "16a",
+   "title": "Crossing the Sea",
+   "refs": "Exodus 14:13, 14:21, 14:22"
+  },
+  {
+   "day": "16b",
+   "title": "The Still Small Voice",
+   "refs": "1 Kings 19:11, 19:12, 19:13"
+  },
+  {
+   "day": "17a",
+   "title": "The Barren Fig Tree",
+   "refs": "Luke 13:7, 13:8, 13:9"
+  },
+  {
+   "day": "17b",
+   "title": "The Vine and the Branches",
+   "refs": "John 15:4, 15:6, 15:5"
+  },
+  {
+   "day": "18a",
+   "title": "The Good Shepherd",
+   "refs": "John 10:12, 10:11, 10:14"
+  },
+  {
+   "day": "18b",
+   "title": "Wheat and Weeds",
+   "refs": "Matthew 13:25, 13:29, 13:30"
+  },
+  {
+   "day": "19a",
+   "title": "The Hidden Treasure",
+   "refs": "Matthew 13:44, 13:44, 13:46"
+  },
+  {
+   "day": "19b",
+   "title": "Workers in the Vineyard",
+   "refs": "Matthew 20:1, 20:6, 20:9"
+  },
+  {
+   "day": "20a",
+   "title": "The Rich Fool",
+   "refs": "Luke 12:18, 12:19, 12:20"
+  },
+  {
+   "day": "20b",
+   "title": "The Persistent Widow",
+   "refs": "Luke 18:3, 18:4, 18:5"
+  },
+  {
+   "day": "21a",
+   "title": "Washing Feet",
+   "refs": "John 13:4, 13:5, 13:15"
+  },
+  {
+   "day": "21b",
+   "title": "Peter Restored",
+   "refs": "John 18:27, 21:15, 21:17"
+  },
+  {
+   "day": "22a",
+   "title": "The Road to Emmaus",
+   "refs": "Luke 24:15, 24:30, 24:32"
+  },
+  {
+   "day": "22b",
+   "title": "Five Loaves",
+   "refs": "John 6:9, 6:11, 6:13"
+  },
+  {
+   "day": "23a",
+   "title": "Come to Me",
+   "refs": "Matthew 11:28, 11:29, 11:30"
+  },
+  {
+   "day": "23b",
+   "title": "Trust in the Lord",
+   "refs": "Proverbs 3:5, 3:6, 3:6"
+  },
+  {
+   "day": "24a",
+   "title": "The Lord is My Shepherd",
+   "refs": "Psalm 22:1, 22:2, 22:4"
+  },
+  {
+   "day": "24b",
+   "title": "Love Is Patient",
+   "refs": "1 Corinthians 13:4, 13:7, 13:13"
+  },
+  {
+   "day": "25a",
+   "title": "Do Not Be Anxious",
+   "refs": "Philippians 4:6, 4:6, 4:7"
+  },
+  {
+   "day": "25b",
+   "title": "Mercies New Every Morning",
+   "refs": "Lamentations 3:22, 3:23, 3:25"
+  },
+  {
+   "day": "26a",
+   "title": "Do Not Grow Weary",
+   "refs": "Galatians 6:9, 6:9, 6:10"
+  },
+  {
+   "day": "26b",
+   "title": "Love Your Enemies",
+   "refs": "Matthew 5:39, 5:44, 5:44"
+  },
+  {
+   "day": "27a",
+   "title": "The Annunciation",
+   "refs": "Luke 1:28, 1:29, 1:38"
+  },
+  {
+   "day": "27b",
+   "title": "The Wedding at Cana",
+   "refs": "John 2:3, 2:5, 2:9"
+  },
+  {
+   "day": "28a",
+   "title": "The Woman Who Touched His Cloak",
+   "refs": "Mark 5:28, 5:27, 5:34"
+  },
+  {
+   "day": "28b",
+   "title": "The Lost Coin",
+   "refs": "Luke 15:8, 15:9, 15:10"
   }
  ],
  "queue": [
   {
-   "title": "The Prodigal Son",
-   "refs": "Luke 15:13, 15:20, 15:22",
-   "idea": "son leaves with coin bag / father sees him far off and runs / robe placed on him"
+   "title": "The Healing Through the Roof",
+   "refs": "Mark 2:3, 2:4, 2:12",
+   "idea": "friends carry a paralysed man / crowd blocks the door, they open the roof and lower him / he picks up his mat and walks"
   },
   {
-   "title": "The Mustard Seed",
-   "refs": "Matthew 13:31, 13:32, 17:19",
-   "idea": "tiny seed planted / grows into tree / birds nest in its branches"
+   "title": "Let the Children Come",
+   "refs": "Mark 10:13, 10:14, 10:16",
+   "idea": "children brought / disciples push them back / Jesus blesses them"
   },
   {
-   "title": "Martha and Mary",
-   "refs": "Luke 10:40, 10:39, 10:42",
-   "idea": "Martha rushing between pots / Mary sitting at the feet / Martha sits too"
+   "title": "The Woman at the Well",
+   "refs": "John 4:7, 4:14, 4:28",
+   "idea": "woman draws water alone at noon / Jesus asks for a drink / she leaves her jar and runs to the town"
   },
   {
-   "title": "Zacchaeus",
-   "refs": "Luke 19:3, 19:4, 19:5",
-   "idea": "short man blocked by crowd / climbs sycamore / Jesus stops and looks up"
+   "title": "Doubting Thomas",
+   "refs": "John 20:25, 20:27, 20:28",
+   "idea": "Thomas arms crossed / Jesus shows his hands / Thomas kneels"
   },
   {
-   "title": "The Narrow Gate",
-   "refs": "Matthew 7:13, 7:14, 7:14",
-   "idea": "crowd streams through wide gate / one squeezes through narrow gate / path beyond opens into light"
+   "title": "The Rich Young Man",
+   "refs": "Mark 10:17, 10:21, 10:22",
+   "idea": "man runs and kneels / Jesus looks at him with love / he walks away sad, bag of coins"
   },
   {
-   "title": "Birds and Lilies",
-   "refs": "Matthew 6:26, 6:28, 6:34",
-   "idea": "man pacing with worries stacked on his back / birds fed / he sets the load down and sleeps"
+   "title": "The Great Catch",
+   "refs": "Luke 5:5, 5:6, 5:11",
+   "idea": "empty nets all night / casts again at his word, net bursts / they leave the boats and follow"
   },
   {
-   "title": "Salt of the Earth",
-   "refs": "Matthew 5:13, 5:14, 5:16",
-   "idea": "salt that lost flavor tossed out / city on a hill seen from far / people drawn to the light"
+   "title": "The Great Banquet",
+   "refs": "Luke 14:18, 14:21, 14:23",
+   "idea": "guests make excuses / the poor and lame brought in / table full"
   },
   {
-   "title": "The Unforgiving Servant",
-   "refs": "Matthew 18:27, 18:28, 18:33",
-   "idea": "king tears up the debt / freed servant chokes his fellow / king's question"
+   "title": "The Faithful Servant",
+   "refs": "Matthew 24:45, 24:46, 24:48",
+   "idea": "master leaves / one servant feeds the household / the other sleeps and the master returns"
   },
   {
-   "title": "Lazarus",
-   "refs": "John 11:35, 11:39, 11:44",
-   "idea": "Jesus weeps at tomb / stone rolled away / Lazarus walks out bound"
+   "title": "The Two Debtors",
+   "refs": "Luke 7:41, 7:42, 7:47",
+   "idea": "two owe a lender / both forgiven / the one forgiven more loves more"
   },
   {
-   "title": "Blind Bartimaeus",
-   "refs": "Mark 10:47, 10:48, 10:52",
-   "idea": "beggar calls out / crowd tells him to be silent, he shouts louder / sees and follows"
+   "title": "The Widow of Nain",
+   "refs": "Luke 7:12, 7:13, 7:15",
+   "idea": "funeral procession / Jesus says do not weep / the young man sits up and is given to his mother"
   },
   {
-   "title": "Calming the Storm",
-   "refs": "Mark 4:37, 4:38, 4:39",
-   "idea": "waves fill boat / Jesus asleep on cushion / he rises, sea goes still"
+   "title": "Mary Magdalene at the Tomb",
+   "refs": "John 20:11, 20:15, 20:16",
+   "idea": "weeping at the empty tomb / thinks he is the gardener / he says her name, she turns"
   },
   {
-   "title": "Jonah",
-   "refs": "Jonah 1:3, 2:1, 3:3",
-   "idea": "Jonah runs the other way by ship / swallowed by fish / walks into Nineveh (check CPDV numbering)"
+   "title": "The Centurion's Faith",
+   "refs": "Matthew 8:8, 8:10, 8:13",
+   "idea": "soldier: I am not worthy / Jesus marvels / servant healed at that hour"
   },
   {
-   "title": "David and Goliath",
-   "refs": "1 Samuel 17:40, 17:45, 17:49",
-   "idea": "boy picks five stones / giant laughs / stone flies, giant falls (CPDV may call it 1 Kings)"
+   "title": "Ruth's Loyalty",
+   "refs": "Ruth 1:14, 1:16, 1:16",
+   "idea": "Orpah kisses and leaves / Ruth clings / they walk on together"
   },
   {
-   "title": "Noah's Dove",
-   "refs": "Genesis 7:12, 8:11, 9:13",
-   "idea": "rain / dove returns with olive leaf / rainbow"
+   "title": "Daniel in the Lions' Den",
+   "refs": "Daniel 6:10, 6:16, 6:22",
+   "idea": "prays at the open window / thrown to the lions / lions lie down (check CPDV numbering)"
   },
   {
-   "title": "Crossing the Sea",
-   "refs": "Exodus 14:13, 14:21, 14:22",
-   "idea": "people trapped at sea / Moses stretches hand / walls of water, walking through"
+   "title": "The Burning Bush",
+   "refs": "Exodus 3:2, 3:4, 3:5",
+   "idea": "shepherd sees the bush burning, not consumed / turns aside / removes his sandals"
   },
   {
-   "title": "The Still Small Voice",
-   "refs": "1 Kings 19:11, 19:12, 19:13",
-   "idea": "wind breaks rocks / fire / whisper, Elijah covers face (check CPDV book naming)"
+   "title": "Speak, Lord",
+   "refs": "1 Samuel 3:4, 3:9, 3:10",
+   "idea": "boy wakes and runs to Eli / sent back to lie down / answers: speak, your servant hears (check CPDV book naming)"
   },
   {
-   "title": "The Barren Fig Tree",
-   "refs": "Luke 13:7, 13:8, 13:9",
-   "idea": "owner with axe / gardener digs and fertilizes / tree fruits"
+   "title": "Joseph Forgives His Brothers",
+   "refs": "Genesis 45:3, 45:4, 45:5",
+   "idea": "brothers terrified / come closer to me / embrace"
   },
   {
-   "title": "The Vine and Branches",
-   "refs": "John 15:4, 15:5, 15:6",
-   "idea": "branch cut off withers / attached branch / heavy grapes"
+   "title": "Be Still",
+   "refs": "Psalm 45:11, 45:2, 45:3",
+   "idea": "Vulgate numbering: Hebrew Psalm 46 is CPDV Psalm 45; busy man rushing / storm and mountains shaking / he stops, sits, is still"
   },
   {
-   "title": "The Good Shepherd",
-   "refs": "John 10:11, 10:12, 10:14",
-   "idea": "wolf comes / hired man runs / shepherd stands between wolf and sheep"
+   "title": "Wings Like Eagles",
+   "refs": "Isaiah 40:29, 40:30, 40:31",
+   "idea": "runners collapse / young men fail / one who hopes rises, eagle above"
   },
   {
-   "title": "Wheat and Weeds",
-   "refs": "Matthew 13:25, 13:29, 13:30",
-   "idea": "enemy sows at night / servants want to pull / harvest sorted"
+   "title": "Pentecost",
+   "refs": "Acts 2:2, 2:3, 2:4",
+   "idea": "disciples hidden in a room / wind and tongues of fire / they go out to the crowd"
   },
   {
-   "title": "The Hidden Treasure",
-   "refs": "Matthew 13:44, 13:45, 13:46",
-   "idea": "man finds treasure / sells everything / buys the field with joy"
+   "title": "The Good Thief",
+   "refs": "Luke 23:39, 23:42, 23:43",
+   "idea": "three crosses / one mocks, one asks / 'today you will be with me in Paradise' light"
   },
   {
-   "title": "Workers in the Vineyard",
-   "refs": "Matthew 20:1, 20:6, 20:9",
-   "idea": "hired at dawn / hired late / all paid the same coin"
-  },
-  {
-   "title": "The Rich Fool",
-   "refs": "Luke 12:18, 12:19, 12:20",
-   "idea": "builds bigger barns / sits back to relax / candle goes out at night"
-  },
-  {
-   "title": "The Persistent Widow",
-   "refs": "Luke 18:3, 18:4, 18:5",
-   "idea": "widow knocks at judge daily / judge ignores / judge finally rises"
-  },
-  {
-   "title": "Washing Feet",
-   "refs": "John 13:4, 13:5, 13:15",
-   "idea": "Jesus removes outer garment / basin, washes feet / disciples wash each other's"
-  },
-  {
-   "title": "Peter Restored",
-   "refs": "John 18:27, 21:15, 21:17",
-   "idea": "rooster crows / fire on the beach / Peter's head lifts, 'Feed my sheep'"
-  },
-  {
-   "title": "The Road to Emmaus",
-   "refs": "Luke 24:15, 24:30, 24:32",
-   "idea": "two walk sad with stranger / he breaks bread / their hearts burned"
-  },
-  {
-   "title": "Five Loaves",
-   "refs": "John 6:9, 6:11, 6:13",
-   "idea": "boy gives small basket / bread passed out / twelve baskets left"
-  },
-  {
-   "title": "Come to Me",
-   "refs": "Matthew 11:28, 11:29, 11:30",
-   "idea": "man bent under heavy load / takes the yoke beside Jesus / walks light"
-  },
-  {
-   "title": "Trust in the Lord",
-   "refs": "Proverbs 3:5, 3:6, 3:6",
-   "idea": "man reads map alone, lost / holds a guiding hand / path straightens"
-  },
-  {
-   "title": "The Lord is My Shepherd",
-   "refs": "Psalm 22:1, 22:2, 22:4",
-   "idea": "Vulgate numbering: Hebrew Psalm 23 is CPDV Psalm 22; green pastures / still waters / dark valley with staff"
-  },
-  {
-   "title": "Love Is Patient",
-   "refs": "1 Corinthians 13:4, 13:7, 13:13",
-   "idea": "waiting / carrying another / three words remain"
-  },
-  {
-   "title": "Do Not Be Anxious",
-   "refs": "Philippians 4:6, 4:6, 4:7",
-   "idea": "worries piling up / kneels in prayer / peace like a guard at the door"
-  },
-  {
-   "title": "Mercies New Every Morning",
-   "refs": "Lamentations 3:22, 3:23, 3:23",
-   "idea": "night / sunrise / same man rises again"
-  },
-  {
-   "title": "Do Not Grow Weary",
-   "refs": "Galatians 6:9, 6:9, 6:10",
-   "idea": "farmer tired / keeps watering / harvest"
-  },
-  {
-   "title": "Love Your Enemies",
-   "refs": "Matthew 5:44, 5:39, 5:44",
-   "idea": "neighbor throws stone / man offers bread / neighbor softens"
-  },
-  {
-   "title": "The Annunciation",
-   "refs": "Luke 1:28, 1:29, 1:38",
-   "idea": "angel greets / Mary troubled / Mary's yes, light fills room"
-  },
-  {
-   "title": "The Wedding at Cana",
-   "refs": "John 2:3, 2:5, 2:9",
-   "idea": "wine runs out / Mary: do whatever he tells you / water tastes like wine"
-  },
-  {
-   "title": "The Woman Who Touched His Cloak",
-   "refs": "Mark 5:27, 5:28, 5:34",
-   "idea": "crowd presses / she reaches the hem / he turns, 'your faith has saved you'"
-  },
-  {
-   "title": "The Lost Coin",
-   "refs": "Luke 15:8, 15:9, 15:10",
-   "idea": "woman sweeps dark house with lamp / finds the coin / calls neighbours, joy"
+   "title": "Faithful in Little",
+   "refs": "Luke 16:10, 16:10, 16:11",
+   "idea": "a man faithful with a coin / careless with a coin / trusted with more"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."
