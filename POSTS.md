@@ -71,3 +71,13 @@ Pinned comment: Read James 2 in Scroll the Catholic Bible (link in bio).
 Same race. What are you still carrying? Drop it. Eyes on Him. ✝️
 Pinned comment: Stay focused every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #RunTheRace #BibleVerse #CatholicTikTok #Faith #Motivation
+
+## Day 8a — The Two Builders (Matthew 7)
+Same rain. Same storm. Only one house stood. What's yours built on? ⛈️
+Pinned comment: Read Matthew 7 in Scroll the Catholic Bible (link in bio).
+#Catholic #BibleVerse #Parables #CatholicTikTok #Faith #Jesus
+
+## Day 8b — The Lost Sheep (Luke 15)
+Ninety-nine were safe. He still went after the one. That one is you. 🐑
+Pinned comment: Start every day in the Word with Ave Missal (link in bio).
+#Catholic #LostSheep #BibleVerse #Parables #CatholicTikTok #Faith #GoodShepherd

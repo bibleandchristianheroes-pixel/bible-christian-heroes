@@ -215,3 +215,127 @@ def finish_line(cr, x, gy, h=140):
         for j in range(3):
             if (k + j) % 2 == 0: cr.rectangle(x + k * 13, gy - h + j * 13, 13, 13); cr.fill()
     cr.set_line_width(2); cr.rectangle(x, gy - h, 52, 39); cr.stroke()
+
+# ---- props added for day 8 (Two Builders, Lost Sheep) ----
+def rock_mound(cr, x0, x1, gy, h=40, slope=60):
+    """Flat-topped rock from x0 to x1 (slopes included). Returns (top_y, plateau_x0, plateau_x1)."""
+    top = gy - h; px0, px1 = x0 + slope, x1 - slope
+    cr.set_source_rgb(*INK)
+    cr.move_to(x0, gy + 2); cr.curve_to(x0 + slope * 0.4, gy - h * 0.2, x0 + slope * 0.6, top, px0, top)
+    cr.line_to(px1, top); cr.curve_to(x1 - slope * 0.6, top, x1 - slope * 0.4, gy - h * 0.2, x1, gy + 2)
+    cr.close_path(); cr.fill()
+    cr.set_source_rgb(*BG); cr.set_line_width(2.5)
+    for cx in (px0 + 40, px0 + 150, px1 - 60):
+        cr.move_to(cx, top + 8); cr.line_to(cx + 10, top + 20); cr.line_to(cx + 4, top + h - 6); cr.stroke()
+    return top, px0, px1
+
+def rock_y(x, x0, x1, gy, h=40, slope=60):
+    """Standing height on a rock_mound at x (gy off the rock)."""
+    if x <= x0 or x >= x1: return gy
+    if x < x0 + slope: return gy - h * smooth_(x, x0, x0 + slope)
+    if x > x1 - slope: return gy - h * (1 - smooth_(x, x1 - slope, x1))
+    return gy - h
+
+def smooth_(x, a, b):
+    u = clamp((x - a) / (b - a)); return u * u * (3 - 2 * u)
+
+def sand(cr, x0, x1, gy, n=70):
+    cr.set_source_rgb(*INK)
+    for k in range(n):
+        cr.arc(x0 + (k * 97) % (x1 - x0), gy + 9 + (k * 31) % 40, 1.5, 0, 2 * math.pi); cr.fill()
+    cr.set_line_width(2)
+    for k in range(5):
+        x = x0 + 30 + k * (x1 - x0 - 60) / 4
+        cr.move_to(x, gy - 1); cr.curve_to(x + 10, gy - 6, x + 26, gy - 6, x + 36, gy - 1); cr.stroke()
+
+HOUSE_W, HOUSE_H, HOUSE_ROOF = 150, 110, 55
+def small_house(cr, x, base_y, built=1.0, tilt=0.0, sink=0.0, collapse=0.0, light=0.0):
+    """Silhouette house, x = centre, base_y = floor. built 0..1 rises from the floor; tilt in degrees;
+    collapse 0..1 breaks it into a rubble heap (left wall, right wall, roof, beams fall at staggered times)."""
+    w, h, r = HOUSE_W, HOUSE_H, HOUSE_ROOF
+    if built <= 0: return
+    cr.save()
+    cr.rectangle(x - 400, base_y - 400, 800, 400 + 0.5); cr.clip()   # nothing shows below the floor
+    cr.translate(x, base_y + sink)
+    if collapse <= 0:
+        cr.rotate(math.radians(tilt))
+        reveal = (h + r) * built
+        cr.save(); cr.rectangle(-w, -reveal, 2 * w, reveal + 1); cr.clip()
+        cr.set_source_rgb(*INK)
+        cr.rectangle(-w / 2, -h, w, h); cr.fill()
+        cr.move_to(-w / 2 - 14, -h + 1); cr.line_to(0, -h - r); cr.line_to(w / 2 + 14, -h + 1); cr.close_path(); cr.fill()
+        # door + window cut-outs (lit when light > 0)
+        dc = tuple(lerp(BG[j], (1, 0.85, 0.45)[j], light) for j in range(3))
+        cr.set_source_rgb(*dc); cr.rectangle(-w / 2 + 22, -62, 32, 62); cr.fill()
+        cr.rectangle(w / 2 - 56, -82, 32, 30); cr.fill()
+        cr.set_source_rgb(*INK); cr.set_line_width(3); cr.move_to(w / 2 - 40, -82); cr.line_to(w / 2 - 40, -52); cr.stroke()
+        cr.restore()
+    else:
+        cr.rotate(math.radians(tilt))
+        # pieces: (polygon, pivot, final_dx, final_dy, final_rot_deg, delay)
+        P = [
+            ([(-w/2, -h), (-w/2 + 26, -h), (-w/2 + 26, 0), (-w/2, 0)], (-w/2, 0), -40, 0, -90, 0.10),   # left wall
+            ([(w/2 - 26, -h), (w/2, -h), (w/2, 0), (w/2 - 26, 0)], (w/2, 0), 30, 0, 90, 0.00),          # right wall
+            ([(-w/2 + 26, -h), (w/2 - 26, -h), (w/2 - 26, -h + 24), (-w/2 + 26, -h + 24)], (0, -h), 10, h - 24, 12, 0.25),  # beam
+            ([(-w/2 - 14, -h + 1), (0, -h - r), (w/2 + 14, -h + 1)], (0, -h), 25, h - 2, -18, 0.18),    # roof
+            ([(-w/2 + 26, -70), (w/2 - 26, -70), (w/2 - 26, 0), (-w/2 + 26, 0)], (0, 0), 0, 0, 0, 0.0),   # rubble core (shrinks)
+        ]
+        cr.set_source_rgb(*INK)
+        for k, (poly, pv, fdx, fdy, frot, dl) in enumerate(P):
+            u = smooth_(collapse, dl, dl + 0.7)
+            u2 = u * u
+            cr.save()
+            if k == 4:
+                cr.translate(0, 0); cr.scale(1, max(0.3, 1 - 0.7 * u))
+            else:
+                cr.translate(pv[0] + fdx * u, pv[1] + fdy * u2); cr.rotate(math.radians(frot * u)); cr.translate(-pv[0], -pv[1])
+            cr.move_to(*poly[0])
+            for p in poly[1:]: cr.line_to(*p)
+            cr.close_path(); cr.fill(); cr.restore()
+    cr.restore()
+
+def rain(cr, y0, ph, t, amount=1.0, slant=0.35, n=90, seed=9):
+    if amount <= 0: return
+    import random as _r
+    r = _r.Random(seed); cr.set_source_rgba(*SOFT, 0.75 * amount); cr.set_line_width(2)
+    for k in range(int(n * amount)):
+        x0 = r.uniform(-200, W + 100); sp = r.uniform(700, 950); ph0 = r.uniform(0, ph); L = r.uniform(18, 30)
+        y = y0 + ((ph0 + t * sp) % ph); x = x0 + slant * (y - y0)
+        cr.move_to(x, y); cr.line_to(x + slant * L, y + L); cr.stroke()
+
+def warm_glow(cr, x, y, r, amount):
+    if amount <= 0: return
+    g = cairo.RadialGradient(x, y, 0, x, y, r)
+    g.add_color_stop_rgba(0, 1, 0.86, 0.48, 0.55 * amount); g.add_color_stop_rgba(1, 1, 0.86, 0.48, 0)
+    cr.set_source(g); cr.rectangle(x - r, y - r, 2 * r, 2 * r); cr.fill()
+
+def sheep(cr, x, gy, s=1.0, face=1, graze=0.0, step=0.0, color=INK):
+    """Silhouette sheep standing on gy. graze 0..1 lowers the head; step = walk phase (radians), 0 = still."""
+    cr.save(); cr.translate(x, gy); cr.scale(face * s, s)
+    cr.set_source_rgb(*color); cr.set_line_width(5); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    for k, lx in enumerate((-20, -12, 14, 22)):
+        sw = 7 * math.sin(step + (0 if k in (0, 3) else math.pi)) if step else 0
+        cr.move_to(lx, -24); cr.line_to(lx + sw, 0); cr.stroke()
+    cr.save(); cr.translate(0, -34); cr.scale(32, 17); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    for bx, by, br in ((-22, -42, 11), (-8, -48, 12), (8, -48, 12), (22, -43, 11), (-30, -32, 9)):
+        cr.arc(bx, by, br, 0, 2 * math.pi); cr.fill()
+    hx, hy = lerp(36, 36, graze), lerp(-48, -14, graze)
+    cr.set_line_width(10); cr.move_to(24, -38); cr.line_to(hx - 4, hy + 2); cr.stroke()
+    cr.save(); cr.translate(hx, hy); cr.rotate(lerp(0.35, 1.2, graze)); cr.scale(12, 7.5); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    cr.save(); cr.translate(hx - 6, hy - 6); cr.rotate(-0.6); cr.scale(7, 3); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    cr.restore()
+
+def staff(cr, x, top_y, bottom_y, color=INK):
+    cr.set_source_rgb(*color); cr.set_line_width(5); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    cr.move_to(x, bottom_y); cr.line_to(x, top_y); cr.stroke()
+    cr.arc(x + 12, top_y, 12, math.pi, 2 * math.pi); cr.stroke()
+
+def thornbush(cr, x, gy, s=1.0, color=INK):
+    cr.set_source_rgb(*color); cr.set_line_width(3.5); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    for k, (a, L) in enumerate(((-1.2, 70), (-0.7, 95), (-0.25, 110), (0.2, 100), (0.65, 90), (1.1, 70))):
+        ex, ey = x + math.sin(a) * L * s, gy - math.cos(a) * L * s * 0.9
+        cr.move_to(x, gy); cr.curve_to(x + (ex - x) * 0.3, gy - 30 * s, ex - (ex - x) * 0.2, ey + 20 * s, ex, ey); cr.stroke()
+        for j in range(1, 4):
+            u = j / 4.0; px, py = lerp(x, ex, u), lerp(gy, ey, u * 1.05)
+            d = 1 if j % 2 else -1
+            cr.move_to(px, py); cr.line_to(px + d * 11 * s, py - 6 * s); cr.stroke()

@@ -75,19 +75,19 @@
    "day": "07b",
    "title": "Run the Race",
    "refs": "Hebrews 12:3, 12:1, 12:2"
+  },
+  {
+   "day": "08a",
+   "title": "The Two Builders",
+   "refs": "Matthew 7:26, 7:27, 7:25"
+  },
+  {
+   "day": "08b",
+   "title": "The Lost Sheep",
+   "refs": "Luke 15:4, 15:5, 15:7"
   }
  ],
  "queue": [
-  {
-   "title": "Two Builders",
-   "refs": "Matthew 7:24, 7:26, 7:27",
-   "idea": "rock house stands / sand house storm / sand house falls; same builder, same storm"
-  },
-  {
-   "title": "The Lost Sheep",
-   "refs": "Luke 15:4, 15:5, 15:7",
-   "idea": "shepherd counts 99 / searches in dark / carries the one home on shoulders, joy"
-  },
   {
    "title": "The Prodigal Son",
    "refs": "Luke 15:13, 15:20, 15:22",
@@ -282,6 +282,11 @@
    "title": "The Woman Who Touched His Cloak",
    "refs": "Mark 5:27, 5:28, 5:34",
    "idea": "crowd presses / she reaches the hem / he turns, 'your faith has saved you'"
+  },
+  {
+   "title": "The Lost Coin",
+   "refs": "Luke 15:8, 15:9, 15:10",
+   "idea": "woman sweeps dark house with lamp / finds the coin / calls neighbours, joy"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."
