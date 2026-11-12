@@ -281,3 +281,13 @@ Pinned comment: Read Mark 5 in Scroll the Catholic Bible (link in bio).
 One coin lost in the dark. She would not stop looking. 🪔
 Pinned comment: Start every day in the Word with Ave Missal (link in bio).
 #Catholic #Luke15 #LostCoin #Parables #GodsLove #BibleVerse #CatholicTikTok
+
+## Day 29a — The Healing Through the Roof (Mark 2)
+The door was blocked. So his friends went through the roof. Who would carry you? 🙌
+Pinned comment: Read Mark 2 in Scroll the Catholic Bible (link in bio).
+#Catholic #Mark2 #Friendship #Faith #Healing #BibleVerse #CatholicTikTok
+
+## Day 29b — Let the Children Come (Mark 10)
+They tried to send the little ones away. Jesus called them closer. 👧👦
+Pinned comment: Pray it every day with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Mark10 #LetTheChildrenCome #CatholicFamily #Jesus #BibleVerse #CatholicTikTok

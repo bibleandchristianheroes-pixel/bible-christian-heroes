@@ -285,19 +285,19 @@
    "day": "28b",
    "title": "The Lost Coin",
    "refs": "Luke 15:8, 15:9, 15:10"
+  },
+  {
+   "day": "29a",
+   "title": "The Healing Through the Roof",
+   "refs": "Mark 2:4, 2:5, 2:12"
+  },
+  {
+   "day": "29b",
+   "title": "Let the Children Come",
+   "refs": "Mark 10:13, 10:14, 10:16"
   }
  ],
  "queue": [
-  {
-   "title": "The Healing Through the Roof",
-   "refs": "Mark 2:3, 2:4, 2:12",
-   "idea": "friends carry a paralysed man / crowd blocks the door, they open the roof and lower him / he picks up his mat and walks"
-  },
-  {
-   "title": "Let the Children Come",
-   "refs": "Mark 10:13, 10:14, 10:16",
-   "idea": "children brought / disciples push them back / Jesus blesses them"
-  },
   {
    "title": "The Woman at the Well",
    "refs": "John 4:7, 4:14, 4:28",
@@ -397,6 +397,16 @@
    "title": "Faithful in Little",
    "refs": "Luke 16:10, 16:10, 16:11",
    "idea": "a man faithful with a coin / careless with a coin / trusted with more"
+  },
+  {
+   "title": "The Pearl of Great Price",
+   "refs": "Matthew 13:45, 13:46",
+   "idea": "three merchants find the same pearl / one keeps bargaining, one shrugs and walks on / one sells everything and buys it (pearl prop)"
+  },
+  {
+   "title": "Doers of the Word",
+   "refs": "James 1:22, 1:23-24, 1:25",
+   "idea": "three people read the same scroll / one closes it and walks away, one looks in a mirror and forgets / one gets up and helps a neighbour"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."

@@ -1586,3 +1586,63 @@ def door_frame_lit(cr, x, gy, open_=0.0, light=0.0, w=78, h=165):
     cr.set_source_rgb(*INK); cr.set_line_width(5); cr.rectangle(x, gy - h, w, h); cr.stroke()
     lw = w * (1 - 0.85 * open_)
     cr.rectangle(x + w - lw, gy - h, lw, h); cr.fill()
+
+# ---- Day 29: healing through the roof / let the children come ----
+INTERIOR = (0.875, 0.845, 0.785)
+
+def cutaway_house(cr, x0, x1, gy, h=200, door=(0, 0), hole=None, open_=0.0, slab=16, wall=12):
+    """Flat-roofed house drawn as a cutaway (interior visible). door=(dx0, dx1) gap in the left wall
+    (absolute x; (0,0) = none). hole=(hx0, hx1): roof section that opens from its centre, open_ 0..1.
+    Returns roof top y. Draw anything 'behind' the house before calling, anything inside after."""
+    ry = gy - h
+    cr.set_source_rgb(*INTERIOR); cr.rectangle(x0, ry, x1 - x0, h); cr.fill()
+    cr.set_source_rgb(*INK)
+    # walls
+    dx0, dx1 = door
+    if dx1 > dx0:
+        cr.rectangle(x0, ry, wall, h - 150); cr.fill()      # wall above the door (door 150 high)
+    else:
+        cr.rectangle(x0, ry, wall, h); cr.fill()
+    cr.rectangle(x1 - wall, ry, wall, h); cr.fill()
+    # roof slab with optional opening
+    if hole and open_ > 0:
+        hx0, hx1 = hole; c = (hx0 + hx1) / 2; half = (hx1 - hx0) / 2 * open_
+        cr.rectangle(x0 - 10, ry, (c - half) - (x0 - 10), slab); cr.fill()
+        cr.rectangle(c + half, ry, (x1 + 10) - (c + half), slab); cr.fill()
+        # beam ends showing in the cut
+        cr.set_source_rgb(*SOFT); cr.set_line_width(2)
+        for xx in (c - half, c + half):
+            cr.move_to(xx, ry + 3); cr.line_to(xx, ry + slab - 3); cr.stroke()
+    else:
+        cr.rectangle(x0 - 10, ry, x1 - x0 + 20, slab); cr.fill()
+    return ry
+
+def roof_tiles_pile(cr, x, ry, n):
+    """Small heap of removed roof slabs sitting on the roof at x (n = 0..6 pieces)."""
+    cr.set_source_rgb(*INK)
+    for k in range(int(n)):
+        row, col = divmod(k, 3)
+        cr.rectangle(x + col * 15 - 22 + row * 7, ry - 9 - row * 9, 13, 8); cr.fill()
+
+def stretcher(cr, ax, ay, bx, by, w=7, color=INK):
+    """Mat/stretcher as a thick bar from (ax, ay) to (bx, by), with short handle ends."""
+    cr.set_source_rgb(*color); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    cr.set_line_width(w); cr.move_to(ax, ay); cr.line_to(bx, by); cr.stroke()
+
+def rope(cr, ax, ay, bx, by, sag=0.0, color=INK):
+    cr.set_source_rgb(*color); cr.set_line_width(2.4)
+    mx, my = (ax + bx) / 2 + sag, (ay + by) / 2
+    cr.move_to(ax, ay); cr.curve_to(mx, my, mx, my, bx, by); cr.stroke()
+
+def rolled_mat(cr, x, y, ang=0.0, L=70, color=INK):
+    """A rolled-up sleeping mat (carried under the arm / over the shoulder). (x, y) = centre."""
+    cr.save(); cr.translate(x, y); cr.rotate(math.radians(ang)); cr.set_source_rgb(*color)
+    cr.set_line_cap(cairo.LINE_CAP_ROUND); cr.set_line_width(13); cr.move_to(-L/2, 0); cr.line_to(L/2, 0); cr.stroke()
+    cr.set_source_rgb(*BG); cr.set_line_width(1.6)
+    for k in (-L/4, L/4): cr.move_to(k, -6); cr.line_to(k, 6); cr.stroke()
+    cr.restore()
+
+def stop_hand(cr, J, face=1, s=1.0, color=INK):
+    """Flat raised palm at the right hand (a 'stop' gesture)."""
+    hx, hy = J["rhand"]; cr.set_source_rgb(*color)
+    cr.save(); cr.translate(hx, hy); cr.scale(1.0, 1.5); cr.arc(0, -3 * s, 6 * s, 0, 2 * math.pi); cr.restore(); cr.fill()
