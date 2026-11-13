@@ -295,19 +295,19 @@
    "day": "29b",
    "title": "Let the Children Come",
    "refs": "Mark 10:13, 10:14, 10:16"
+  },
+  {
+   "day": "30a",
+   "title": "The Woman at the Well",
+   "refs": "John 4:13, 4:14, 4:28"
+  },
+  {
+   "day": "30b",
+   "title": "Doubting Thomas",
+   "refs": "John 20:25, 20:27, 20:28"
   }
  ],
  "queue": [
-  {
-   "title": "The Woman at the Well",
-   "refs": "John 4:7, 4:14, 4:28",
-   "idea": "woman draws water alone at noon / Jesus asks for a drink / she leaves her jar and runs to the town"
-  },
-  {
-   "title": "Doubting Thomas",
-   "refs": "John 20:25, 20:27, 20:28",
-   "idea": "Thomas arms crossed / Jesus shows his hands / Thomas kneels"
-  },
   {
    "title": "The Rich Young Man",
    "refs": "Mark 10:17, 10:21, 10:22",
@@ -407,6 +407,16 @@
    "title": "Doers of the Word",
    "refs": "James 1:22, 1:23-24, 1:25",
    "idea": "three people read the same scroll / one closes it and walks away, one looks in a mirror and forgets / one gets up and helps a neighbour"
+  },
+  {
+   "title": "The Widow of Zarephath",
+   "refs": "1 Kings 17:12, 17:15, 17:16",
+   "idea": "last handful of flour / she bakes for Elijah first / the jar of flour never runs out"
+  },
+  {
+   "title": "The Sheep and the Goats",
+   "refs": "Matthew 25:35, 25:36, 25:40",
+   "idea": "three people pass a hungry stranger, a sick man, a prisoner: two walk past / one stops for each, and the stranger is a robed silhouette in light"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."

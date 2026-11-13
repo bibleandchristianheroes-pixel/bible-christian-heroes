@@ -291,3 +291,13 @@ Pinned comment: Read Mark 2 in Scroll the Catholic Bible (link in bio).
 They tried to send the little ones away. Jesus called them closer. 👧👦
 Pinned comment: Pray it every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Mark10 #LetTheChildrenCome #CatholicFamily #Jesus #BibleVerse #CatholicTikTok
+
+## Day 30a — The Woman at the Well (John 4)
+Same well. Same noon sun. Only one of them never thirsted again. 💧
+Pinned comment: Read John 4 in Scroll the Catholic Bible (link in bio).
+#Catholic #John4 #WomanAtTheWell #LivingWater #Jesus #BibleVerse #CatholicTikTok
+
+## Day 30b — Doubting Thomas (John 20)
+He crossed his arms and said "unless I see." Then Jesus showed him his hands. 🙏
+Pinned comment: Start every day in the Word with Ave Missal (link in bio).
+#Catholic #John20 #DoubtingThomas #MyLordAndMyGod #DivineMercy #BibleVerse #CatholicTikTok

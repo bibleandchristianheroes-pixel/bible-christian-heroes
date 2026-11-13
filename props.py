@@ -1646,3 +1646,85 @@ def stop_hand(cr, J, face=1, s=1.0, color=INK):
     """Flat raised palm at the right hand (a 'stop' gesture)."""
     hx, hy = J["rhand"]; cr.set_source_rgb(*color)
     cr.save(); cr.translate(hx, hy); cr.scale(1.0, 1.5); cr.arc(0, -3 * s, 6 * s, 0, 2 * math.pi); cr.restore(); cr.fill()
+
+# ---- Day 30: woman at the well / doubting Thomas ----
+def stone_well(cr, x, gy, w=150, h=66, post_h=120):
+    """Round stone well centred at x: light stone drum, dark opening, two posts, beam and pulley.
+    Draw anything that dips INTO the well (a jar on a rope) before this, so the drum hides it."""
+    x0, x1, top = x - w / 2, x + w / 2, gy - h
+    cr.set_source_rgb(*INK); cr.set_line_width(7)
+    for px in (x0 + 10, x1 - 10):
+        cr.move_to(px, top); cr.line_to(px, top - post_h); cr.stroke()
+    cr.set_line_width(9); cr.move_to(x0 - 2, top - post_h); cr.line_to(x1 + 2, top - post_h); cr.stroke()
+    cr.arc(x, top - post_h + 14, 11, 0, 2 * math.pi); cr.fill()
+    cr.set_source_rgb(*STONE); cr.rectangle(x0, top, w, h); cr.fill()
+    cr.save(); cr.translate(x, top); cr.scale(w / 2, 12); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    cr.set_source_rgb(*INK)
+    cr.save(); cr.translate(x, top); cr.scale(w / 2 - 12, 6); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    cr.set_line_width(4)
+    cr.save(); cr.translate(x, top); cr.scale(w / 2, 12); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.stroke()
+    cr.move_to(x0, top); cr.line_to(x0, gy); cr.move_to(x1, top); cr.line_to(x1, gy); cr.stroke()
+    cr.set_line_width(2.5)
+    for k, yy in enumerate((top + h * 0.38, top + h * 0.7)):
+        cr.move_to(x0, yy); cr.line_to(x1, yy); cr.stroke()
+        off = 0 if k % 2 else w / 6
+        for bx in range(int(x0 + off + w / 6), int(x1), int(w / 3)):
+            y_a = top + 6 if k == 0 else top + h * 0.38
+            cr.move_to(bx, y_a); cr.line_to(bx, yy); cr.stroke()
+
+def water_jar(cr, x, y, s=1.0, tilt=0.0, color=INK):
+    """Small clay water jar; (x, y) = centre of its belly; tilt in degrees (+ = clockwise)."""
+    cr.save(); cr.translate(x, y); cr.rotate(math.radians(tilt)); cr.scale(s, s)
+    cr.set_source_rgb(*color)
+    cr.save(); cr.translate(0, 4); cr.scale(15, 19); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    cr.move_to(-5, -10); cr.line_to(-6, -22); cr.line_to(6, -22); cr.line_to(5, -10); cr.close_path(); cr.fill()
+    cr.rectangle(-9, -26, 18, 5); cr.fill()
+    cr.set_line_width(3)
+    for d in (-1, 1):
+        cr.move_to(d * 6, -19); cr.curve_to(d * 15, -20, d * 16, -12, d * 12, -6); cr.stroke()
+    cr.restore()
+
+def heat_waves(cr, x, y, t, amount=1.0, n=3, h=44):
+    """Wavy lines shimmering up from (x, y): heat, thirst."""
+    if amount <= 0: return
+    cr.set_source_rgba(*SOFT, 0.8 * amount); cr.set_line_width(3)
+    for k in range(n):
+        xx = x + (k - (n - 1) / 2) * 16
+        ph = t * 4 + k * 1.7
+        cr.move_to(xx, y)
+        for j in range(1, 9):
+            u = j / 8
+            cr.line_to(xx + 5 * math.sin(ph + u * 6), y - u * h * amount)
+        cr.stroke()
+
+def living_water(cr, x, y, amount, t, n=14, h=95, spread=46):
+    """A small fountain of light-water springing up from (x, y) (John 4:14)."""
+    if amount <= 0: return
+    warm_glow(cr, x, y - h * 0.4, 150 * amount + 30, amount)
+    for k in range(n):
+        ph = (t * 0.9 + k / n) % 1.0
+        side = ((k * 7) % n) / (n - 1) * 2 - 1
+        px = x + side * spread * ph
+        py = y - (4 * h * ph * (1 - ph * 0.75)) * amount
+        a = amount * (1 - ph) ** 0.6
+        cr.set_source_rgba(*WATER_C, 0.95 * a); cr.arc(px, py, 4.2 - 1.6 * ph, 0, 2 * math.pi); cr.fill()
+        cr.set_source_rgba(1, 0.86, 0.48, 0.8 * a); cr.arc(px, py, 1.8, 0, 2 * math.pi); cr.fill()
+
+def barred_door(cr, x, gy, w=80, h=170):
+    """Shut door with a beam across it (x = left edge): 'the doors had been closed'."""
+    cr.set_source_rgb(*INK); cr.set_line_width(5); cr.rectangle(x, gy - h, w, h); cr.stroke()
+    cr.rectangle(x + 6, gy - h + 6, w - 12, h - 6); cr.fill()
+    cr.set_source_rgb(*SOFT); cr.set_line_width(3)
+    cr.move_to(x + w / 2, gy - h + 10); cr.line_to(x + w / 2, gy - 4); cr.stroke()
+    cr.set_source_rgb(*INK); cr.rectangle(x - 14, gy - h * 0.52, w + 28, 12); cr.fill()
+    for bx in (x - 18, x + w + 8):
+        cr.rectangle(bx, gy - h * 0.52 - 6, 10, 24); cr.fill()
+
+def wound_marks(cr, J, s=1.0, amount=1.0, glow=0.0):
+    """Nail marks on a silhouette's hands (cream dots), with an optional soft glow."""
+    if amount <= 0: return
+    for key in ("rhand", "lhand"):
+        hx, hy = J[key]; ex, ey = J[key + "_mid"]
+        hx, hy = lerp(hx, ex, 0.12), lerp(hy, ey, 0.12)
+        if glow > 0: warm_glow(cr, hx, hy, 34 * s, glow)
+        cr.set_source_rgba(*BG, amount); cr.arc(hx, hy, 3.2 * s, 0, 2 * math.pi); cr.fill()
