@@ -301,3 +301,13 @@ Pinned comment: Read John 4 in Scroll the Catholic Bible (link in bio).
 He crossed his arms and said "unless I see." Then Jesus showed him his hands. 🙏
 Pinned comment: Start every day in the Word with Ave Missal (link in bio).
 #Catholic #John20 #DoubtingThomas #MyLordAndMyGod #DivineMercy #BibleVerse #CatholicTikTok
+
+## Day 31a — The Rich Young Man (Mark 10)
+Jesus looked at him with love and said: come, follow me. Three answers. Which one is yours? 💰
+Pinned comment: Read Mark 10 in Scroll the Catholic Bible (link in bio).
+#Catholic #Mark10 #RichYoungMan #FollowMe #TreasureInHeaven #BibleVerse #CatholicTikTok
+
+## Day 31b — The Great Catch (Luke 5)
+All night: nothing. One word from Jesus: nets bursting. Then they left it all behind. 🐟
+Pinned comment: Pray it every day with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Luke5 #GreatCatch #FishersOfMen #AtYourWord #BibleVerse #CatholicTikTok

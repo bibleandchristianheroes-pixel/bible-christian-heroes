@@ -1728,3 +1728,45 @@ def wound_marks(cr, J, s=1.0, amount=1.0, glow=0.0):
         hx, hy = lerp(hx, ex, 0.12), lerp(hy, ey, 0.12)
         if glow > 0: warm_glow(cr, hx, hy, 34 * s, glow)
         cr.set_source_rgba(*BG, amount); cr.arc(hx, hy, 3.2 * s, 0, 2 * math.pi); cr.fill()
+
+def fishing_net(cr, hx, hy, x, y, w=120, h=70, fish_n=0, burst=0.0, t=0.0, seed=4, color=INK):
+    """Cast net hanging from a hand (hx, hy) into the water; (x, y) = top centre of the net bag.
+    fish_n = number of fish inside (the bag swells); burst 0..1 opens tears and lets fish leap out."""
+    import random as _r
+    r = _r.Random(seed)
+    sw = 1.0 + 0.012 * fish_n
+    w2, hh = w * sw / 2, h * sw
+    cr.set_source_rgb(*color); cr.set_line_width(2.5)
+    cr.move_to(hx, hy); cr.curve_to(hx + (x - hx) * 0.5, hy, x - w2 * 0.6, y - 10, x - w2, y); cr.stroke()
+    cr.move_to(hx, hy); cr.curve_to(hx + (x - hx) * 0.5, hy + 6, x + w2 * 0.6, y - 10, x + w2, y); cr.stroke()
+    # bag outline
+    def outline():
+        cr.move_to(x - w2, y); cr.curve_to(x - w2 * 1.1, y + hh * 0.7, x - w2 * 0.4, y + hh, x, y + hh)
+        cr.curve_to(x + w2 * 0.4, y + hh, x + w2 * 1.1, y + hh * 0.7, x + w2, y)
+    cr.save(); outline(); cr.close_path(); cr.clip()
+    for k in range(int(fish_n)):
+        fx = x + r.uniform(-0.75, 0.75) * w2; fy = y + r.uniform(0.2, 0.85) * hh
+        fish(cr, fx + 2 * math.sin(t * 6 + k), fy, s=r.uniform(0.6, 0.85), face=r.choice((-1, 1)), color=color)
+    cr.set_source_rgba(*color, 0.75); cr.set_line_width(1.6)
+    step = 16
+    for d in range(-int(w2 + hh), int(w2 + hh), step):
+        cr.move_to(x + d, y); cr.line_to(x + d + hh, y + hh); cr.stroke()
+        cr.move_to(x + d, y); cr.line_to(x + d - hh, y + hh); cr.stroke()
+    cr.restore()
+    cr.set_source_rgb(*color); cr.set_line_width(3); outline(); cr.stroke()
+    if burst > 0:   # tears in the mesh and fish leaping free
+        cr.set_source_rgb(*BG)
+        for k, (u, v) in enumerate(((-0.55, 0.55), (0.5, 0.7), (0.05, 0.95))):
+            cr.arc(x + u * w2, y + v * hh, 9 * burst, 0, 2 * math.pi); cr.fill()
+        for k in range(5):
+            ph = (t * 0.9 + k * 0.21) % 1.0
+            fx = x + (k - 2) * w2 * 0.45 + 30 * ph * (1 if k % 2 else -1)
+            fy = y + hh * 0.4 - 120 * ph + 150 * ph * ph
+            if burst > 0.3:
+                fish(cr, fx, fy, s=0.7, face=1 if k % 2 else -1, color=color)
+
+def empty_net_pile(cr, x, y, w=70, color=INK):
+    """Heap of empty net lying in a boat; (x, y) = base centre."""
+    cr.set_source_rgb(*color); cr.set_line_width(2)
+    for k in range(4):
+        cr.move_to(x - w / 2 + k * 6, y); cr.curve_to(x - w / 4, y - 18 - 3 * k, x + w / 4, y - 20 + 2 * k, x + w / 2 - k * 6, y); cr.stroke()
