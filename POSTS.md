@@ -311,3 +311,13 @@ Pinned comment: Read Mark 10 in Scroll the Catholic Bible (link in bio).
 All night: nothing. One word from Jesus: nets bursting. Then they left it all behind. 🐟
 Pinned comment: Pray it every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Luke5 #GreatCatch #FishersOfMen #AtYourWord #BibleVerse #CatholicTikTok
+
+## Day 32a — The Great Banquet (Luke 14)
+The feast was ready. The invited guests made excuses. So the master opened the doors to everyone. Is your seat empty? 🍞
+Pinned comment: Read Luke 14 in Scroll the Catholic Bible (link in bio).
+#Catholic #Luke14 #GreatBanquet #Parables #AllAreInvited #BibleVerse #CatholicTikTok
+
+## Day 32b — The Faithful Servant (Matthew 24)
+The master went away. One servant slept, one partied, one fed the household. Which one will he find when he comes back? ⏳
+Pinned comment: Start every day in the Word with Ave Missal (link in bio).
+#Catholic #Matthew24 #FaithfulServant #Advent #BeReady #BibleVerse #CatholicTikTok

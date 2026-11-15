@@ -315,19 +315,19 @@
    "day": "31b",
    "title": "The Great Catch",
    "refs": "Luke 5:5, 5:6, 5:11"
+  },
+  {
+   "day": "32a",
+   "title": "The Great Banquet",
+   "refs": "Luke 14:18, 14:21, 14:23"
+  },
+  {
+   "day": "32b",
+   "title": "The Faithful Servant",
+   "refs": "Matthew 24:48, 24:49, 24:46"
   }
  ],
  "queue": [
-  {
-   "title": "The Great Banquet",
-   "refs": "Luke 14:18, 14:21, 14:23",
-   "idea": "guests make excuses / the poor and lame brought in / table full"
-  },
-  {
-   "title": "The Faithful Servant",
-   "refs": "Matthew 24:45, 24:46, 24:48",
-   "idea": "master leaves / one servant feeds the household / the other sleeps and the master returns"
-  },
   {
    "title": "The Two Debtors",
    "refs": "Luke 7:41, 7:42, 7:47",
@@ -422,6 +422,16 @@
    "title": "Peter Walks on Water",
    "refs": "Matthew 14:29, 14:30, 14:31",
    "idea": "Peter steps out of the boat / looks at the wind and sinks / Jesus' hand catches him"
+  },
+  {
+   "title": "The Lost Son's Brother",
+   "refs": "Luke 15:28, 15:31, 15:32",
+   "idea": "feast for the returned son / elder brother stays outside angry / father goes out and pleads; one enters the feast"
+  },
+  {
+   "title": "Bread of Life",
+   "refs": "John 6:35, 6:67, 6:69",
+   "idea": "crowd hears Jesus / many walk away / Peter stays: 'to whom shall we go?' (CPDV numbering: 6:67 walk away, 6:69 Peter's answer)"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."
