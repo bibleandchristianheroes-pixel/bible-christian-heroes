@@ -321,3 +321,13 @@ Pinned comment: Read Luke 14 in Scroll the Catholic Bible (link in bio).
 The master went away. One servant slept, one partied, one fed the household. Which one will he find when he comes back? ⏳
 Pinned comment: Start every day in the Word with Ave Missal (link in bio).
 #Catholic #Matthew24 #FaithfulServant #Advent #BeReady #BibleVerse #CatholicTikTok
+
+## Day 33a — The Two Debtors (Luke 7)
+One owed fifty. One owed five hundred. Both were forgiven. Only one stayed at his feet. 💛
+Pinned comment: Read Luke 7 in Scroll the Catholic Bible (link in bio).
+#Catholic #Luke7 #TwoDebtors #Forgiveness #Confession #BibleVerse #CatholicTikTok
+
+## Day 33b — The Widow of Nain (Luke 7)
+A widow was burying her only son. Then Jesus said, "Do not weep," and touched the bier. 🕊️
+Pinned comment: Pray it every day with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Luke7 #WidowOfNain #DoNotWeep #Hope #BibleVerse #CatholicTikTok

@@ -538,8 +538,13 @@ def throne(cr, x, gy, face=1, color=INK):
     cr.rectangle(bx - 7, gy - 170, 14, 130); cr.fill()
     cr.arc(bx, gy - 172, 10, 0, 2 * math.pi); cr.fill()
 
-def debt_scroll(cr, x, y, tear=0.0, fall=0.0, gy=None, color=INK):
-    """Scroll held open at (x, y) (centre); tear 0..1 rips it in two; fall 0..1 drops the halves to gy."""
+def debt_scroll(cr, x, y, tear=0.0, fall=0.0, gy=None, color=INK, s=1.0):
+    """Scroll held open at (x, y) (centre); tear 0..1 rips it in two; fall 0..1 drops the halves to gy.
+    s scales it (s > 1 = a bigger debt)."""
+    if s != 1.0:
+        cr.save(); cr.translate(x, y); cr.scale(s, s)
+        debt_scroll(cr, 0, 0, tear, fall, None if gy is None else (gy - y) / s, color)
+        cr.restore(); return
     cr.set_source_rgb(*color)
     for d in (-1, 1):
         dx = d * 6 * tear + d * 30 * fall; dy = (gy - y - 6) * fall * fall if gy else 0
@@ -1770,3 +1775,13 @@ def empty_net_pile(cr, x, y, w=70, color=INK):
     cr.set_source_rgb(*color); cr.set_line_width(2)
     for k in range(4):
         cr.move_to(x - w / 2 + k * 6, y); cr.curve_to(x - w / 4, y - 18 - 3 * k, x + w / 4, y - 20 + 2 * k, x + w / 2 - k * 6, y); cr.stroke()
+
+
+def bier(cr, x0, x1, y, color=INK):
+    """Funeral bier / open litter: a plank from x0 to x1 at height y (its top), with handle ends and low rails."""
+    cr.set_source_rgb(*color); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    cr.set_line_width(10); cr.move_to(x0 + 10, y + 5); cr.line_to(x1 - 10, y + 5); cr.stroke()
+    cr.set_line_width(6); cr.move_to(x0 - 22, y + 7); cr.line_to(x1 + 22, y + 7); cr.stroke()
+    cr.set_line_width(5)
+    for xx in (x0 + 8, x1 - 8):
+        cr.move_to(xx, y + 4); cr.line_to(xx, y - 14); cr.stroke()
