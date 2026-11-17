@@ -331,3 +331,13 @@ Pinned comment: Read Luke 7 in Scroll the Catholic Bible (link in bio).
 A widow was burying her only son. Then Jesus said, "Do not weep," and touched the bier. 🕊️
 Pinned comment: Pray it every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Luke7 #WidowOfNain #DoNotWeep #Hope #BibleVerse #CatholicTikTok
+
+## Day 34a — Mary Magdalene at the Tomb (John 20)
+She stood at the empty tomb, weeping. She thought he was the gardener. Then he said her name. 🌅
+Pinned comment: Read John 20 in Scroll the Catholic Bible (link in bio).
+#Catholic #John20 #MaryMagdalene #HeIsRisen #Easter #BibleVerse #CatholicTikTok
+
+## Day 34b — The Centurion's Faith (Matthew 8)
+"Lord, I am not worthy." He didn't ask Jesus to come. He asked for one word, and his servant was healed that very hour. 🛡️
+Pinned comment: Pray these words at every Mass with Ave Missal (link in bio).
+#Catholic #Matthew8 #LordIAmNotWorthy #Faith #HolyMass #BibleVerse #CatholicTikTok

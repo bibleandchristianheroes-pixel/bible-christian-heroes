@@ -1785,3 +1785,26 @@ def bier(cr, x0, x1, y, color=INK):
     cr.set_line_width(5)
     for xx in (x0 + 8, x1 - 8):
         cr.move_to(xx, y + 4); cr.line_to(xx, y - 14); cr.stroke()
+
+def soldier_helmet(cr, J, s=1.0, face=1, color=INK):
+    """Roman centurion's helmet with a transverse crest, on a draw_figure head (pass the joints J)."""
+    hx, hy = J["head"]; HR = 12.5 * s
+    cr.set_source_rgb(*color)
+    cr.save(); cr.translate(hx, hy); cr.scale(1.0, 1.15)
+    cr.arc(0, 0, HR + 3 * s, math.pi * 1.0, math.pi * 2.0); cr.close_path(); cr.restore(); cr.fill()
+    # neck guard at the back, brow ridge at the front
+    cr.rectangle(hx - face * (HR + 5 * s) - (0 if face > 0 else 0), hy - 2 * s, face * 9 * s, 5 * s)
+    cr.fill()
+    # crest: a solid brush standing up across the top
+    top = hy - HR * 1.15 - 3 * s
+    cr.save(); cr.translate(hx - face * 1 * s, top + 2 * s); cr.scale(HR + 6 * s, HR * 1.25)
+    cr.arc(0, 0, 1, math.pi, 2 * math.pi); cr.close_path(); cr.restore(); cr.fill()
+    cr.set_source_rgb(*BG); cr.set_line_width(1.6 * s)
+    for k in range(4):
+        xx = hx - face * 1 * s + (k - 1.5) * 5.5 * s
+        cr.move_to(xx, top - 1 * s); cr.line_to(xx, top - HR * 0.8); cr.stroke()
+
+def ghost_joints(x, gy, p, s=1.0, face=1):
+    """Joint positions of a figure without drawing it (e.g. to draw a cape behind it)."""
+    surf = cairo.ImageSurface(cairo.FORMAT_A8, 4, 4)
+    return draw_figure(cairo.Context(surf), x, gy, p, s=s, face=face)

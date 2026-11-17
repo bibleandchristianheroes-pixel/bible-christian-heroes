@@ -335,19 +335,19 @@
       "day": "33b",
       "title": "The Widow of Nain",
       "refs": "Luke 7:12, 7:13, 7:15"
+    },
+    {
+      "day": "34a",
+      "title": "Mary Magdalene at the Tomb",
+      "refs": "John 20:11, 20:15, 20:16"
+    },
+    {
+      "day": "34b",
+      "title": "The Centurion's Faith",
+      "refs": "Matthew 8:8, 8:10, 8:13"
     }
   ],
   "queue": [
-    {
-      "title": "Mary Magdalene at the Tomb",
-      "refs": "John 20:11, 20:15, 20:16",
-      "idea": "weeping at the empty tomb / thinks he is the gardener / he says her name, she turns"
-    },
-    {
-      "title": "The Centurion's Faith",
-      "refs": "Matthew 8:8, 8:10, 8:13",
-      "idea": "soldier: I am not worthy / Jesus marvels / servant healed at that hour"
-    },
     {
       "title": "Ruth's Loyalty",
       "refs": "Ruth 1:14, 1:16, 1:16",
@@ -447,6 +447,16 @@
       "title": "Ruth Stays",
       "refs": "Ruth 1:14, 1:16, 2:3",
       "idea": "two daughters-in-law at the road / one kisses and turns back, one clings / Ruth gleans in the field"
+    },
+    {
+      "title": "The Healing at Bethesda",
+      "refs": "John 5:5, 5:7, 5:8",
+      "idea": "crippled man by the pool for 38 years / others rush past into the water / 'Rise, take up your bed and walk' (check CPDV wording)"
+    },
+    {
+      "title": "The Lost Child in the Temple",
+      "refs": "Luke 2:45, 2:46, 2:49",
+      "idea": "parents search the crowd / three days / the boy found among the teachers"
     }
   ],
   "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."
