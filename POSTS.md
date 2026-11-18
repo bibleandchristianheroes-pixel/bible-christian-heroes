@@ -341,3 +341,13 @@ Pinned comment: Read John 20 in Scroll the Catholic Bible (link in bio).
 "Lord, I am not worthy." He didn't ask Jesus to come. He asked for one word, and his servant was healed that very hour. 🛡️
 Pinned comment: Pray these words at every Mass with Ave Missal (link in bio).
 #Catholic #Matthew8 #LordIAmNotWorthy #Faith #HolyMass #BibleVerse #CatholicTikTok
+
+## Day 35a — Ruth's Loyalty (Ruth 1)
+Naomi told both her daughters-in-law to go home. Orpah kissed her and turned back. Ruth said, "Wherever you go, I will go." 🌾
+Pinned comment: Read Ruth 1 in Scroll the Catholic Bible (link in bio).
+#Catholic #Ruth1 #Ruth #Loyalty #WhereverYouGo #BibleVerse #CatholicTikTok
+
+## Day 35b — Daniel in the Lions' Den (Daniel 6)
+The king made praying a crime. Daniel opened his window and knelt anyway, and God shut the lions' mouths. 🦁
+Pinned comment: Pray every day, no matter what, with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Daniel6 #LionsDen #Prayer #Courage #BibleVerse #CatholicTikTok

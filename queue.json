@@ -345,19 +345,19 @@
       "day": "34b",
       "title": "The Centurion's Faith",
       "refs": "Matthew 8:8, 8:10, 8:13"
+    },
+    {
+      "day": "35a",
+      "title": "Ruth's Loyalty",
+      "refs": "Ruth 1:14, 1:16, 1:19"
+    },
+    {
+      "day": "35b",
+      "title": "Daniel in the Lions' Den",
+      "refs": "Daniel 6:10, 6:16, 6:22"
     }
   ],
   "queue": [
-    {
-      "title": "Ruth's Loyalty",
-      "refs": "Ruth 1:14, 1:16, 1:16",
-      "idea": "Orpah kisses and leaves / Ruth clings / they walk on together"
-    },
-    {
-      "title": "Daniel in the Lions' Den",
-      "refs": "Daniel 6:10, 6:16, 6:22",
-      "idea": "prays at the open window / thrown to the lions / lions lie down (check CPDV numbering)"
-    },
     {
       "title": "The Burning Bush",
       "refs": "Exodus 3:2, 3:4, 3:5",
@@ -444,11 +444,6 @@
       "idea": "last handful of flour / she bakes for the prophet first / the jar never runs out"
     },
     {
-      "title": "Ruth Stays",
-      "refs": "Ruth 1:14, 1:16, 2:3",
-      "idea": "two daughters-in-law at the road / one kisses and turns back, one clings / Ruth gleans in the field"
-    },
-    {
       "title": "The Healing at Bethesda",
       "refs": "John 5:5, 5:7, 5:8",
       "idea": "crippled man by the pool for 38 years / others rush past into the water / 'Rise, take up your bed and walk' (check CPDV wording)"
@@ -457,7 +452,30 @@
       "title": "The Lost Child in the Temple",
       "refs": "Luke 2:45, 2:46, 2:49",
       "idea": "parents search the crowd / three days / the boy found among the teachers"
+    },
+    {
+      "title": "The Visitation",
+      "refs": "Luke 1:39, 1:41, 1:45",
+      "idea": "Mary hurries over the hill country / Elizabeth's child leaps, she cries out / blessed is she who believed"
+    },
+    {
+      "title": "Hannah's Prayer",
+      "refs": "1 Samuel 1:10, 1:17, 1:20",
+      "idea": "weeping at the temple / Eli: go in peace / she holds her son Samuel (check CPDV book naming I Samuel)"
+    },
+    {
+      "title": "The Fiery Furnace",
+      "refs": "Daniel 3:18, 3:21, 3:92",
+      "idea": "three refuse to bow to the statue / bound and thrown in / a fourth walks with them in the fire (CPDV Daniel 3 numbering runs longer; verify)"
     }
   ],
-  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day."
+  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",
+  "skipped": [
+    {
+      "title": "Ruth Stays",
+      "refs": "Ruth 1:14, 1:16, 2:3",
+      "idea": "two daughters-in-law at the road / one kisses and turns back, one clings / Ruth gleans in the field",
+      "reason": "duplicate of Day 35a Ruth's Loyalty"
+    }
+  ]
 }

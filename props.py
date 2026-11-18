@@ -1808,3 +1808,83 @@ def ghost_joints(x, gy, p, s=1.0, face=1):
     """Joint positions of a figure without drawing it (e.g. to draw a cape behind it)."""
     surf = cairo.ImageSurface(cairo.FORMAT_A8, 4, 4)
     return draw_figure(cairo.Context(surf), x, gy, p, s=s, face=face)
+
+# ---- Day 35: Daniel in the lions' den ----
+DEN_BACK = (0.80, 0.77, 0.71)
+
+def lion(cr, x, gy, s=1.0, face=-1, step=0.0, roar=0.0, lie=0.0, color=INK):
+    """Silhouette lion on gy (x = body centre). step = gait phase (0 = still); roar 0..1 opens the jaw;
+    lie 0..1 folds the legs and lays it down, head resting low and calm."""
+    cr.save(); cr.translate(x, gy); cr.scale(face * s, s)
+    cr.set_source_rgb(*color); cr.set_line_cap(cairo.LINE_CAP_ROUND); cr.set_line_join(cairo.LINE_JOIN_ROUND)
+    by = -52 + 34 * lie
+    cr.set_line_width(9)
+    for (lx, ph) in ((-34, 0), (-24, math.pi), (26, math.pi), (36, 0)):
+        if lie > 0.5:
+            # folded legs: paws stretched forward along the ground
+            u = (lie - 0.5) * 2
+            cr.move_to(lx, by + 6); cr.line_to(lx + 26 * u, -4); cr.stroke()
+            continue
+        sw = 12 * math.sin(step + ph) if step else 0
+        kx = lx + sw * 0.5 + (4 if lx < 0 else -3)
+        cr.move_to(lx, by + 6); cr.line_to(kx, (by + 6) * 0.45); cr.line_to(lx + sw, -2); cr.stroke()
+    cr.save(); cr.translate(0, by); cr.scale(48, 18); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    # mane + head
+    hx, hy = 48, by - 20 + 14 * lie
+    cr.save(); cr.translate(hx - 4, hy + 2); cr.scale(28, 30); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    for k in range(9):
+        a = -2.4 + k * 0.6
+        cr.move_to(hx - 4 + 22 * math.cos(a), hy + 2 + 24 * math.sin(a))
+        cr.line_to(hx - 4 + 36 * math.cos(a + 0.15), hy + 2 + 36 * math.sin(a + 0.15))
+        cr.line_to(hx - 4 + 22 * math.cos(a + 0.4), hy + 2 + 24 * math.sin(a + 0.4)); cr.close_path(); cr.fill()
+    # muzzle and jaw
+    jaw = 0.55 * roar
+    cr.save(); cr.translate(hx + 18, hy + 4); cr.rotate(-0.25 * roar)
+    cr.move_to(-6, -12); cr.line_to(16, -6); cr.line_to(18, 2); cr.line_to(-6, 4); cr.close_path(); cr.fill(); cr.restore()
+    cr.save(); cr.translate(hx + 14, hy + 8); cr.rotate(jaw)
+    cr.move_to(-4, 0); cr.line_to(16, 2); cr.line_to(14, 8); cr.line_to(-4, 8); cr.close_path(); cr.fill(); cr.restore()
+    # tail with tuft
+    cr.set_line_width(5)
+    cr.move_to(-46, by - 4); cr.curve_to(-70, by - 2, -74, by + 20 + 10 * lie, -88, by + 10 + 16 * lie); cr.stroke()
+    cr.arc(-90, by + 10 + 16 * lie, 7, 0, 2 * math.pi); cr.fill()
+    cr.restore()
+
+def lions_den(cr, x0, x1, gy, h=160, gate=1.0, wall=16):
+    """Open-topped den drawn in cutaway: stone back wall, solid side walls, and a gate in the left wall
+    that rises out of the way (gate 1 = closed, 0 = fully raised). Draw lions/people after it."""
+    cr.set_source_rgb(*DEN_BACK); cr.rectangle(x0, gy - h, x1 - x0, h); cr.fill()
+    cr.set_source_rgb(*SOFT); cr.set_line_width(2)
+    rows = int(h // 38)
+    for r in range(rows):
+        yy = gy - (r + 1) * 38
+        cr.move_to(x0 + wall, yy); cr.line_to(x1 - wall, yy); cr.stroke()
+        off = 0 if r % 2 else 45
+        for xx in range(int(x0 + wall + off), int(x1 - wall), 90):
+            cr.move_to(xx, yy); cr.line_to(xx, yy + 38); cr.stroke()
+    cr.set_source_rgb(*INK)
+    cr.rectangle(x1 - wall, gy - h, wall, h); cr.fill()                  # right wall
+    cr.rectangle(x0 - 4, gy - h - 6, wall + 8, 26); cr.fill()            # left gate post top
+    gh = h - 26; lift = gh * (1 - gate)
+    cr.save(); cr.rectangle(x0 - 8, gy - h + 20, wall + 16, h); cr.clip()
+    top = gy - gh - lift
+    cr.set_line_width(4)
+    for dx in (2, wall - 2):
+        cr.move_to(x0 + dx, top); cr.line_to(x0 + dx, top + gh); cr.stroke()
+    for k in range(5):
+        yy = top + 6 + k * (gh - 12) / 4
+        cr.move_to(x0 - 4, yy); cr.line_to(x0 + wall + 4, yy); cr.stroke()
+    cr.restore()
+
+def window_wall(cr, x0, x1, gy, h=170, wx=None, ww=80, wh=110, sill=45, light=0.0):
+    """Short stretch of house wall (stone tone, inked edges) with an arched window that can glow.
+    wx = window left x (default centred). Returns the window centre (x, y)."""
+    cr.set_source_rgb(*DEN_BACK); cr.rectangle(x0, gy - h, x1 - x0, h); cr.fill()
+    cr.set_source_rgb(*INK); cr.set_line_width(5)
+    cr.move_to(x0, gy); cr.line_to(x0, gy - h); cr.line_to(x1, gy - h); cr.line_to(x1, gy); cr.stroke()
+    cr.rectangle(x0 - 8, gy - h - 10, x1 - x0 + 16, 12); cr.fill()
+    if wx is None: wx = (x0 + x1 - ww) / 2
+    wy = gy - sill
+    if light > 0:
+        warm_glow(cr, wx + ww / 2, wy - wh / 2, 150, light)
+    arched_window(cr, wx, wy, w=ww, h=wh, light=0.85 * light)
+    return (wx + ww / 2, wy - wh / 2)
