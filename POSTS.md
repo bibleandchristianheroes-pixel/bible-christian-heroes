@@ -351,3 +351,13 @@ Pinned comment: Read Ruth 1 in Scroll the Catholic Bible (link in bio).
 The king made praying a crime. Daniel opened his window and knelt anyway, and God shut the lions' mouths. 🦁
 Pinned comment: Pray every day, no matter what, with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Daniel6 #LionsDen #Prayer #Courage #BibleVerse #CatholicTikTok
+
+## Day 36a — The Burning Bush (Exodus 3)
+A bush on fire that never burns up. One shepherd walked on by. One turned aside, heard his name, and took off his sandals. 🔥
+Pinned comment: Read Exodus 3 in Scroll the Catholic Bible (link in bio).
+#Catholic #Exodus3 #BurningBush #HolyGround #Moses #BibleVerse #CatholicTikTok
+
+## Day 36b — Speak, Lord (1 Samuel 3)
+God called Samuel in the night, and he kept running to Eli. Then he learned to stay still and say, "Speak, Lord, for your servant is listening." 🕯️
+Pinned comment: Hear God's Word every day with Ave Missal (link in bio).
+#Catholic #1Samuel3 #SpeakLord #Samuel #Listening #BibleVerse #CatholicTikTok

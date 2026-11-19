@@ -1888,3 +1888,42 @@ def window_wall(cr, x0, x1, gy, h=170, wx=None, ww=80, wh=110, sill=45, light=0.
         warm_glow(cr, wx + ww / 2, wy - wh / 2, 150, light)
     arched_window(cr, wx, wy, w=ww, h=wh, light=0.85 * light)
     return (wx + ww / 2, wy - wh / 2)
+
+# ---- Day 36: the burning bush / Speak, Lord ----
+def burning_bush(cr, x, gy, t, fire=1.0, s=1.0):
+    """A thornbush wrapped in flames that do not consume it. fire 0..1 (0 = plain bush)."""
+    if fire > 0:
+        warm_glow(cr, x, gy - 70 * s, 230 * s * (0.6 + 0.4 * fire), fire)
+    thornbush(cr, x, gy, s=s)
+    if fire > 0:
+        cr.save(); cr.push_group()
+        flames(cr, x - 22 * s, gy - 2, 105 * s * fire, t + 0.7, w=0.75 * s, seed=5)
+        flames(cr, x + 24 * s, gy - 2, 112 * s * fire, t + 1.3, w=0.75 * s, seed=8)
+        flames(cr, x, gy - 2, 135 * s * fire, t, w=0.9 * s, seed=2)
+        cr.pop_group_to_source(); cr.paint_with_alpha(0.88); cr.restore()
+        # the branches stay dark and whole inside the fire
+        cr.save(); cr.push_group(); thornbush(cr, x, gy, s=s); cr.pop_group_to_source(); cr.paint_with_alpha(0.55 * fire); cr.restore()
+
+def sandals(cr, x, gy, n=2, color=INK):
+    """A pair of sandals lying on the ground, toes pointing right; x = centre."""
+    cr.set_source_rgb(*color)
+    for k in range(n):
+        sx = x + (k - (n - 1) / 2) * 34
+        cr.save(); cr.translate(sx, gy - 4); cr.scale(15, 4.2); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+        cr.set_line_width(2.5); cr.arc(sx + 2, gy - 6, 7, math.pi, 2 * math.pi); cr.stroke()
+
+def sleeping_mat(cr, x0, x1, gy, h=10, pillow=None, color=INK):
+    """Low flat sleeping mat on the floor; pillow = 'left' / 'right' adds a rolled headrest."""
+    cr.set_source_rgb(*color); cr.rectangle(x0, gy - h, x1 - x0, h); cr.fill()
+    if pillow:
+        px = x0 + 16 if pillow == "left" else x1 - 16
+        cr.save(); cr.translate(px, gy - h - 7); cr.scale(17, 8); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+
+def call_rings(cr, x, y, amount, t, t0=0.0, n=3, r1=120, color=(1.0, 0.80, 0.38)):
+    """Soft warm rings spreading from a point: a voice calling in the night (no text)."""
+    if amount <= 0: return
+    cr.set_line_width(4); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    for k in range(n):
+        u = ((t - t0) * 0.9 + k / n) % 1.0
+        cr.set_source_rgba(*color, amount * (1 - u) * 0.9)
+        cr.arc(x, y, 18 + u * r1, 0, 2 * math.pi); cr.stroke()
