@@ -365,19 +365,19 @@
    "day": "36b",
    "title": "Speak, Lord",
    "refs": "1 Samuel 3:5, 3:9, 3:10"
+  },
+  {
+   "day": "37a",
+   "title": "Joseph Forgives His Brothers",
+   "refs": "Genesis 45:3, 45:4, 45:5"
+  },
+  {
+   "day": "37b",
+   "title": "Be Still",
+   "refs": "Psalm 45:3, 45:4, 45:11"
   }
  ],
  "queue": [
-  {
-   "title": "Joseph Forgives His Brothers",
-   "refs": "Genesis 45:3, 45:4, 45:5",
-   "idea": "brothers terrified / come closer to me / embrace"
-  },
-  {
-   "title": "Be Still",
-   "refs": "Psalm 45:11, 45:2, 45:3",
-   "idea": "Vulgate numbering: Hebrew Psalm 46 is CPDV Psalm 45; busy man rushing / storm and mountains shaking / he stops, sits, is still"
-  },
   {
    "title": "Wings Like Eagles",
    "refs": "Isaiah 40:29, 40:30, 40:31",
@@ -477,6 +477,16 @@
    "title": "The Healing at the Pool",
    "refs": "John 5:6, 5:7, 5:8",
    "idea": "man waits by the pool for years / others always get in first / Jesus says rise, take up your mat"
+  },
+  {
+   "title": "The Ten Virgins",
+   "refs": "Matthew 25:3, 25:4, 25:10",
+   "idea": "ten women with lamps / foolish ones run out of oil, door shut / wise ones enter the feast"
+  },
+  {
+   "title": "Elijah and the Widow's Flour",
+   "refs": "I Kings 17:12, 17:15, 17:16",
+   "idea": "widow with last handful / she bakes for the prophet first / jar never empties"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",

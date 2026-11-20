@@ -361,3 +361,13 @@ Pinned comment: Read Exodus 3 in Scroll the Catholic Bible (link in bio).
 God called Samuel in the night, and he kept running to Eli. Then he learned to stay still and say, "Speak, Lord, for your servant is listening." 🕯️
 Pinned comment: Hear God's Word every day with Ave Missal (link in bio).
 #Catholic #1Samuel3 #SpeakLord #Samuel #Listening #BibleVerse #CatholicTikTok
+
+## Day 37a — Joseph Forgives His Brothers (Genesis 45)
+His brothers sold him into slavery. Years later he held their lives in his hands, and he called them close and wept on their necks. 🤍
+Pinned comment: Read Genesis 45 in Scroll the Catholic Bible (link in bio).
+#Catholic #Genesis45 #Joseph #Forgiveness #Mercy #BibleVerse #CatholicTikTok
+
+## Day 37b — Be Still (Psalm 45/46)
+The earth shook. One man ran, one man hid. One set his burden down, knelt, and opened his hands. 🌤️
+Pinned comment: Be still with God every day with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Psalm46 #BeStill #Peace #Prayer #BibleVerse #CatholicTikTok

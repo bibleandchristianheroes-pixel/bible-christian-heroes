@@ -1927,3 +1927,67 @@ def call_rings(cr, x, y, amount, t, t0=0.0, n=3, r1=120, color=(1.0, 0.80, 0.38)
         u = ((t - t0) * 0.9 + k / n) % 1.0
         cr.set_source_rgba(*color, amount * (1 - u) * 0.9)
         cr.arc(x, y, 18 + u * r1, 0, 2 * math.pi); cr.stroke()
+
+# ---- props added for Day 37 ----
+def nemes(cr, head, s=1.0, face=1, color=INK, alpha=1.0):
+    """Egyptian striped head-cloth on a draw_figure head (pass J['head']); lappets fall to the shoulders."""
+    if alpha <= 0: return
+    hx, hy = head
+    cr.save(); cr.push_group(); cr.set_source_rgb(*color)
+    cr.move_to(hx - 15 * s, hy - 3 * s); cr.curve_to(hx - 15 * s, hy - 22 * s, hx + 15 * s, hy - 22 * s, hx + 15 * s, hy - 3 * s)
+    cr.line_to(hx + 21 * s, hy + 26 * s); cr.line_to(hx + 8 * s, hy + 26 * s); cr.line_to(hx + 6 * s, hy + 6 * s)
+    cr.line_to(hx - 6 * s, hy + 6 * s); cr.line_to(hx - 8 * s, hy + 26 * s); cr.line_to(hx - 21 * s, hy + 26 * s)
+    cr.close_path(); cr.fill()
+    cr.set_source_rgb(*BG); cr.set_line_width(1.6 * s)
+    for k in range(3):
+        yy = hy + (6 + 7 * k) * s
+        cr.move_to(hx - (16 + 1.5 * k) * s, yy); cr.line_to(hx - (9 - 0.3 * k) * s, yy); cr.stroke()
+        cr.move_to(hx + (16 + 1.5 * k) * s, yy); cr.line_to(hx + (9 - 0.3 * k) * s, yy); cr.stroke()
+    cr.pop_group_to_source(); cr.paint_with_alpha(alpha); cr.restore()
+
+def nemes_cloth(cr, x, y, s=1.0, color=INK):
+    """The head-cloth taken off and held / laid down: a small folded striped bundle centred at (x, y)."""
+    cr.set_source_rgb(*color)
+    cr.move_to(x - 16 * s, y - 6 * s); cr.line_to(x + 16 * s, y - 6 * s); cr.line_to(x + 12 * s, y + 9 * s); cr.line_to(x - 12 * s, y + 9 * s)
+    cr.close_path(); cr.fill()
+    cr.set_source_rgb(*BG); cr.set_line_width(1.6 * s)
+    for k in range(2):
+        cr.move_to(x - 12 * s, y - 1 * s + 5 * k * s); cr.line_to(x + 12 * s, y - 1 * s + 5 * k * s); cr.stroke()
+
+def pyramids(cr, x, gy, s=1.0, color=STONE):
+    """Two distant pyramids (pale), base starting at x."""
+    cr.set_source_rgb(*color)
+    for dx, w, h in ((0, 190, 120), (150, 130, 82)):
+        cr.move_to(x + dx * s, gy); cr.line_to(x + (dx + w / 2) * s, gy - h * s); cr.line_to(x + (dx + w) * s, gy); cr.close_path(); cr.fill()
+
+def lotus_column(cr, x, gy, h=230, w=30, color=STONE):
+    """Egyptian palace column with a flared lotus capital."""
+    cr.set_source_rgb(*color)
+    cr.rectangle(x - w / 2 - 6, gy - 12, w + 12, 12); cr.fill()
+    cr.rectangle(x - w / 2, gy - h + 30, w, h - 40); cr.fill()
+    cr.move_to(x - w / 2, gy - h + 34); cr.curve_to(x - w / 2 - 6, gy - h + 16, x - w, gy - h + 6, x - w - 4, gy - h)
+    cr.line_to(x + w + 4, gy - h); cr.curve_to(x + w, gy - h + 6, x + w / 2 + 6, gy - h + 16, x + w / 2, gy - h + 34); cr.close_path(); cr.fill()
+    cr.rectangle(x - w - 8, gy - h - 10, 2 * w + 16, 10); cr.fill()
+
+def lightning(cr, x, y0, y1, amount, seed=1, color=(1.0, 0.97, 0.80)):
+    """Jagged bolt from (x, y0) down to y1; amount 0..1 is the flash brightness."""
+    if amount <= 0: return
+    import random as _r
+    r = _r.Random(seed)
+    pts = [(x, y0)]; yy = y0; xx = x
+    while yy < y1:
+        yy += r.uniform(22, 40); xx += r.uniform(-26, 26); pts.append((xx, min(yy, y1)))
+    cr.save(); cr.set_line_join(cairo.LINE_JOIN_MITER)
+    for wdt, col, a in ((12, color, 0.35), (4.5, color, 1.0)):
+        cr.set_source_rgba(*col, a * amount); cr.set_line_width(wdt)
+        cr.move_to(*pts[0])
+        for p in pts[1:]: cr.line_to(*p)
+        cr.stroke()
+    cr.restore()
+
+def storm_sky(cr, y0, ph, amount, flash=0.0):
+    """Grey storm tint over a panel, with an optional white lightning flash."""
+    if amount > 0:
+        cr.set_source_rgba(0.30, 0.31, 0.34, 0.32 * amount); cr.rectangle(0, y0, W, ph); cr.fill()
+    if flash > 0:
+        cr.set_source_rgba(1, 1, 1, 0.35 * flash); cr.rectangle(0, y0, W, ph); cr.fill()
