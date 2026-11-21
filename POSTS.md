@@ -371,3 +371,13 @@ Pinned comment: Read Genesis 45 in Scroll the Catholic Bible (link in bio).
 The earth shook. One man ran, one man hid. One set his burden down, knelt, and opened his hands. 🌤️
 Pinned comment: Be still with God every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Psalm46 #BeStill #Peace #Prayer #BibleVerse #CatholicTikTok
+
+## Day 38a — Wings Like Eagles (Isaiah 40)
+Everyone runs out of strength. One sat down in the dust, one hit the ground. One knelt, looked up and hoped in the Lord, and got up running. 🦅
+Pinned comment: Read Isaiah 40 in Scroll the Catholic Bible (link in bio).
+#Catholic #Isaiah40 #WingsLikeEagles #Hope #Strength #BibleVerse #CatholicTikTok
+
+## Day 38b — Pentecost (Acts 2)
+They hid behind a barred door. Then came a sound like a violent wind, and tongues as if of fire. They opened the door and went out to the crowd. 🔥
+Pinned comment: Pray with the Church every day with Ave Missal (link in bio).
+#Catholic #Acts2 #Pentecost #HolySpirit #ComeHolySpirit #BibleVerse #CatholicTikTok

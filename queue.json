@@ -375,19 +375,19 @@
    "day": "37b",
    "title": "Be Still",
    "refs": "Psalm 45:3, 45:4, 45:11"
+  },
+  {
+   "day": "38a",
+   "title": "Wings Like Eagles",
+   "refs": "Isaiah 40:30, 40:30, 40:31"
+  },
+  {
+   "day": "38b",
+   "title": "Pentecost",
+   "refs": "Acts 2:1, 2:2, 2:4"
   }
  ],
  "queue": [
-  {
-   "title": "Wings Like Eagles",
-   "refs": "Isaiah 40:29, 40:30, 40:31",
-   "idea": "runners collapse / young men fail / one who hopes rises, eagle above"
-  },
-  {
-   "title": "Pentecost",
-   "refs": "Acts 2:2, 2:3, 2:4",
-   "idea": "disciples hidden in a room / wind and tongues of fire / they go out to the crowd"
-  },
   {
    "title": "The Good Thief",
    "refs": "Luke 23:39, 23:42, 23:43",
@@ -487,6 +487,16 @@
    "title": "Elijah and the Widow's Flour",
    "refs": "I Kings 17:12, 17:15, 17:16",
    "idea": "widow with last handful / she bakes for the prophet first / jar never empties"
+  },
+  {
+   "title": "Gideon's Three Hundred",
+   "refs": "Judges 7:3, 7:6, 7:7",
+   "idea": "the fearful go home / most kneel to drink / the few who lap from the hand are chosen"
+  },
+  {
+   "title": "Here I Am, Send Me",
+   "refs": "Isaiah 6:5, 6:7, 6:8",
+   "idea": "one hides his face / one turns away / one, his lips touched by the coal, steps forward"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",

@@ -1991,3 +1991,66 @@ def storm_sky(cr, y0, ph, amount, flash=0.0):
         cr.set_source_rgba(0.30, 0.31, 0.34, 0.32 * amount); cr.rectangle(0, y0, W, ph); cr.fill()
     if flash > 0:
         cr.set_source_rgba(1, 1, 1, 0.35 * flash); cr.rectangle(0, y0, W, ph); cr.fill()
+
+
+# ---- Day 38: Wings Like Eagles / Pentecost ----
+def eagle(cr, x, y, flap=0.0, s=1.0, face=-1, color=INK):
+    """Soaring eagle seen from below: wide wings with fingered tips, fan tail, head turned to `face`.
+    flap in [-1, 1] raises / lowers the wing tips (0 = level glide)."""
+    cr.save(); cr.translate(x, y); cr.scale(s, s); cr.set_source_rgb(*color)
+    lift = -34 * flap
+    for side in (-1, 1):
+        cr.save(); cr.scale(side, 1)
+        cr.move_to(4, -10)
+        cr.curve_to(40, -26, 80, -24 + lift * 0.5, 112, -20 + lift)          # leading edge
+        for k in range(5):                                                  # five finger feathers
+            fy = -20 + lift + 6 * k
+            cr.line_to(132 - 3 * k, fy - 2 + 2 * k); cr.line_to(114 - 2 * k, fy + 5)
+        cr.curve_to(96, 6 + lift * 0.6, 60, 14, 30, 14)                     # trailing edge
+        cr.curve_to(20, 16, 10, 10, 4, 12); cr.close_path(); cr.fill()
+        cr.restore()
+    cr.save(); cr.scale(13, 26); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()   # body
+    cr.move_to(-10, 16); cr.line_to(-22, 50); cr.curve_to(-6, 58, 6, 58, 22, 50); cr.line_to(10, 16); cr.close_path(); cr.fill()  # tail
+    cr.arc(0, -30, 10, 0, 2 * math.pi); cr.fill()                                           # head
+    cr.move_to(face * 6, -36); cr.curve_to(face * 20, -36, face * 22, -28, face * 16, -24); cr.line_to(face * 6, -26); cr.fill()  # hooked beak
+    cr.restore()
+
+
+def fire_tongue(cr, x, y, t, amount=1.0, seed=0, s=1.0):
+    """A single small 'tongue as if of fire' resting above a head; (x, y) = its base."""
+    if amount <= 0: return
+    h = (30 + 4 * math.sin(t * 12 + seed)) * s * amount
+    sw = 3 * math.sin(t * 9 + seed * 1.7) * s
+    cr.set_source_rgba(0.88, 0.40, 0.14, 0.95 * min(1, amount * 1.5))
+    cr.move_to(x - 10 * s, y); cr.curve_to(x - 12 * s, y - h * 0.5, x + sw - 3 * s, y - h * 0.8, x + sw, y - h)
+    cr.curve_to(x + sw + 3 * s, y - h * 0.8, x + 12 * s, y - h * 0.5, x + 10 * s, y); cr.close_path(); cr.fill()
+    cr.set_source_rgba(1.0, 0.80, 0.36, 0.95 * min(1, amount * 1.5))
+    cr.move_to(x - 5 * s, y); cr.curve_to(x - 6 * s, y - h * 0.3, x + sw * 0.5, y - h * 0.45, x + sw * 0.5, y - h * 0.55)
+    cr.curve_to(x + sw * 0.5 + 2, y - h * 0.4, x + 6 * s, y - h * 0.3, x + 5 * s, y); cr.close_path(); cr.fill()
+
+
+def room_door(cr, x, gy, w=80, h=170, open_=0.0, bar=1.0, outside=(1.0, 0.93, 0.76)):
+    """Upper-room door (x = left edge) in a short stretch of wall. open_ 0..1 swings it inward
+    (hinged on the left); bar 1 = beam across, 0 = beam lifted off and leaning by the door."""
+    cr.set_source_rgb(*DEN_BACK)                    # wall around the doorway
+    cr.rectangle(x - 34, gy - h - 40, w + 68, h + 40); cr.fill()
+    cr.set_source_rgb(*INK); cr.set_line_width(5)
+    cr.move_to(x - 34, gy); cr.line_to(x - 34, gy - h - 40); cr.line_to(x + w + 34, gy - h - 40); cr.line_to(x + w + 34, gy); cr.stroke()
+    cr.set_source_rgb(*(outside if open_ > 0 else INK)); cr.rectangle(x, gy - h, w, h); cr.fill()
+    cr.set_source_rgb(*INK); cr.rectangle(x, gy - h, w, h); cr.stroke()
+    if open_ < 1:
+        dw = (w - 12) * (1 - open_) + 8 * open_      # swinging panel narrows toward the hinge
+        cr.rectangle(x + 6, gy - h + 6, dw, h - 6); cr.fill()
+        if open_ < 0.3:
+            cr.set_source_rgb(*SOFT); cr.set_line_width(3)
+            cr.move_to(x + w / 2, gy - h + 10); cr.line_to(x + w / 2, gy - 4); cr.stroke()
+    cr.set_source_rgb(*INK)
+    for bx in (x - 18, x + w + 8):                  # brackets
+        cr.rectangle(bx, gy - h * 0.52 - 6, 10, 24); cr.fill()
+    # the beam: across the door, or leaning against the wall on the left
+    bx0, by0, ang0 = x + w / 2, gy - h * 0.52 + 6, 0.0
+    bx1, by1, ang1 = x - 58, gy - (w + 28) / 2 * 0.94, math.radians(-75)
+    u = 1 - bar
+    cx, cy = lerp(bx0, bx1, u), lerp(by0, by1, u) - 40 * math.sin(math.pi * u)
+    cr.save(); cr.translate(cx, cy); cr.rotate(lerp(ang0, ang1, u))
+    cr.rectangle(-(w + 28) / 2, -6, w + 28, 12); cr.fill(); cr.restore()
