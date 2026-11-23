@@ -381,3 +381,13 @@ Pinned comment: Read Isaiah 40 in Scroll the Catholic Bible (link in bio).
 They hid behind a barred door. Then came a sound like a violent wind, and tongues as if of fire. They opened the door and went out to the crowd. 🔥
 Pinned comment: Pray with the Church every day with Ave Missal (link in bio).
 #Catholic #Acts2 #Pentecost #HolySpirit #ComeHolySpirit #BibleVerse #CatholicTikTok
+
+## Day 39a — The Good Thief (Luke 23)
+Two men were crucified beside Jesus. One mocked him. One turned and said, "Lord, remember me," and heard, "This day you shall be with me in Paradise." ✝️
+Pinned comment: Read Luke 23 in Scroll the Catholic Bible (link in bio).
+#Catholic #Luke23 #GoodThief #SaintDismas #Mercy #BibleVerse #CatholicTikTok
+
+## Day 39b — Faithful in Little (Luke 16)
+Each was trusted with one small coin. One pocketed it, one lost it. One kept it safe and gave it back, and was trusted with more. 🪙
+Pinned comment: Be faithful in the little things every day with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Luke16 #FaithfulInLittle #Faithfulness #Integrity #BibleVerse #CatholicTikTok

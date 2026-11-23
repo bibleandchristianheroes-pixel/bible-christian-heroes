@@ -2054,3 +2054,23 @@ def room_door(cr, x, gy, w=80, h=170, open_=0.0, bar=1.0, outside=(1.0, 0.93, 0.
     cx, cy = lerp(bx0, bx1, u), lerp(by0, by1, u) - 40 * math.sin(math.pi * u)
     cr.save(); cr.translate(cx, cy); cr.rotate(lerp(ang0, ang1, u))
     cr.rectangle(-(w + 28) / 2, -6, w + 28, 12); cr.fill(); cr.restore()
+
+
+def calvary_hill(cr, x, gy, w=760, h=34, color=STONE):
+    """Low, wide hump of ground (Calvary). (x = centre). Returns the ground-y function."""
+    cr.set_source_rgb(*color)
+    cr.move_to(x - w / 2, gy + 2)
+    cr.curve_to(x - w * 0.25, gy - h, x + w * 0.25, gy - h, x + w / 2, gy + 2); cr.close_path(); cr.fill()
+    return lambda xx: gy - h * 0.75 * max(0.0, 1 - ((xx - x) / (w / 2)) ** 2)
+
+
+def crucified(cr, x, gy, h=210, s=0.9, head=20, lean=0.0, face=1, robe=False, color=INK):
+    """A cross with a silhouette hanging on it, arms along the beam. Only head / lean / face move.
+    (x, gy) = foot of the cross, h = full height. Returns the figure's joints (J['head'] for cry lines etc.)."""
+    top = gy - h; beam_y = top + 48; half = 76 * s
+    cr.set_source_rgb(*color); cr.set_line_width(10); cr.set_line_cap(cairo.LINE_CAP_BUTT)
+    cr.move_to(x, gy); cr.line_to(x, top); cr.stroke()
+    cr.move_to(x - half, beam_y); cr.line_to(x + half, beam_y); cr.stroke()
+    p = _pose("stand", lean=lean, head=head, rs=99, re=-4, ls=-99, le=4, lt=4, lk=10, rt=-2, rk=10)
+    feet = beam_y + 141 * s
+    return draw_figure(cr, x, feet, p, s=s, face=face, color=color, prop="robe" if robe else None)
