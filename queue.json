@@ -395,19 +395,19 @@
    "day": "39b",
    "title": "Faithful in Little",
    "refs": "Luke 16:10, 16:11, 16:10"
+  },
+  {
+   "day": "40a",
+   "title": "The Pearl of Great Price",
+   "refs": "Luke 14:33, Matthew 6:21, Matthew 13:46"
+  },
+  {
+   "day": "40b",
+   "title": "Doers of the Word",
+   "refs": "James 1:22, 1:24, 1:25"
   }
  ],
  "queue": [
-  {
-   "title": "The Pearl of Great Price",
-   "refs": "Matthew 13:45, 13:46",
-   "idea": "three merchants find the same pearl / one keeps bargaining, one shrugs and walks on / one sells everything and buys it (pearl prop)"
-  },
-  {
-   "title": "Doers of the Word",
-   "refs": "James 1:22, 1:23-24, 1:25",
-   "idea": "three people read the same scroll / one closes it and walks away, one looks in a mirror and forgets / one gets up and helps a neighbour"
-  },
   {
    "title": "The Widow of Zarephath",
    "refs": "1 Kings 17:12, 17:15, 17:16",
@@ -502,6 +502,21 @@
    "title": "Two Masters",
    "refs": "Matthew 6:24, 6:24, 6:24",
    "idea": "a man pulled between a coin bag and a cross / one clutches the bag, one tries to hold both and drops both / one lets the bag go and follows"
+  },
+  {
+   "title": "Jairus' Daughter",
+   "refs": "Mark 5:23, 5:36, 5:41",
+   "idea": "a father begs at Jesus' feet / mourners shake their heads, 'do not be afraid, only believe' / Jesus takes the girl's hand and she stands (bed or mat prop)"
+  },
+  {
+   "title": "Elijah Under the Juniper Tree",
+   "refs": "1 Kings 19:4, 19:5, 19:8",
+   "idea": "three worn-out travellers in the desert / one gives up and lies down, one turns back / one is woken by an angel, eats the bread and walks on (JSON book name is 'I Kings')"
+  },
+  {
+   "title": "Nicodemus by Night",
+   "refs": "John 3:2, 3:3, 19:39",
+   "idea": "three men see Jesus teach by day / two stay away, one comes by night with a lamp / later he comes openly carrying myrrh and aloes (lamp, moon props)"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",

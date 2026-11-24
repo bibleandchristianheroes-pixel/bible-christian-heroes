@@ -391,3 +391,13 @@ Pinned comment: Read Luke 23 in Scroll the Catholic Bible (link in bio).
 Each was trusted with one small coin. One pocketed it, one lost it. One kept it safe and gave it back, and was trusted with more. 🪙
 Pinned comment: Be faithful in the little things every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Luke16 #FaithfulInLittle #Faithfulness #Integrity #BibleVerse #CatholicTikTok
+
+## Day 40a — The Pearl of Great Price (Matthew 13)
+Three men found the same pearl. One haggled, one hugged his purse and went home. One sold everything he had and bought it. 🦪
+Pinned comment: Read Matthew 13 in Scroll the Catholic Bible (link in bio).
+#Catholic #Matthew13 #PearlOfGreatPrice #Parables #KingdomOfHeaven #BibleVerse #CatholicTikTok
+
+## Day 40b — Doers of the Word (James 1)
+Three people read the same Word. One closed it and walked past, one looked in a mirror and forgot. One got up and carried his neighbour's load. 📜
+Pinned comment: Start every day with the readings in Ave Missal (link in bio).
+#Catholic #James1 #DoersOfTheWord #FaithInAction #LoveYourNeighbor #BibleVerse #CatholicTikTok

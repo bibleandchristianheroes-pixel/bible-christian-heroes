@@ -2074,3 +2074,47 @@ def crucified(cr, x, gy, h=210, s=0.9, head=20, lean=0.0, face=1, robe=False, co
     p = _pose("stand", lean=lean, head=head, rs=99, re=-4, ls=-99, le=4, lt=4, lk=10, rt=-2, rk=10)
     feet = beam_y + 141 * s
     return draw_figure(cr, x, feet, p, s=s, face=face, color=color, prop="robe" if robe else None)
+
+
+def reading_scroll(cr, x, y, w=64, h=40, open_=1.0, ang=0.0, color=INK):
+    """Scroll held at (x, y) (centre): two rollers with the sheet between. open_ 0 = rolled shut.
+    The sheet shows only faint rule lines (no text)."""
+    ww = max(0.0, w * open_)
+    cr.save(); cr.translate(x, y); cr.rotate(ang)
+    if ww > 2:
+        cr.set_source_rgb(*BG); cr.rectangle(-ww / 2, -h / 2, ww, h); cr.fill()
+        cr.set_source_rgb(*color); cr.set_line_width(2.2); cr.rectangle(-ww / 2, -h / 2, ww, h); cr.stroke()
+        cr.set_source_rgba(*SOFT, 0.9); cr.set_line_width(1.6)
+        for k in range(4):
+            yy = -h / 2 + 8 + k * (h - 14) / 3
+            cr.move_to(-ww / 2 + 7, yy); cr.line_to(ww / 2 - 7 - (10 if k == 3 else 0), yy); cr.stroke()
+    cr.set_source_rgb(*color)
+    for d in (-1, 1):
+        rx = d * (ww / 2 + 3)
+        cr.rectangle(rx - 5, -h / 2 - 7, 10, h + 14); cr.fill()
+    cr.restore()
+
+
+def hand_mirror(cr, x, y, ang=0.0, s=1.0, flash=0.0, color=INK):
+    """Hand mirror whose handle end is at (x, y); ang tilts it (radians, 0 = glass straight up).
+    flash 0..1 adds a glint on the glass."""
+    cr.save(); cr.translate(x, y); cr.rotate(ang)
+    cr.set_source_rgb(*color); cr.set_line_width(6 * s); cr.set_line_cap(cairo.LINE_CAP_ROUND)
+    cr.move_to(0, 0); cr.line_to(0, -20 * s); cr.stroke()
+    cr.save(); cr.translate(0, -34 * s); cr.scale(12 * s, 15 * s); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    cr.set_source_rgb(0.86, 0.88, 0.90)
+    cr.save(); cr.translate(0, -34 * s); cr.scale(8 * s, 11 * s); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()
+    if flash > 0:
+        cr.set_source_rgba(1, 1, 1, flash); cr.set_line_width(2.4 * s)
+        cr.move_to(-4 * s, -40 * s); cr.line_to(2 * s, -30 * s); cr.stroke()
+    cr.restore()
+
+
+def pearl_stand(cr, x, gy, h=58, color=INK):
+    """Small pedestal (a trader's display stand); returns the y where a pearl sits on top."""
+    cr.set_source_rgb(*color)
+    cr.rectangle(x - 22, gy - 8, 44, 8); cr.fill()
+    cr.move_to(x - 7, gy - 8); cr.line_to(x - 4, gy - h + 10); cr.line_to(x + 4, gy - h + 10); cr.line_to(x + 7, gy - 8)
+    cr.close_path(); cr.fill()
+    cr.save(); cr.translate(x, gy - h + 8); cr.scale(20, 7); cr.arc(0, 0, 1, 0, math.pi); cr.restore(); cr.fill()
+    return gy - h - 6
