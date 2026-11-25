@@ -1516,7 +1516,7 @@ def stone_water_jar(cr, x, gy, fill=0.0, fill_color=WATER_C, w=58, h=96):
         cr.close_path()
     path(); cr.set_source_rgb(*BG); cr.fill_preserve()
     if fill > 0:
-        cr.save(); cr.clip_preserve()
+        cr.save(); cr.clip(); cr.new_path()
         cr.set_source_rgb(*fill_color); cr.rectangle(x - w, gy - h * 0.92 * fill, 2 * w, h); cr.fill(); cr.restore()
     cr.new_path(); path(); cr.set_source_rgb(*INK); cr.set_line_width(5); cr.stroke()
 
@@ -2118,3 +2118,23 @@ def pearl_stand(cr, x, gy, h=58, color=INK):
     cr.close_path(); cr.fill()
     cr.save(); cr.translate(x, gy - h + 8); cr.scale(20, 7); cr.arc(0, 0, 1, 0, math.pi); cr.restore(); cr.fill()
     return gy - h - 6
+
+# ---- Day 41: the widow of Zarephath / the sheep and the goats ----
+FLOUR_C = (0.86, 0.75, 0.53)      # flour / meal tint inside jars
+
+def flour_jar(cr, x, gy, level=0.0, glow=0.0, w=50, h=74):
+    """Outlined jar standing on gy with flour up to `level` (0..1); glow lights it from within."""
+    if glow > 0: warm_glow(cr, x, gy - h * 0.55, 150 * glow, glow)
+    stone_water_jar(cr, x, gy, fill=level, fill_color=FLOUR_C, w=w, h=h)
+    if level > 0.97:                                     # heaped to the brim
+        cr.set_source_rgb(*FLOUR_C); cr.save(); cr.translate(x, gy - h); cr.scale(w * 0.34, 9 * min(1, (level - 0.97) / 0.03))
+        cr.arc(0, 0, 1, math.pi, 2 * math.pi); cr.restore(); cr.fill()
+
+def flour_puff(cr, x, y, amount, t, n=7, seed=2):
+    """A few pale flecks of flour drifting up from a jar mouth or a hand."""
+    if amount <= 0: return
+    cr.set_source_rgba(*FLOUR_C, 0.9 * amount)
+    for k in range(n):
+        u = (t * 0.9 + k / n) % 1.0
+        dx = 18 * math.sin(k * 2.3 + seed) + 6 * math.sin(t * 3 + k)
+        cr.arc(x + dx, y - 40 * u, 3.2 * (1 - 0.5 * u), 0, 2 * math.pi); cr.fill()

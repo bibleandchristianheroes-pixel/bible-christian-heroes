@@ -405,19 +405,19 @@
    "day": "40b",
    "title": "Doers of the Word",
    "refs": "James 1:22, 1:24, 1:25"
+  },
+  {
+   "day": "41a",
+   "title": "The Widow of Zarephath",
+   "refs": "1 Kings 17:12, 17:13, 17:16"
+  },
+  {
+   "day": "41b",
+   "title": "The Sheep and the Goats",
+   "refs": "Matthew 25:42, 25:45, 25:40"
   }
  ],
  "queue": [
-  {
-   "title": "The Widow of Zarephath",
-   "refs": "1 Kings 17:12, 17:15, 17:16",
-   "idea": "last handful of flour / she bakes for Elijah first / the jar of flour never runs out"
-  },
-  {
-   "title": "The Sheep and the Goats",
-   "refs": "Matthew 25:35, 25:36, 25:40",
-   "idea": "three people pass a hungry stranger, a sick man, a prisoner: two walk past / one stops for each, and the stranger is a robed silhouette in light"
-  },
   {
    "title": "The Lost Son's Brother",
    "refs": "Luke 15:28, 15:31, 15:32",
@@ -517,6 +517,21 @@
    "title": "Nicodemus by Night",
    "refs": "John 3:2, 3:3, 19:39",
    "idea": "three men see Jesus teach by day / two stay away, one comes by night with a lamp / later he comes openly carrying myrrh and aloes (lamp, moon props)"
+  },
+  {
+   "title": "Go to the Ant",
+   "refs": "Proverbs 6:6, 6:8, 6:8",
+   "idea": "three people at harvest time / one sleeps in the shade, one plays / one gathers like the ant and has bread when winter comes (wheat, sheaf, snow props)"
+  },
+  {
+   "title": "Silver and Gold Is Not Mine",
+   "refs": "Acts 3:2, 3:6, 3:8",
+   "idea": "a lame man at the temple gate asks for alms / two drop a coin or pass / Peter takes his hand and he leaps up praising God (temple, coin props)"
+  },
+  {
+   "title": "The Call of Matthew",
+   "refs": "Matthew 9:9, 9:9, 9:11",
+   "idea": "three tax collectors at their tables counting coins / two keep counting when Jesus passes / one leaves the coins and follows (low_table, coin_stack)"
   }
  ],
  "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",

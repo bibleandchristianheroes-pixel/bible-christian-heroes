@@ -401,3 +401,13 @@ Pinned comment: Read Matthew 13 in Scroll the Catholic Bible (link in bio).
 Three people read the same Word. One closed it and walked past, one looked in a mirror and forgot. One got up and carried his neighbour's load. 📜
 Pinned comment: Start every day with the readings in Ave Missal (link in bio).
 #Catholic #James1 #DoersOfTheWord #FaithInAction #LoveYourNeighbor #BibleVerse #CatholicTikTok
+
+## Day 41a — The Widow of Zarephath (1 Kings 17)
+Three widows had one handful of flour left. One shut the door, one baked for herself first. One baked for the prophet first, and her jar of flour never ran out. 🍞
+Pinned comment: Read 1 Kings 17 in Scroll the Catholic Bible (link in bio).
+#Catholic #1Kings17 #Elijah #WidowOfZarephath #TrustInGod #BibleVerse #CatholicTikTok
+
+## Day 41b — The Sheep and the Goats (Matthew 25)
+Three men passed the same hungry beggar. One looked away, one almost gave and kept it. One knelt, shared his bread, lifted him up, and saw who he really was. ✝️
+Pinned comment: Let Christ meet you in prayer every day with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #Matthew25 #SheepAndGoats #WorksOfMercy #LeastOfThese #BibleVerse #CatholicTikTok
