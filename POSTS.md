@@ -411,3 +411,13 @@ Pinned comment: Read 1 Kings 17 in Scroll the Catholic Bible (link in bio).
 Three men passed the same hungry beggar. One looked away, one almost gave and kept it. One knelt, shared his bread, lifted him up, and saw who he really was. ✝️
 Pinned comment: Let Christ meet you in prayer every day with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #Matthew25 #SheepAndGoats #WorksOfMercy #LeastOfThese #BibleVerse #CatholicTikTok
+
+## Day 42a — The Lost Son's Brother (Luke 15)
+His brother came home and the house was dancing. One brother crossed his arms and walked away, one sat down outside with his back turned. One let his father lead him in to the feast. 🎉
+Pinned comment: Read Luke 15 in Scroll the Catholic Bible (link in bio).
+#Catholic #Luke15 #ProdigalSon #ElderBrother #Mercy #BibleVerse #CatholicTikTok
+
+## Day 42b — Bread of Life (John 6)
+He held up the bread and said, "I am the bread of life." One shook his head and left, one looked back and still left. One came forward, knelt and said, "Lord, to whom would we go?" 🍞
+Pinned comment: Receive the Word every day with Ave Missal (link in bio).
+#Catholic #John6 #BreadOfLife #Eucharist #SaintPeter #BibleVerse #CatholicTikTok

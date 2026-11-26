@@ -2138,3 +2138,37 @@ def flour_puff(cr, x, y, amount, t, n=7, seed=2):
         u = (t * 0.9 + k / n) % 1.0
         dx = 18 * math.sin(k * 2.3 + seed) + 6 * math.sin(t * 3 + k)
         cr.arc(x + dx, y - 40 * u, 3.2 * (1 - 0.5 * u), 0, 2 * math.pi); cr.fill()
+
+# ---- Day 42: the elder brother ----
+def feast_house(cr, x, gy, t, light=1.0, w=290, h=200, dancers=2):
+    """House with a lit open doorway (left) and a wide window where small silhouettes dance.
+    x = left edge. Returns (door_x0, door_x1). Draw people in front after calling."""
+    from engine import draw_figure, pose
+    dx, dw, dh = x + 28, 74, 150
+    wx0, wx1, wy0, wy1 = x + 125, x + w - 28, gy - 178, gy - 92
+    if light > 0:
+        g = cairo.RadialGradient(dx + dw / 2, gy - 60, 10, dx + dw / 2, gy - 60, 300)
+        g.add_color_stop_rgba(0, 1, 0.90, 0.62, 0.45 * light); g.add_color_stop_rgba(1, 1, 0.90, 0.62, 0)
+        cr.set_source(g); cr.rectangle(dx - 320, gy - 360, 760, 360); cr.fill()
+        cr.set_source_rgba(1, 0.95, 0.76, 0.85 * light)     # light spilling onto the ground
+        cr.move_to(dx, gy); cr.line_to(dx + dw, gy); cr.line_to(dx + dw - 10, gy + 1); cr.line_to(dx - 150, gy + 1)
+        cr.close_path(); cr.fill()
+        cr.set_source_rgba(1, 0.95, 0.75, light)
+        cr.rectangle(dx, gy - dh, dw, dh); cr.fill()
+        cr.rectangle(wx0, wy0, wx1 - wx0, wy1 - wy0); cr.fill()
+    # dancers seen through the window
+    cr.save(); cr.rectangle(wx0, wy0, wx1 - wx0, wy1 - wy0); cr.clip()
+    for k in range(dancers):
+        ph = t * 2.6 + k * 1.7
+        u = 0.5 + 0.5 * math.sin(ph)
+        p = pose("joy", rs=lerp(120, 165, u), ls=lerp(165, 125, u), lean=lerp(-8, 6, u), lt=lerp(-10, 14, u), rt=lerp(10, -12, u))
+        fx = wx0 + 34 + k * 62 + 8 * math.sin(ph * 0.5)
+        draw_figure(cr, fx, wy1 + 34 - 6 * abs(math.sin(ph)), p, s=0.42, face=1 if k % 2 == 0 else -1)
+    cr.restore()
+    cr.set_source_rgb(*INK); cr.set_line_width(5)
+    cr.move_to(x, gy); cr.line_to(x, gy - h); cr.line_to(x + w, gy - h); cr.line_to(x + w, gy); cr.stroke()
+    cr.move_to(x - 18, gy - h); cr.line_to(x + w / 2, gy - h - 62); cr.line_to(x + w + 18, gy - h); cr.stroke()
+    cr.set_line_width(4); cr.rectangle(dx, gy - dh, dw, dh); cr.stroke()
+    cr.rectangle(wx0, wy0, wx1 - wx0, wy1 - wy0); cr.stroke()
+    cr.set_source_rgb(*INK); cr.rectangle(dx + dw - 11, gy - dh, 11, dh); cr.fill()   # door leaf swung open
+    return dx, dx + dw
