@@ -421,3 +421,13 @@ Pinned comment: Read Luke 15 in Scroll the Catholic Bible (link in bio).
 He held up the bread and said, "I am the bread of life." One shook his head and left, one looked back and still left. One came forward, knelt and said, "Lord, to whom would we go?" 🍞
 Pinned comment: Receive the Word every day with Ave Missal (link in bio).
 #Catholic #John6 #BreadOfLife #Eucharist #SaintPeter #BibleVerse #CatholicTikTok
+
+## Day 43a — The Lost Axe Head (2 Kings 6)
+The borrowed axe head flew off into the Jordan. One man cried "Alas!" and walked away. Two turned to the man of God, and the iron floated up. One reached out and took it back. 🪓
+Pinned comment: Read 2 Kings 6 in Scroll the Catholic Bible (link in bio).
+#Catholic #2Kings6 #Elisha #Miracles #TrustInGod #BibleVerse #CatholicTikTok
+
+## Day 43b — The Healing at the Pool (John 5)
+Thirty-eight years by the pool. One lay back down, one crawled and someone else got there first. Then Jesus walked over and said, "Rise, take up your stretcher, and walk." 🙏
+Pinned comment: Bring him whatever you've been waiting on, every day, with Ave – Catholic Prayer Lock (link in bio).
+#Catholic #John5 #Bethesda #Healing #JesusHeals #BibleVerse #CatholicTikTok

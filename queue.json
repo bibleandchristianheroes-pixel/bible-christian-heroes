@@ -425,19 +425,19 @@
       "day": "42b",
       "title": "Bread of Life",
       "refs": "John 6:67, 6:68, 6:69"
+    },
+    {
+      "day": "43a",
+      "title": "The Lost Axe Head",
+      "refs": "2 Kings 6:5, 6:6, 6:7"
+    },
+    {
+      "day": "43b",
+      "title": "The Healing at the Pool",
+      "refs": "John 5:5, 5:7, 5:8"
     }
   ],
   "queue": [
-    {
-      "title": "The Lost Axe Head",
-      "refs": "2 Kings 6:5, 6:6, 6:7",
-      "idea": "axe head sinks / Elisha throws a stick / iron floats, he reaches out and takes it"
-    },
-    {
-      "title": "The Healing at Bethesda",
-      "refs": "John 5:5, 5:7, 5:8",
-      "idea": "crippled man by the pool for 38 years / others rush past into the water / 'Rise, take up your bed and walk' (check CPDV wording)"
-    },
     {
       "title": "The Lost Child in the Temple",
       "refs": "Luke 2:45, 2:46, 2:49",
@@ -532,6 +532,21 @@
       "title": "The Call of Matthew",
       "refs": "Matthew 9:9, 9:9, 9:11",
       "idea": "three tax collectors at their tables counting coins / two keep counting when Jesus passes / one leaves the coins and follows (low_table, coin_stack)"
+    },
+    {
+      "title": "Counting the Cost",
+      "refs": "Luke 14:28, 14:29, 14:30",
+      "idea": "three builders lay a tower foundation / one runs out of stones, one walks away mid-build / one sits down first, counts, and finishes the tower"
+    },
+    {
+      "title": "The Road to Damascus",
+      "refs": "Acts 9:4, 9:6, 9:18",
+      "idea": "Saul rides out / a light knocks him to the ground / scales fall, he rises and is baptized"
+    },
+    {
+      "title": "Lot's Wife",
+      "refs": "Genesis 19:26, Luke 17:32, Luke 9:62",
+      "idea": "three leave a burning city / one looks back and turns to salt, one stops to gather goods / one keeps walking toward the hills (check refs)"
     }
   ],
   "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",

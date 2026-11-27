@@ -899,11 +899,13 @@ def fig_tree(cr, x, gy, s=1.0, leaves=0.5, figs=0.0, fall=0.0, color=INK):
     cr.restore(); cr.restore()
     return [(x + tx, gy - stump + ty) for tx, ty in tips]
 
-def axe(cr, hx, hy, ang, s=1.0, color=INK):
-    """Axe held at (hx, hy); ang = screen direction of the handle in degrees (0 = up, 90 = right)."""
+def axe(cr, hx, hy, ang, s=1.0, color=INK, head=True):
+    """Axe held at (hx, hy); ang = screen direction of the handle in degrees (0 = up, 90 = right).
+    head=False draws the bare handle (the iron has flown off)."""
     r = math.radians(ang); dx, dy = math.sin(r), -math.cos(r)
     cr.set_source_rgb(*color); cr.set_line_cap(cairo.LINE_CAP_ROUND); cr.set_line_width(5 * s)
     cr.move_to(hx - dx * 10 * s, hy - dy * 10 * s); cr.line_to(hx + dx * 62 * s, hy + dy * 62 * s); cr.stroke()
+    if not head: return
     cr.save(); cr.translate(hx + dx * 56 * s, hy + dy * 56 * s); cr.rotate(r)
     cr.move_to(-3 * s, -9 * s); cr.line_to(20 * s, -14 * s); cr.curve_to(25 * s, -6 * s, 25 * s, 4 * s, 20 * s, 10 * s)
     cr.line_to(-3 * s, 3 * s); cr.close_path(); cr.fill(); cr.restore()
@@ -2172,3 +2174,55 @@ def feast_house(cr, x, gy, t, light=1.0, w=290, h=200, dancers=2):
     cr.rectangle(wx0, wy0, wx1 - wx0, wy1 - wy0); cr.stroke()
     cr.set_source_rgb(*INK); cr.rectangle(dx + dw - 11, gy - dh, 11, dh); cr.fill()   # door leaf swung open
     return dx, dx + dw
+
+
+# ---- Day 43: the lost axe head / the pool of Bethesda ----
+def axe_head(cr, x, y, rot=0.0, s=1.0, color=INK):
+    """Loose iron axe head centred at (x, y); rot in degrees. Matches the blade drawn by axe()."""
+    cr.save(); cr.translate(x, y); cr.rotate(math.radians(rot)); cr.set_source_rgb(*color)
+    cr.move_to(-12 * s, -9 * s); cr.line_to(11 * s, -14 * s); cr.curve_to(16 * s, -6 * s, 16 * s, 4 * s, 11 * s, 10 * s)
+    cr.line_to(-12 * s, 3 * s); cr.close_path(); cr.fill()
+    cr.set_source_rgb(*BG); cr.arc(-6 * s, -3 * s, 2.6 * s, 0, 2 * math.pi); cr.fill()      # the eye for the handle
+    cr.restore()
+
+def ripples(cr, x, y, amount, t, t0=0.0, n=3, w=110, color=INK):
+    """Flat expanding rings on a water surface at (x, y), started at time t0."""
+    if amount <= 0 or t < t0: return
+    cr.set_line_width(2.5)
+    for k in range(n):
+        u = ((t - t0) * 0.7 + k / n) % 1.0
+        cr.set_source_rgba(*color, amount * (1 - u) * 0.9)
+        cr.save(); cr.translate(x, y); cr.scale(max(1, w * (0.15 + u)), max(1, 9 * (0.15 + u)))
+        cr.arc(0, 0, 1, math.pi * 0.05, math.pi * 0.95); cr.restore(); cr.stroke()
+
+def stick(cr, x, y, ang=0.0, L=54, color=INK):
+    """A short cut stick centred at (x, y); ang in degrees."""
+    cr.save(); cr.translate(x, y); cr.rotate(math.radians(ang)); cr.set_source_rgb(*color)
+    cr.set_line_cap(cairo.LINE_CAP_ROUND); cr.set_line_width(5); cr.move_to(-L / 2, 0); cr.line_to(L / 2, 0); cr.stroke()
+    cr.set_line_width(3); cr.move_to(L * 0.1, 0); cr.line_to(L * 0.25, -9); cr.stroke()
+    cr.restore()
+
+def colonnade(cr, x0, x1, gy, h=200, n=5, col_w=22, color=STONE):
+    """Row of plain columns with a lintel (porches of a pool or court), standing on the ground line."""
+    cr.set_source_rgb(*color)
+    cr.rectangle(x0 - 14, gy - h - 22, (x1 - x0) + 28, 20); cr.fill()
+    for k in range(n):
+        cx = x0 + (x1 - x0) * k / max(1, n - 1)
+        cr.rectangle(cx - col_w / 2, gy - h, col_w, h); cr.fill()
+        cr.rectangle(cx - col_w / 2 - 6, gy - h - 4, col_w + 12, 8); cr.fill()
+        cr.rectangle(cx - col_w / 2 - 6, gy - 8, col_w + 12, 8); cr.fill()
+
+def pool_steps(cr, x, gy, n=3, step=16, rise=12, color=INK):
+    """Steps going down from the bank at x into a pool to the right (drawn before the water)."""
+    cr.set_source_rgb(*color); cr.set_line_width(4)
+    cr.move_to(x, gy)
+    for k in range(n):
+        cr.line_to(x + k * step, gy + (k + 1) * rise); cr.line_to(x + (k + 1) * step, gy + (k + 1) * rise)
+    cr.stroke()
+
+def far_bank(cr, x0, x1, y, h=24, color=STONE):
+    """Low distant river bank in a light tone (reads as 'the other side'); y = waterline."""
+    cr.set_source_rgb(*color)
+    cr.move_to(x0, y + 4); cr.curve_to(x0 + 40, y - h * 0.3, x0 + 60, y - h, x0 + 110, y - h)
+    cr.curve_to(x0 + 200, y - h * 1.1, (x0 + x1) / 2, y - h * 0.8, x1, y - h * 1.2)
+    cr.line_to(x1, y + 4); cr.close_path(); cr.fill()
