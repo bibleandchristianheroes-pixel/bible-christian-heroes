@@ -266,7 +266,7 @@ class Episode:
     headline = ""
     captions = []
     cta = "Read it in Scroll the Catholic Bible"
-    caption_bg = False
+    caption_bg = False               # True, or a per-panel tuple like (False, True, False)
     ground = True
 
     def draw_frame(self, cr, t):
@@ -281,7 +281,8 @@ class Episode:
             self.draw_panel(cr, i, t, y0, gy)
             txt, ref, t_in = self.captions[i]
             a = prog(t, t_in, t_in + 0.6)
-            if a > 0 and self.caption_bg:
+            cbg = self.caption_bg[i] if isinstance(self.caption_bg, (list, tuple)) else self.caption_bg
+            if a > 0 and cbg:
                 cr.select_font_face("Lora", cairo.FONT_SLANT_ITALIC, cairo.FONT_WEIGHT_NORMAL); cr.set_font_size(31)
                 nl = len(wrap(cr, txt, 700)); hh = nl * 31 * 1.28 + 52
                 cr.set_source_rgba(*BG, 0.92 * a); rr = 18; bx, by, bw = 30, y0 + 18, 740

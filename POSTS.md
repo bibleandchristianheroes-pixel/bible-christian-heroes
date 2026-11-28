@@ -431,3 +431,13 @@ Pinned comment: Read 2 Kings 6 in Scroll the Catholic Bible (link in bio).
 Thirty-eight years by the pool. One lay back down, one crawled and someone else got there first. Then Jesus walked over and said, "Rise, take up your stretcher, and walk." 🙏
 Pinned comment: Bring him whatever you've been waiting on, every day, with Ave – Catholic Prayer Lock (link in bio).
 #Catholic #John5 #Bethesda #Healing #JesusHeals #BibleVerse #CatholicTikTok
+
+## Day 44a — The Boy Jesus in the Temple (Luke 2)
+They searched among the relatives. They searched Jerusalem for three days. He was in his Father's house the whole time, sitting among the teachers. 🏛️
+Pinned comment: Read Luke 2 in Scroll the Catholic Bible (link in bio).
+#Catholic #Luke2 #FindingInTheTemple #HolyFamily #JoyfulMysteries #BibleVerse #CatholicTikTok
+
+## Day 44b — The Visitation (Luke 1)
+Mary didn't wait. She hurried over the hills to Elizabeth, and at her greeting the baby leaped for joy. "Blessed are you who believed." 💛
+Pinned comment: Start every day with the readings in Ave Missal (link in bio).
+#Catholic #Luke1 #Visitation #BlessedMother #JoyfulMysteries #BibleVerse #CatholicTikTok

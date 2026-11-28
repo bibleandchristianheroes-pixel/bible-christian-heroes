@@ -2226,3 +2226,20 @@ def far_bank(cr, x0, x1, y, h=24, color=STONE):
     cr.move_to(x0, y + 4); cr.curve_to(x0 + 40, y - h * 0.3, x0 + 60, y - h, x0 + 110, y - h)
     cr.curve_to(x0 + 200, y - h * 1.1, (x0 + x1) / 2, y - h * 0.8, x1, y - h * 1.2)
     cr.line_to(x1, y + 4); cr.close_path(); cr.fill()
+
+def temple_porch(cr, x0, x1, gy, h=190, n=4, col_w=20, roof=54, color=STONE):
+    """Temple court porch in a light stone tone: colonnade, a low pediment and a step, so seated figures read in front."""
+    colonnade(cr, x0, x1, gy, h=h, n=n, col_w=col_w, color=color)
+    cr.set_source_rgb(*color)
+    top = gy - h - 22
+    cr.move_to(x0 - 22, top); cr.line_to((x0 + x1) / 2, top - roof); cr.line_to(x1 + 22, top); cr.close_path(); cr.fill()
+    cr.set_source_rgb(*BG); cr.set_line_width(3)
+    cr.move_to(x0 + 14, top - 6); cr.line_to((x0 + x1) / 2, top - roof + 14); cr.line_to(x1 - 14, top - 6); cr.stroke()
+
+def belly(cr, J, s=1.0, face=1, size=1.0, color=INK):
+    """A rounded front for a woman with child; call right after draw_figure with its joints J."""
+    if size <= 0: return
+    hx, hy = J["hip"]; sx, sy = J["sh"]
+    cx = lerp(hx, sx, 0.38) + face * 9 * s * size; cy = lerp(hy, sy, 0.38)
+    cr.set_source_rgb(*color)
+    cr.save(); cr.translate(cx, cy); cr.scale(15 * s * size, 19 * s * size); cr.arc(0, 0, 1, 0, 2 * math.pi); cr.restore(); cr.fill()

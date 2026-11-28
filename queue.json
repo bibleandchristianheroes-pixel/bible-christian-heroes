@@ -435,19 +435,19 @@
       "day": "43b",
       "title": "The Healing at the Pool",
       "refs": "John 5:5, 5:7, 5:8"
+    },
+    {
+      "day": "44a",
+      "title": "The Boy Jesus in the Temple",
+      "refs": "Luke 2:44, 2:45, 2:49"
+    },
+    {
+      "day": "44b",
+      "title": "The Visitation",
+      "refs": "Luke 1:39, 1:41, 1:45"
     }
   ],
   "queue": [
-    {
-      "title": "The Lost Child in the Temple",
-      "refs": "Luke 2:45, 2:46, 2:49",
-      "idea": "parents search the crowd / three days / the boy found among the teachers"
-    },
-    {
-      "title": "The Visitation",
-      "refs": "Luke 1:39, 1:41, 1:45",
-      "idea": "Mary hurries over the hill country / Elizabeth's child leaps, she cries out / blessed is she who believed"
-    },
     {
       "title": "Hannah's Prayer",
       "refs": "1 Samuel 1:10, 1:17, 1:20",
@@ -547,6 +547,16 @@
       "title": "Lot's Wife",
       "refs": "Genesis 19:26, Luke 17:32, Luke 9:62",
       "idea": "three leave a burning city / one looks back and turns to salt, one stops to gather goods / one keeps walking toward the hills (check refs)"
+    },
+    {
+      "title": "The Rich Young Man",
+      "refs": "Matthew 19:20, 19:21, 19:22",
+      "idea": "three men kneel before Jesus with full coin bags / one clutches his bag and walks away sad, one opens it and closes it again / one gives to the poor and follows (coin_bag)"
+    },
+    {
+      "title": "The Wise Men's Gifts",
+      "refs": "Matthew 2:2, 2:10, 2:11",
+      "idea": "three travellers see the star / one turns back at the hills, one stops at the palace / one follows the star to the house and kneels with his gift (star prop, house)"
     }
   ],
   "numbering": "Two videos per day: dayNNa and dayNNb (NN = day number, two digits). Next run makes the day after the last done[].day.",
